@@ -1,40 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Este é um projeto [Next.js](https://nextjs.org/) iniciado com [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Começando
 
-First, run the development server:
+Primeiro, execute o servidor de desenvolvimento:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Você pode começar a editar a página modificando `pages/index.tsx`. A página atualiza automaticamente conforme você edita o arquivo.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Rotas de API podem ser acessadas em [http://localhost:3000/api/hello](http://localhost:3000/api/hello). Este endpoint pode ser editado em `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Bibliotecas Utilizadas
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Este projeto requer Node versão superior a 20 e utiliza exclusivamente o gerenciador de pacotes `pnpm` para instalação de dependências. As seguintes bibliotecas são utilizadas:
 
-## Learn More
+- **next**: Framework para React que permite funcionalidades como SSR (Server Side Rendering) e SSG (Static Site Generation).
+- **react**: Biblioteca JavaScript para criar interfaces de usuário.
+- **react-dom**: Pacote que permite o uso do React no DOM da web.
+- **eslint**: Ferramenta de análise de código para identificar padrões problemáticos encontrados no código JavaScript.
+- **prettier**: Formatador de código opinativo que suporta várias linguagens e integra-se com a maioria dos editores.
+- **tailwindcss**: Framework CSS de utilidade-primeira para criar rapidamente designs customizados.
+- **typescript**: Superset de JavaScript que adiciona tipagem estática.
+- **vitest**: Framework de teste para Vue.js, que também pode ser usado em projetos JavaScript/TypeScript gerais.
+- **eslint-plugin-vitest-globals**: Plugin ESLint para globals do Vitest.
+- **husky**: Ferramenta para gerenciar ganchos Git.
+- **jsdom**: Implementação de JavaScript puro do DOM e do HTML.
+- **lint-staged**: Ferramenta para executar comandos em arquivos em staged.
+- **plop**: Gerador de código.
+- **postcss**: Ferramenta para transformar CSS com plugins JavaScript.
+- **prettier-plugin-tailwindcss**: Plugin do Prettier para formatar código com Tailwind CSS.
+- **vite-tsconfig-paths**: Plugin do Vite para suportar caminhos do tsconfig.
 
-To learn more about Next.js, take a look at the following resources:
+## Aprenda Mais
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Para aprender mais sobre Next.js, veja os seguintes recursos:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Documentação do Next.js](https://nextjs.org/docs) - aprenda sobre os recursos e API do Next.js.
+- [Tutorial Next.js](https://nextjs.org/learn) - um tutorial interativo de Next.js.
 
-## Deploy on Vercel
+Você pode conferir [o repositório GitHub do Next.js](https://github.com/vercel/next.js/) - seu feedback e contribuições são bem-vindos!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deploy no Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+A maneira mais fácil de fazer o deploy do seu app Next.js é usando a [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) dos criadores do Next.js.
+
+Confira nossa [documentação de deploy do Next.js](https://nextjs.org/docs/deployment) para mais detalhes.

@@ -11,7 +11,8 @@
     "lint": "next lint",
     "generate": "pnpm plop --plopfile generators/plopfile.js",
     "prepare": "husky",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "preinstall": "npx only-allow pnpm"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
