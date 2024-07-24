@@ -49,3 +49,91 @@ Você pode conferir [o repositório GitHub do Next.js](https://github.com/vercel
 A maneira mais fácil de fazer o deploy do seu app Next.js é usando a [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) dos criadores do Next.js.
 
 Confira nossa [documentação de deploy do Next.js](https://nextjs.org/docs/deployment) para mais detalhes.
+
+## Como criar um novo componente
+
+Para criar um novo componente, execute o comando:
+
+```bash
+pnpm generate <nome-do-componente>
+```
+
+Ele irá criar um novo componente na pasta `components` com o nome especificado com três arquivos: `index.tsx`, `.<nome-do-componente>.stories.tsx` e `<nome-do-componente>.test.tsx`.
+
+Então assim você pode começar a desenvolver o seu novo componente.
+
+## Quando commitar o código o que ira acontecer?
+
+Quando você commitar o código, o Husky irá rodar o Lint-Staged que irá rodar o ESLint e o Prettier para verificar se o código está correto e formatado corretamente. Então você precisa garantir que o código está correto e formatado corretamente antes de commitar. Caso esteja em duvida rode o comando:
+
+```bash
+pnpm lint
+```
+
+Ele irá rodar o ESLint e o Prettier para verificar se o código está correto e formatado corretamente, resolva os problemas que aparecerem e então commitar o código.
+
+## O que é ESLint e Prettier?
+
+ESLint é uma ferramenta de análise de código estática para identificar padrões problemáticos encontrados no código JavaScript. Ele é usado para encontrar e corrigir problemas no código JavaScript.
+
+Prettier é um formatador de código opinativo que suporta várias linguagens e integra-se com a maioria dos editores. Ele é usado para formatar o código JavaScript.
+
+## O que é Vitest?
+
+Vitest é um framework de teste que também pode ser usado em projetos JavaScript/TypeScript gerais. Ele é uma alternativa ao Jest e ao Mocha.
+
+## Como rodar os testes?
+
+Para rodar os testes, execute o comando:
+
+```bash
+pnpm test
+```
+
+Ele irá rodar os testes e mostrar o resultado no terminal.
+
+## Como rodar os testes com coverage?
+
+Para rodar os testes com coverage, execute o comando:
+
+```bash
+pnpm test:coverage
+```
+
+Ele irá rodar os testes com coverage e mostrar o resultado no terminal.
+
+## O que é o storybook?
+
+O Storybook é uma ferramenta de desenvolvimento de componentes para React, Vue e Angular. Ele permite que você navegue por uma biblioteca de componentes, visualize diferentes estados de cada componente e interaja com eles.
+
+Vamos utiliza-lo porquê ele nos permite visualizar os componentes de forma isolada, o que facilita o desenvolvimento e a manutenção dos componentes.
+
+## Como rodar o storybook?
+
+Para rodar o storybook, execute o comando:
+
+```bash
+pnpm storybook
+```
+
+Ele irá rodar o storybook e abrir no navegador.
+
+## Como fazer o build do projeto?
+
+Para fazer o build do projeto, execute o comando:
+
+```bash
+pnpm build
+```
+
+Ele irá fazer o build do projeto e gerar a pasta `build`.
+
+## Como rodar o projeto em produção?
+
+Para rodar o projeto em produção, execute o comando:
+
+```bash
+pnpm start
+```
+
+Ele irá rodar o projeto em produção.
