@@ -1,26 +1,18 @@
-import type { Preview } from "@storybook/react"
+import { Preview, ReactRenderer } from "@storybook/react"
+import { withThemeByDataAttribute } from "@storybook/addon-themes"
 import "../src/styles/globals.css"
 
-import { withThemeByClassName } from "@storybook/addon-themes"
-
 const preview: Preview = {
-  parameters: {
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i
-      }
-    }
-  },
+  parameters: {},
 
   decorators: [
-    withThemeByClassName({
+    withThemeByDataAttribute<ReactRenderer>({
       themes: {
-        // nameOfTheme: 'classNameForTheme',
         light: "light",
         dark: "dark"
       },
-      defaultTheme: "light"
+      defaultTheme: "light",
+      attributeName: "data-mode"
     })
   ]
 }
