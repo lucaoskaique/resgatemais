@@ -9,11 +9,13 @@
   --light-gray-rgb: 217, 217, 217;
 }
 
-[data-mode="dark"] {
-  --foreground-rgb: 255, 255, 255;
-  --highlight-rgb: 214, 62, 68; /* Vermelho (text, bg) */
-  --background-rgb: 50, 50, 50;
-  --light-gray-rgb: 217, 217, 217;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --highlight-rgb: 214, 62, 68; /* Vermelho (text, bg) */
+    --background-rgb: 50, 50, 50;
+    --light-gray-rgb: 217, 217, 217;
+  }
 }
 
 body {
