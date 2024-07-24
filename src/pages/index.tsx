@@ -1,5 +1,7 @@
 import { Inter } from "next/font/google"
 
+import ThemeToggle from "@/components/theme-toggle/theme-toggle"
+
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
@@ -9,6 +11,7 @@ export default function Home() {
       <h1 className="text-4xl font-bold">
         Organização Audiovisual da Sociedade Civil
       </h1>
+      <ThemeToggle />
     </main>
   )
 }
