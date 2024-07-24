@@ -8,6 +8,7 @@ config();
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
   test: {
+    environment: 'jsdom',
     globals: true,
     fileParallelism: false,
     isolate: false,

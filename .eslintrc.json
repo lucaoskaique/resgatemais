@@ -10,7 +10,8 @@
     "next/core-web-vitals",
     "prettier",
     "plugin:primer-react/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "plugin:storybook/recommended"
   ],
   "plugins": ["jsx-a11y"],
   "settings": {
@@ -83,7 +84,12 @@
         "ignoreDeclarationSort": true
       }
     ],
-    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
     "no-control-regex": "off",
     "no-sparse-arrays": "off",
     "no-unused-vars": [
