@@ -4,16 +4,14 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --highlight-rgb: 214, 62, 68;
-  --highlight-darker-rgb: 214, 62, 68;
+  --highlight-rgb: 214, 62, 68; /* Vermelho (text, bg) */
   --background-rgb: 235, 235, 235;
   --light-gray-rgb: 217, 217, 217;
 }
 
 [data-mode="dark"] {
   --foreground-rgb: 255, 255, 255;
-  --highlight-rgb: 214, 62, 68;
-  --highlight-darker-rgb: 214, 62, 68;
+  --highlight-rgb: 214, 62, 68; /* Vermelho (text, bg) */
   --background-rgb: 50, 50, 50;
   --light-gray-rgb: 217, 217, 217;
 }
