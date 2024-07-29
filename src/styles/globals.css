@@ -2,23 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --highlight-rgb: 214, 62, 68; /* Vermelho (text, bg) */
-  --background-rgb: 235, 235, 235;
-  --light-gray-rgb: 217, 217, 217;
+@layer base {
+  :root {
+    --foreground: 0, 0, 0; /* Texto Principal */
+    --background: 224, 224, 224; /* Background Principal */
+
+    --highlight: 214, 62, 68; /* Vermelho (text, bg) */
+
+    --light-gray: 217, 217, 217;
+    --dark-gray: 50, 50, 50;
+  }
+
+  .dark {
+    --foreground: 255, 255, 255; /* Texto Principal */
+    --background: 50, 50, 50; /* Background Principal */
+
+    --highlight: 214, 62, 68; /* Vermelho (text, bg) */
+
+    --light-gray: 217, 217, 217;
+    --dark-gray: 50, 50, 50;
+  }
 }
 
-[data-mode="dark"] {
-  --foreground-rgb: 255, 255, 255;
-  --highlight-rgb: 214, 62, 68; /* Vermelho (text, bg) */
-  --background-rgb: 50, 50, 50;
-  --light-gray-rgb: 217, 217, 217;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
 @layer utilities {
