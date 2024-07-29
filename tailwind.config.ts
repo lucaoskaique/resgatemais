@@ -9,6 +9,13 @@ const config: Config = {
   darkMode: ["class", '[data-mode="dark"]'],
   theme: {
     extend: {
+      colors: {
+        foreground: "rgb(var(--foreground))",
+        background: "rgb(var(--background))",
+        highlight: "rgb(var(--highlight))",
+        "light-gray": "rgb(var(--light-gray))",
+        "dark-gray": "rgb(var(--dark-gray))"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
