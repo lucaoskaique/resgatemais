@@ -20,16 +20,16 @@ export default function DonatePageHero({
 }: DonateHeroProps) {
   return (
     <div
-      className={`custom-background grid w-full grid-cols-2 items-center py-20`}>
-      <article className="ml-20 max-w-[480px]">
+      className={`custom-background grid w-full grid-rows-2 justify-items-center gap-y-16 py-20 lg:grid-cols-2 lg:grid-rows-1 lg:items-center lg:justify-items-start`}>
+      <article className="max-w-[480px] text-center lg:ml-20 lg:text-left">
         <h1 className="text-lg font-bold text-highlight">{title}</h1>
         <p className="mt-10 text-white">
           {paragraph1}
-          <span className="mt-4 block">{paragraph2}</span>
+          <span className="block lg:mt-4">{paragraph2}</span>
         </p>
       </article>
       {qrCode && (
-        <aside className="justify-self-end pr-[120px]">
+        <aside className="lg:justify-self-end lg:pr-[120px]">
           <p className="mb-4 text-center text-xs font-bold text-white">
             {donateCall}
           </p>

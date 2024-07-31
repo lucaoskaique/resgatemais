@@ -12,9 +12,9 @@ export default function DonatePageFooter({
   bankInfo
 }: DonateFooterProps) {
   return (
-    <footer className="py-[120px] pl-20 dark:bg-background-secondary dark:text-secondary">
+    <footer className="py-12 text-center dark:bg-background-secondary dark:text-secondary lg:py-[120px] lg:pl-20 lg:text-left">
       <h1 className="text-lg font-bold text-highlight">{title}</h1>
-      <div className="mt-10 leading-loose">
+      <div className="mt-4 leading-loose lg:mt-10">
         <h2>{info}</h2>
         {pixKey && (
           <p className="font-bold">
