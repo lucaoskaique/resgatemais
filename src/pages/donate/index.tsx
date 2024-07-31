@@ -1,14 +1,26 @@
-import Footer from "@/components/donate-page/footer"
-import Hero from "@/components/donate-page/hero"
+import DonatePageFooter, {
+  DonateFooterProps
+} from "@/components/donate-page/footer/footer"
+import DonatePageHero, {
+  DonateHeroProps
+} from "@/components/donate-page/hero/hero"
 
-export default function DonatePage() {
+export type DonatePageProps = {
+  heroProps?: DonateHeroProps
+  footerProps?: DonateFooterProps
+}
+
+export default function DonatePage({
+  heroProps,
+  footerProps
+}: DonatePageProps) {
   return (
     <main className="flex h-screen w-screen flex-col">
-      <section className="flex w-full flex-1 justify-center bg-hero-pattern bg-cover bg-center bg-no-repeat">
+      <section className="flex w-full flex-1 justify-center">
         {/* Header */}
-        <Hero />
+        <DonatePageHero {...heroProps} />
       </section>
-      <Footer />
+      <DonatePageFooter {...footerProps} />
     </main>
   )
 }
