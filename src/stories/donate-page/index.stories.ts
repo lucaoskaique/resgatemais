@@ -5,8 +5,7 @@ import {
   footerTemplate,
   heroTemplate
 } from "@/components/donate-page/template.json"
-
-import DonatePage, { DonatePageProps } from "."
+import DonatePage, { DonatePageProps } from "@/pages/donate"
 
 export default {
   title: "Resgatemais/DonatePage",
