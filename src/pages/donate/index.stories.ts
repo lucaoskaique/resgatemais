@@ -1,14 +1,36 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import DonatePage from "."
+import qrCode from "@/assets/images/qr-code.png"
+import {
+  footerTemplate,
+  heroTemplate
+} from "@/components/donate-page/template.json"
+
+import DonatePage, { DonatePageProps } from "."
 
 export default {
-  title: "Pages/Donation",
+  title: "Resgatemais/DonatePage",
   component: DonatePage,
   parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
     layout: "fullscreen"
-  }
-} as Meta
+  },
+  args: {
+    heroProps: {
+      title: heroTemplate.title,
+      paragraph1: heroTemplate.paragraph1,
+      paragraph2: heroTemplate.paragraph2,
+      donateCall: heroTemplate.donateCall,
+      qrCode: qrCode,
+      backgroundImageUrl: heroTemplate.imageUrl
+    },
+    footerProps: {
+      title: footerTemplate.title,
+      info: footerTemplate.info,
+      pixKey: footerTemplate.pixKey,
+      bankInfo: footerTemplate.bankInfo
+    }
+  },
+  tags: ["autodocs"]
+} as Meta<DonatePageProps>
 
-export const Default: StoryObj = {}
+export const Default: StoryObj<DonatePageProps> = {}
