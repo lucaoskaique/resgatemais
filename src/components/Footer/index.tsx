@@ -26,8 +26,10 @@ const Footer = ({
         </h2>
         <ul className={`text-sm`}>
           {email && <li className="leading-[16.24px]">E-mail: {email}</li>}
-          <li className="leading-[16.24px]">Instagram: {instagram}</li>
-          <li className="leading-[16.24px]">Telefone: {phone}</li>
+          {instagram && (
+            <li className="leading-[16.24px]">Instagram: {instagram}</li>
+          )}
+          {phone && <li className="leading-[16.24px]">Telefone: {phone}</li>}
         </ul>
       </div>
     </div>
