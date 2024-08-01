@@ -1,7 +1,5 @@
 import localFont from "next/font/local"
 
-import { Header } from "@/components/Header"
-
 const alteHassGrotesk = localFont({
   src: [
     {
