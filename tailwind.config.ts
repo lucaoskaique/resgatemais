@@ -9,6 +9,9 @@ const config: Config = {
   darkMode: ["class", '[data-mode="dark"]'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: "var(--font-alteHassGrotesk)"
+      },
       colors: {
         foreground: "rgb(var(--foreground))",
         background: "rgb(var(--background))",
