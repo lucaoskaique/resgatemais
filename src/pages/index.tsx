@@ -1,6 +1,6 @@
 import localFont from "next/font/local"
 
-import ThemeToggle from "@/components/theme-toggle/theme-toggle"
+import { Header } from "@/components/Header"
 
 const alteHassGrotesk = localFont({
   src: [
@@ -23,7 +23,6 @@ export default function Home() {
       <h1 className="text-4xl font-bold">
         Organização Audiovisual da Sociedade Civil
       </h1>
-      <ThemeToggle />
     </main>
   )
 }

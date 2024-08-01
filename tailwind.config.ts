@@ -13,8 +13,10 @@ const config: Config = {
         sans: "var(--font-alteHassGrotesk)"
       },
       colors: {
-        foreground: "rgb(var(--foreground))",
+        primary: "rgb(var(--primary))",
+        secondary: "rgb(var(--secondary))",
         background: "rgb(var(--background))",
+        "background-secondary": "rgb(var(--background-secondary))",
         highlight: "rgb(var(--highlight))",
         "light-gray": "rgb(var(--light-gray))",
         "dark-gray": "rgb(var(--dark-gray))"
@@ -23,6 +25,9 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))"
+      },
+      backgroundColor: {
+        "color-red": "#D63E44"
       }
     }
   },
