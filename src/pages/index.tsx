@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google"
 
-import Footer from "@/components/Footer"
 import ThemeToggle from "@/components/theme-toggle/theme-toggle"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -13,7 +12,6 @@ export default function Home() {
         Organização Audiovisual da Sociedade Civil
       </h1>
       <ThemeToggle />
-      <Footer />
     </main>
   )
 }
