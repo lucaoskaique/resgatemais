@@ -21,8 +21,10 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "hero-pattern": "url('/hero-bg.png')"
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))"
+      },
+      backgroundColor: {
+        "color-red": "#D63E44"
       }
     }
   },
