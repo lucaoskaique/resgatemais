@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: "var(--font-alteHassGrotesk)"
+        alteHaas: ['"Alte Haas Grotesk"']
       },
       colors: {
         primary: "rgb(var(--primary))",
