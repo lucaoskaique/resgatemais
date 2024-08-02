@@ -1,6 +1,5 @@
 "use client"
 
-import Switch from "@mui/material/Switch"
 import { useTheme } from "next-themes"
 import * as React from "react"
 
@@ -11,9 +10,5 @@ export default function ThemeToggle() {
     setTheme(theme === "dark" ? "light" : "dark")
   }
 
-  return (
-    <button onClick={handleTheme}>
-      <Switch {...label} />
-    </button>
-  )
+  return <button onClick={handleTheme}>Theme Toggle</button>
 }
