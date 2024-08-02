@@ -1,5 +1,70 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`<Navbar /> > should match the snapshot 1`] = `
+<div>
+  <nav>
+    <ul
+      class="flex itens-center gap-9"
+    >
+      <li
+        class="py-3"
+      >
+        <a
+          href="#"
+        >
+          Sobre
+        </a>
+      </li>
+      <li
+        class="py-3"
+      >
+        <a
+          href="#"
+        >
+          Ações
+        </a>
+      </li>
+      <li>
+        <button>
+          <span
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+          >
+            <span
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+            >
+              <input
+                aria-label="Switch demo"
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                type="checkbox"
+              />
+              <span
+                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </span>
+            <span
+              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+            />
+          </span>
+        </button>
+      </li>
+      <li
+        class="py-3"
+      >
+        <a
+          class="bg-color-red px-4 py-3 rounded-[0.313rem]"
+          href="#"
+        >
+          Doar
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;
+
 exports[`<Navbar /> > should render the heading 1`] = `
 <body>
   <div>

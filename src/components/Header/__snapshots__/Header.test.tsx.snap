@@ -1,0 +1,229 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`<Header /> > should match the snapshot 1`] = `
+<header
+  class="fixed w-full py-6 px-10 top-0"
+  id="header"
+>
+  <nav
+    class="flex items-center justify-between w-full text-xs text-black dark:text-white font-bold"
+  >
+    <div
+      class="flex items-center gap-6"
+    >
+      <div
+        class="hidden dark:block"
+      >
+        <a
+          href="#"
+        >
+          <img
+            alt="Logo"
+            class="w-full max-w-[6.5rem]"
+            data-nimg="1"
+            decoding="async"
+            height="100"
+            loading="lazy"
+            src="/logo-oficial-02.svg"
+            style="color: transparent;"
+            width="100"
+          />
+        </a>
+      </div>
+      <div
+        class="block dark:hidden"
+      >
+        <a
+          href="#"
+        >
+          <img
+            alt="Logo"
+            class="w-full max-w-[6.5rem]"
+            data-nimg="1"
+            decoding="async"
+            height="100"
+            loading="lazy"
+            src="/logo-oficial_Prancheta-1.svg"
+            style="color: transparent;"
+            width="100"
+          />
+        </a>
+      </div>
+      <p>
+        Organização Audiovisual da Sociedade Civil
+      </p>
+    </div>
+    <ul
+      class="flex itens-center gap-9"
+    >
+      <li
+        class="py-3"
+      >
+        <a
+          href="#"
+        >
+          Sobre
+        </a>
+      </li>
+      <li
+        class="py-3"
+      >
+        <a
+          href="#"
+        >
+          Ações
+        </a>
+      </li>
+      <li>
+        <button>
+          <span
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+          >
+            <span
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+            >
+              <input
+                aria-label="Switch demo"
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                type="checkbox"
+              />
+              <span
+                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </span>
+            <span
+              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+            />
+          </span>
+        </button>
+      </li>
+      <li
+        class="py-3"
+      >
+        <a
+          class="bg-color-red px-4 py-3 rounded-[0.313rem]"
+          href="#"
+        >
+          Doar
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;
+
+exports[`<Header /> > should render the heading 1`] = `
+<header
+  class="fixed py-6 px-10 top-0 flex items-center justify-between w-full text-xs text-black dark:text-white font-bold"
+  id="header"
+>
+  <div
+    class="flex items-center gap-6"
+  >
+    <div
+      class="hidden dark:block"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Logo"
+          class="w-full max-w-[6.5rem]"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/logo-oficial-02.svg"
+          style="color: transparent;"
+          width="100"
+        />
+      </a>
+    </div>
+    <div
+      class="block dark:hidden"
+    >
+      <a
+        href="#"
+      >
+        <img
+          alt="Logo"
+          class="w-full max-w-[6.5rem]"
+          data-nimg="1"
+          decoding="async"
+          height="100"
+          loading="lazy"
+          src="/logo-oficial_Prancheta-1.svg"
+          style="color: transparent;"
+          width="100"
+        />
+      </a>
+    </div>
+    <h1>
+      Organização Audiovisual da Sociedade Civil
+    </h1>
+  </div>
+  <nav>
+    <ul
+      class="flex itens-center gap-9"
+    >
+      <li
+        class="py-3"
+      >
+        <a
+          href="#"
+        >
+          Sobre
+        </a>
+      </li>
+      <li
+        class="py-3"
+      >
+        <a
+          href="#"
+        >
+          Ações
+        </a>
+      </li>
+      <li>
+        <button>
+          <span
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+          >
+            <span
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+            >
+              <input
+                aria-label="Switch demo"
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                type="checkbox"
+              />
+              <span
+                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+              />
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </span>
+            <span
+              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+            />
+          </span>
+        </button>
+      </li>
+      <li
+        class="py-3"
+      >
+        <a
+          class="bg-color-red px-4 py-3 rounded-[0.313rem]"
+          href="#"
+        >
+          Doar
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;
