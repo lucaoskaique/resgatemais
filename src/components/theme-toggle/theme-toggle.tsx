@@ -10,5 +10,5 @@ export default function ThemeToggle() {
     setTheme(theme === "dark" ? "light" : "dark")
   }
 
-  return <button onClick={handleTheme}>Toggle Theme</button>
+  return <button onClick={handleTheme}>Theme Toggle</button>
 }
