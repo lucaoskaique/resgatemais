@@ -9,6 +9,9 @@ const config: Config = {
   darkMode: ["class", '[data-mode="dark"]'],
   theme: {
     extend: {
+      fontFamily: {
+        alteHaas: ['"Alte Haas Grotesk"']
+      },
       colors: {
         primary: "rgb(var(--primary))",
         secondary: "rgb(var(--secondary))",

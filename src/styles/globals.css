@@ -31,8 +31,22 @@
 }
 
 @layer base {
+  @font-face {
+    font-family: "Alte Haas Grotesk";
+    font-weight: 400;
+    src: url(/fonts/AlteHaasGroteskRegular.ttf) format("ttf");
+  }
+
+  @font-face {
+    font-family: "Alte Haas Grotesk";
+    font-weight: 700;
+    src: url(/fonts/AlteHaasGroteskBold.ttf) format("ttf");
+  }
+}
+
+@layer base {
   body {
-    @apply bg-background text-primary;
+    @apply bg-background font-alteHaas text-primary;
   }
 }
 
