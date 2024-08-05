@@ -5,7 +5,6 @@ import Link from "next/link"
 import { useEffect } from "react"
 
 import { Navbar } from "../Navbar"
-import { HeaderResponsive } from "../responsive/header-responsive"
 
 export function Header() {
   useEffect(() => {
@@ -56,7 +55,6 @@ export function Header() {
         </div>
         <Navbar />
       </header>
-      <HeaderResponsive />
     </>
   )
 }
