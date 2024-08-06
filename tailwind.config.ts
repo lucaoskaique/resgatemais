@@ -21,6 +21,9 @@ const config: Config = {
         "light-gray": "rgb(var(--light-gray))",
         "dark-gray": "rgb(var(--dark-gray))"
       },
+      boxShadow: {
+        button: "0px 0px 0px 1px rgba(0, 0, 0, 0.2) inset"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

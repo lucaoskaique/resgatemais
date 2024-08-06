@@ -4,7 +4,7 @@ import qrCode from "@/assets/images/qr-code.png"
 import {
   footerTemplate,
   heroTemplate
-} from "@/components/donate-page/template.json"
+} from "@/components/donatePage/template.json"
 import DonatePage, { DonatePageProps } from "@/pages/donate"
 
 export default {
