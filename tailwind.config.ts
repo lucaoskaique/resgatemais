@@ -9,6 +9,9 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      fontFamily: {
+        alteHaas: ['"Alte Haas Grotesk"']
+      },
       colors: {
         primary: "rgb(var(--primary))",
         secondary: "rgb(var(--secondary))",
@@ -21,7 +24,8 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))"
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "register-email": "url(../../public/bg-footer.png)"
       },
       backgroundColor: {
         "color-red": "#D63E44"
