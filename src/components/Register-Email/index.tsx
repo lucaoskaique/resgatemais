@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export interface RegisterEmailProps {
   title?: string
   textLogo?: string
@@ -19,7 +21,7 @@ const RegisterEmail = ({ title, textLogo }: RegisterEmailProps) => {
         />
 
         <div className="flex flex-row items-center gap-[30px]">
-          <img
+          <Image
             className="ml-[3px] mt-[32px]"
             src="./logo-white-red.png"
             alt="Logo Resgaste Mais"
