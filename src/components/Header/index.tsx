@@ -22,50 +22,54 @@ export function Header() {
   }, [])
 
   return (
-      <header
-        className="fixed top-0 flex w-full items-center justify-between px-10 py-6 text-xs font-bold"
-        id="header"
-        data-testid="header">
-        <Link className="block lg:hidden" href="#">
+    <header
+      className="fixed top-0 flex w-full items-center justify-between px-10 py-6 text-xs font-bold"
+      id="header"
+      data-testid="header">
+      <Link className="block lg:hidden" href="#">
+        <Image
+          data-testid="small-screen-logo"
+          className="w-full max-w-[6.5rem]"
+          src="/icon-red.png"
+          width={100}
+          height={100}
+          alt=""
+        />
+      </Link>
+      <Link
+        className="block rounded-[0.313rem] bg-color-red px-4 py-3 lg:hidden"
+        data-testid="doar-link-small"
+        href="#">
+        Doar
+      </Link>
+      <div className="hidden lg:flex lg:items-center lg:gap-6">
+        <Link
+          className="flex h-7 w-[6.5rem] items-center overflow-y-hidden dark:hidden"
+          href="#">
           <Image
-            data-testid="small-screen-logo"
-            className="w-full max-w-[6.5rem]"
-            src="/icon-red.png"
-            width={100}
-            height={100}
-            alt=""
+            data-testid="large-screen-light-logo"
+            className="w-full"
+            src="/logo-black-red.png"
+            width={120}
+            height={120}
+            alt="Logo Resgate Mais"
           />
         </Link>
         <Link
-          className="block rounded-[0.313rem] bg-color-red px-4 py-3 lg:hidden"
-          data-testid="doar-link-small"
+          className="hidden h-7 w-[6.5rem] items-center overflow-y-hidden dark:flex"
           href="#">
-          Doar
-      </Link>
-        <div className="lg:flex lg:items-center lg:gap-6 hidden">
-            <Link className="dark:hidden w-[6.5rem] h-7 overflow-y-hidden flex items-center" href="#">
-              <Image
-                data-testid="large-screen-light-logo"
-                className="w-full"
-                src="/logo-black-red.png"
-                width={120}
-                height={120}
-                alt=""
-                />
-            </Link>
-            <Link className="hidden dark:flex overflow-y-hidden w-[6.5rem] h-7 items-center" href="#">
-              <Image
-                data-testid="large-screen-dark-logo"
-                className="w-full"
-                src="/logo-white-red.png"
-                width={120}
-                height={120}
-                alt=""
-              />
-            </Link>
-          <h1>Organização Audiovisual da Sociedade Civil</h1>
-        </div>
-        <Navbar />
-      </header>
+          <Image
+            data-testid="large-screen-dark-logo"
+            className="w-full"
+            src="/logo-white-red.png"
+            width={120}
+            height={120}
+            alt=""
+          />
+        </Link>
+        <h1>Organização Audiovisual da Sociedade Civil</h1>
+      </div>
+      <Navbar />
+    </header>
   )
 }
