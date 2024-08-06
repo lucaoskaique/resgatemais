@@ -14,8 +14,7 @@ export function Header() {
     const handleScroll = () => {
       const scrolled = window.scrollY > 50
       header.classList.toggle("bg-transparent", !scrolled)
-      header.classList.toggle("dark:bg-[#323232]", scrolled)
-      header.classList.toggle("bg-white", scrolled)
+      header.classList.toggle("bg-background", scrolled)
     }
 
     window.addEventListener("scroll", handleScroll)
@@ -23,38 +22,50 @@ export function Header() {
   }, [])
 
   return (
-    <>
       <header
-        className="fixed top-0 hidden w-full items-center justify-between px-10 py-6 text-xs font-bold text-black dark:text-white lg:flex"
+        className="fixed top-0 flex w-full items-center justify-between px-10 py-6 text-xs font-bold"
         id="header"
         data-testid="header">
-        <div className="flex items-center gap-6">
-          <div className="hidden dark:block">
-            <Link href="#">
+        <Link className="block lg:hidden" href="#">
+          <Image
+            data-testid="small-screen-logo"
+            className="w-full max-w-[6.5rem]"
+            src="/icon-red.png"
+            width={100}
+            height={100}
+            alt=""
+          />
+        </Link>
+        <Link
+          className="block rounded-[0.313rem] bg-color-red px-4 py-3 lg:hidden"
+          data-testid="doar-link-small"
+          href="#">
+          Doar
+      </Link>
+        <div className="lg:flex lg:items-center lg:gap-6 hidden">
+            <Link className="dark:hidden w-[6.5rem] h-7 overflow-y-hidden flex items-center" href="#">
               <Image
-                className="w-full max-w-[6.5rem]"
-                src="/logo-oficial-02.svg"
-                width={100}
-                height={100}
-                alt="Logo"
+                data-testid="large-screen-light-logo"
+                className="w-full"
+                src="/logo-black-red.png"
+                width={120}
+                height={120}
+                alt=""
+                />
+            </Link>
+            <Link className="hidden dark:flex overflow-y-hidden w-[6.5rem] h-7 items-center" href="#">
+              <Image
+                data-testid="large-screen-dark-logo"
+                className="w-full"
+                src="/logo-white-red.png"
+                width={120}
+                height={120}
+                alt=""
               />
             </Link>
-          </div>
-          <div className="block dark:hidden">
-            <Link href="#">
-              <Image
-                className="w-full max-w-[6.5rem]"
-                src="/logo-oficial_Prancheta-1.svg"
-                width={100}
-                height={100}
-                alt="Logo"
-              />
-            </Link>
-          </div>
           <h1>Organização Audiovisual da Sociedade Civil</h1>
         </div>
         <Navbar />
       </header>
-    </>
   )
 }
