@@ -1,14 +1,14 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { fn } from "@storybook/test"
 
-import { Navbar } from "."
+import { Navbar } from "./navbar"
 
 const meta = {
   title: "Resgatemais/Navbar",
   component: Navbar,
   tags: ["autodocs"],
   parameters: {
-    layout: "centered"
+    layout: "fullscreen"
   },
   args: {
     onLogin: fn(),
