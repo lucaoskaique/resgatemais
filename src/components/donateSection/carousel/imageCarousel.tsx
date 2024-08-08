@@ -1,19 +1,19 @@
 import Autoplay from "embla-carousel-autoplay"
 import Image from "next/image"
 
-import { contentTemplateProps } from "./contentTemplate"
+import { contentTemplate, contentTemplateProps } from "./contentTemplate"
 import { Carousel, CarouselContent, CarouselItem } from "./emblaCarouselReact"
 
 export type DonateImageCarouselProps = {
   autoplay?: boolean
   autoplayDelay?: number
-  carouselImages: contentTemplateProps[]
+  carouselImages?: contentTemplateProps[]
 }
 
 export default function DonateImageCarousel({
-  autoplay,
+  autoplay = true,
   autoplayDelay = 3000,
-  carouselImages
+  carouselImages = contentTemplate
 }: DonateImageCarouselProps) {
   const carouselPlugins = autoplay
     ? [
