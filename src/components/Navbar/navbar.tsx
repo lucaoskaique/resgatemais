@@ -6,7 +6,19 @@ import { useEffect, useState } from "react"
 
 import { SwitchTheme } from "../switch-theme/switch-theme"
 
-export function Navbar() {
+interface Links {
+  dark?: string
+  light?: string
+  small?: string
+}
+
+export interface NavbarProps {
+  title?: string
+  logos?: Links
+  textLinks?: string[]
+}
+
+export function Navbar({ title, logos, textLinks = [] }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -35,7 +47,7 @@ export function Navbar() {
         <Image
           data-testid="small-screen-logo"
           className="w-full max-w-[6.5rem]"
-          src="/icon-red.png"
+          src={logos?.small ? logos.small : "/logo-white-red.png"}
           width={100}
           height={100}
           alt=""
@@ -45,7 +57,7 @@ export function Navbar() {
         className="block rounded-[0.313rem] bg-color-red px-4 py-3 lg:hidden"
         data-testid="doar-link-small"
         href="#">
-        Doar
+        {textLinks[2] ? textLinks[2] : "doar"}
       </Link>
       <div className="hidden lg:flex lg:items-center lg:gap-6">
         <Link
@@ -54,7 +66,7 @@ export function Navbar() {
           <Image
             data-testid="large-screen-light-logo"
             className="w-full"
-            src="/logo-black-red.png"
+            src={logos?.light ? logos.light : "/logo-black-red.png"}
             width={120}
             height={120}
             alt=""
@@ -66,25 +78,25 @@ export function Navbar() {
           <Image
             data-testid="large-screen-dark-logo"
             className="w-full"
-            src="/logo-white-red.png"
+            src={logos?.dark ? logos.dark : "/logo-white-red.png"}
             width={120}
             height={120}
             alt=""
           />
         </Link>
-        <h1>Organização Audiovisual da Sociedade Civil</h1>
+        <h1>{title}</h1>
       </div>
 
       <nav>
         <ul className="hidden lg:flex lg:items-center lg:gap-9">
           <li className="py-3">
             <Link href="#" data-testid="sobre-link-large">
-              Sobre
+              {textLinks[0] ? textLinks[0] : "sobre"}
             </Link>
           </li>
           <li className="py-3">
             <Link href="#" data-testid="acoes-link-large">
-              Ações
+              {textLinks[1] ? textLinks[1] : "acoes"}
             </Link>
           </li>
           <li>
@@ -95,7 +107,7 @@ export function Navbar() {
               className="rounded-[0.313rem] bg-color-red px-4 py-3"
               data-testid="doar-link-large"
               href="#">
-              Doar
+              {textLinks[2] ? textLinks[2] : "doar"}
             </Link>
           </li>
         </ul>
@@ -125,7 +137,7 @@ export function Navbar() {
                 href="#"
                 className="block px-4 py-2"
                 data-testid="sobre-link-small">
-                Sobre
+                {textLinks[0] ? textLinks[0] : "sobre"}
               </Link>
             </li>
             <li className="py-2">
@@ -133,7 +145,7 @@ export function Navbar() {
                 href="#"
                 className="block px-4 py-2"
                 data-testid="acoes-link-small">
-                Ações
+                {textLinks[1] ? textLinks[1] : "acoes"}
               </Link>
             </li>
           </ul>

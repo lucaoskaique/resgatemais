@@ -1,23 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/react"
-import { fn } from "@storybook/test"
 
-import { Navbar } from "./navbar"
+import { Navbar, NavbarProps } from "./navbar"
 
-const meta = {
+const meta: Meta<NavbarProps> = {
   title: "Resgatemais/Navbar",
   component: Navbar,
-  tags: ["autodocs"],
   parameters: {
     layout: "fullscreen"
   },
   args: {
-    onLogin: fn(),
-    onLogout: fn(),
-    onCreateAccount: fn()
+    title: "Organização Audiovisual da Sociedade Civil",
+    logos: {
+      dark: "/logo-white-red.png",
+      light: "/logo-black-red.png",
+      small: "/icon-red.png"
+    },
+    textLinks: ["sobre", "acoes", "doar"]
   }
-} satisfies Meta<typeof Navbar>
+}
 
 export default meta
-type Story = StoryObj<typeof meta>
 
-export const Default: Story = {}
+export const Default: StoryObj<NavbarProps> = {}
