@@ -5,7 +5,7 @@ import { Header } from "."
 export default {
   title: "Resgatemais/Header",
   component: Header,
-  tags: ["autodocs"],
+  tags: ["autodocs"]
 } as Meta
 
 export const Default: StoryObj = {}

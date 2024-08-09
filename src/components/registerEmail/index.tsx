@@ -19,7 +19,6 @@ const RegisterEmail = ({ title, textLogo }: RegisterEmailProps) => {
           name="email-cadastro"
           id="email-cadastro"
         />
-
         <div className="flex flex-row items-center gap-[15px] sm:gap-[30px]">
           <Image
             className="ml-[3px] mt-[32px]"
