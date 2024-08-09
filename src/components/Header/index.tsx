@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect } from "react"
 
-import { Navbar } from "../Navbar"
+import { Navbar } from "../navBar"
 
 export function Header() {
   useEffect(() => {
