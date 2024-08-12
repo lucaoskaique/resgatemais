@@ -52,7 +52,7 @@ export function Header() {
             src="/logo-black-red.png"
             width={120}
             height={120}
-            alt=""
+            alt="Logo Resgate Mais"
           />
         </Link>
         <Link
