@@ -25,7 +25,8 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "register-email": "url(../../public/bg-footer.png)"
+        "register-email": "url(../../public/bg-footer.png)",
+        hero: "url(/bg-hero.png)"
       },
       backgroundColor: {
         "color-red": "#D63E44"
