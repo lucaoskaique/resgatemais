@@ -3,21 +3,36 @@ import Base from "../Base"
 const Home = () => {
   return (
     <Base>
-      <section style={{ height: "100px", backgroundColor: "lightgray" }}>
+      <section>
         {/* sessão hero */}
+        <div style={{ height: "100px", backgroundColor: "lightgray" }}>
+          sessão hero
+        </div>
       </section>
-      <section style={{ height: "100px", backgroundColor: "lightblue" }}>
+      <section>
         {/* sessão about */}
+        <div style={{ height: "100px", backgroundColor: "lightblue" }}>
+          sessão about
+        </div>
       </section>
-      <section style={{ height: "100px", backgroundColor: "lightgreen" }}>
+      <section>
         {/* sessão mission (Missão, Visão e Valores) */}
+        <div style={{ height: "100px", backgroundColor: "lightgreen" }}>
+          sessão mission (Missão, Visão e Valores)
+        </div>
       </section>
-      <section style={{ height: "100px", backgroundColor: "lightcoral" }}>
+      <section>
         {/* sessão donations (Doações Mobilizadas) */}
+        <div style={{ height: "100px", backgroundColor: "lightcoral" }}>
+          sessão donations (Doações Mobilizadas)
+        </div>
       </section>
-      <section
-        style={{ height: "100px", backgroundColor: "lightgoldenrodyellow" }}>
+      <section>
         {/* sessão newsletter */}
+        <div
+          style={{ height: "100px", backgroundColor: "lightgoldenrodyellow" }}>
+          sessão newsletter
+        </div>
       </section>
     </Base>
   )
