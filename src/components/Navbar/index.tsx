@@ -6,19 +6,7 @@ import { useEffect, useState } from "react"
 
 import { SwitchTheme } from "../switchTheme/switch-theme"
 
-interface Links {
-  dark?: string
-  light?: string
-  small?: string
-}
-
-export interface NavbarProps {
-  title?: string
-  logos?: Links
-  textLinks?: string[]
-}
-
-export function Navbar({ title, logos, textLinks = [] }: NavbarProps) {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -38,6 +26,14 @@ export function Navbar({ title, logos, textLinks = [] }: NavbarProps) {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const title = "Organização Audiovisual da Sociedade Civil"
+  const logos = {
+    dark: "/logo-white-red.png",
+    light: "/logo-black-red.png",
+    small: "/icon-red.png"
+  }
+  const textLinks = ["sobre", "acoes", "doar"]
+
   return (
     <header
       className="fixed top-0 flex w-full items-center justify-between px-10 py-6 text-xs font-bold"
@@ -47,7 +43,7 @@ export function Navbar({ title, logos, textLinks = [] }: NavbarProps) {
         <Image
           data-testid="small-screen-logo"
           className="w-full max-w-[6.5rem]"
-          src={logos?.small ? logos.small : "/logo-white-red.png"}
+          src={logos.small}
           width={100}
           height={100}
           alt=""
@@ -57,7 +53,7 @@ export function Navbar({ title, logos, textLinks = [] }: NavbarProps) {
         className="block rounded-[0.313rem] bg-color-red px-4 py-3 lg:hidden"
         data-testid="doar-link-small"
         href="#">
-        {textLinks[2] ? textLinks[2] : "doar"}
+        {textLinks[2]}
       </Link>
       <div className="hidden lg:flex lg:items-center lg:gap-6">
         <Link
@@ -66,7 +62,7 @@ export function Navbar({ title, logos, textLinks = [] }: NavbarProps) {
           <Image
             data-testid="large-screen-light-logo"
             className="w-full"
-            src={logos?.light ? logos.light : "/logo-black-red.png"}
+            src={logos.light}
             width={120}
             height={120}
             alt=""
@@ -78,7 +74,7 @@ export function Navbar({ title, logos, textLinks = [] }: NavbarProps) {
           <Image
             data-testid="large-screen-dark-logo"
             className="w-full"
-            src={logos?.dark ? logos.dark : "/logo-white-red.png"}
+            src={logos.dark}
             width={120}
             height={120}
             alt=""
@@ -91,12 +87,12 @@ export function Navbar({ title, logos, textLinks = [] }: NavbarProps) {
         <ul className="hidden lg:flex lg:items-center lg:gap-9">
           <li className="py-3">
             <Link href="#" data-testid="sobre-link-large">
-              {textLinks[0] ? textLinks[0] : "sobre"}
+              {textLinks[0]}
             </Link>
           </li>
           <li className="py-3">
             <Link href="#" data-testid="acoes-link-large">
-              {textLinks[1] ? textLinks[1] : "acoes"}
+              {textLinks[1]}
             </Link>
           </li>
           <li>
@@ -107,7 +103,7 @@ export function Navbar({ title, logos, textLinks = [] }: NavbarProps) {
               className="rounded-[0.313rem] bg-color-red px-4 py-3"
               data-testid="doar-link-large"
               href="#">
-              {textLinks[2] ? textLinks[2] : "doar"}
+              {textLinks[2]}
             </Link>
           </li>
         </ul>
@@ -137,7 +133,7 @@ export function Navbar({ title, logos, textLinks = [] }: NavbarProps) {
                 href="#"
                 className="block px-4 py-2"
                 data-testid="sobre-link-small">
-                {textLinks[0] ? textLinks[0] : "sobre"}
+                {textLinks[0]}
               </Link>
             </li>
             <li className="py-2">
@@ -145,7 +141,7 @@ export function Navbar({ title, logos, textLinks = [] }: NavbarProps) {
                 href="#"
                 className="block px-4 py-2"
                 data-testid="acoes-link-small">
-                {textLinks[1] ? textLinks[1] : "acoes"}
+                {textLinks[1]}
               </Link>
             </li>
           </ul>

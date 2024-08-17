@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/react"
 
-import { Navbar, NavbarProps } from "./navbar"
+import Navbar from "."
 
-const meta: Meta<NavbarProps> = {
+const meta: Meta = {
   title: "Resgatemais/Navbar",
   component: Navbar,
   parameters: {
@@ -21,4 +21,4 @@ const meta: Meta<NavbarProps> = {
 
 export default meta
 
-export const Default: StoryObj<NavbarProps> = {}
+export const Default: StoryObj = {}
