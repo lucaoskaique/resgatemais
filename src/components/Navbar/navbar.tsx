@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
-import { SwitchTheme } from "../switch-theme/switch-theme"
+import { SwitchTheme } from "../switchTheme/switch-theme"
 
 interface Links {
   dark?: string
