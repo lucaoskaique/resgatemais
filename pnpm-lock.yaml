@@ -23,6 +23,9 @@ importers:
       next:
         specifier: 14.2.5
         version: 14.2.5(@babel/core@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next-seo:
+        specifier: ^6.5.0
+        version: 6.5.0(next@14.2.5(@babel/core@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       next-themes:
         specifier: ^0.3.0
         version: 0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4299,6 +4302,13 @@ packages:
 
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
+
+  next-seo@6.5.0:
+    resolution: {integrity: sha512-MfzUeWTN/x/rsKp/1n0213eojO97lIl0unxqbeCY+6pAucViHDA8GSLRRcXpgjsSmBxfCFdfpu7LXbt4ANQoNQ==}
+    peerDependencies:
+      next: ^8.1.1-canary.54 || >=9.0.0
+      react: '>=16.0.0'
+      react-dom: '>=16.0.0'
 
   next-themes@0.3.0:
     resolution: {integrity: sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==}
@@ -10931,6 +10941,12 @@ snapshots:
   negotiator@0.6.3: {}
 
   neo-async@2.6.2: {}
+
+  next-seo@6.5.0(next@14.2.5(@babel/core@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+    dependencies:
+      next: 14.2.5(@babel/core@7.24.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
 
   next-themes@0.3.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:

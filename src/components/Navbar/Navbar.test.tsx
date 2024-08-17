@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react"
 import { describe, expect, it, vi } from "vitest"
 
-import { Navbar } from "./navbar"
+import Navbar from "."
 
 const mockScrollTo = vi.fn()
 global.scrollTo = mockScrollTo
