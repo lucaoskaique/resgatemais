@@ -15,7 +15,8 @@
     "preinstall": "npx only-allow pnpm",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "vitest"
+    "test": "vitest",
+    "type-check": "tsc --noEmit"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [

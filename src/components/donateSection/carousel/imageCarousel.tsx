@@ -31,7 +31,7 @@ export default function DonateImageCarousel({
       opts={{ loop: true }}
       plugins={carouselPlugins}>
       <CarouselContent className="ml-0">
-        {carouselImages.map((card, index) => (
+        {carouselImages?.map((card, index) => (
           <CarouselItem key={index} className="relative basis-full pl-0">
             <Image
               className="h-full w-full"

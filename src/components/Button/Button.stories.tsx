@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import Button, { ButtonProps } from "./button"
+import Button, { ButtonProps } from "."
 
 export default {
   title: "Resgatemais/Componentes/Button",
@@ -10,9 +10,8 @@ export default {
     layout: "centered"
   },
   argTypes: {
-    txtColor: { control: "inline-radio" },
-    btnColor: { control: "inline-radio" },
-    txtSize: { control: "inline-radio" }
+    textColor: { control: "inline-radio" },
+    background: { control: "inline-radio" }
   },
   args: {
     label: "Botão"
@@ -21,38 +20,35 @@ export default {
 
 export const Primary: StoryObj<ButtonProps> = {
   args: {
-    txtColor: "white",
-    btnColor: "red"
+    textColor: "white",
+    background: "red"
   }
 }
 
 export const Secondary: StoryObj<ButtonProps> = {
   args: {
-    txtColor: "white",
-    btnColor: "transparent"
+    textColor: "white",
+    background: "red"
   }
 }
 
 export const SecondaryBorder: StoryObj<ButtonProps> = {
   args: {
-    txtColor: "white",
-    btnColor: "transparent",
-    btnBorder: true
+    textColor: "white",
+    background: "black"
   }
 }
 
 export const Small: StoryObj<ButtonProps> = {
   args: {
-    txtColor: "white",
-    btnColor: "red",
-    txtSize: "small"
+    textColor: "white",
+    background: "red"
   }
 }
 
 export const Large: StoryObj<ButtonProps> = {
   args: {
-    txtColor: "white",
-    btnColor: "red",
-    txtSize: "large"
+    textColor: "white",
+    background: "red"
   }
 }

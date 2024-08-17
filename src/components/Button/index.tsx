@@ -14,7 +14,7 @@ type ButtonTypes =
   | ButtonHTMLAttributes<HTMLButtonElement>
 
 export type ButtonProps = {
-  background?: "hot" | "ice" | "white"
+  background?: "red" | "white" | "black" | "blue"
   size?: "xlarge" | "large" | "medium" | "small"
   icon?: ReactNode
   fullWidth?: boolean
@@ -30,7 +30,7 @@ const Button: ForwardRefRenderFunction<
   {
     children,
     size = "large",
-    background = "hot",
+    background = "red",
     fullWidth = false,
     icon,
     textColor = "white",
@@ -47,9 +47,10 @@ const Button: ForwardRefRenderFunction<
   }
 
   const backgroundClasses = {
-    hot: "bg-red-500",
-    ice: "bg-blue-500",
-    white: "bg-white"
+    red: "bg-red-500",
+    blue: "bg-blue-500",
+    white: "bg-white",
+    black: "bg-black"
   }
 
   const textColorClasses = {
