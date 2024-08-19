@@ -1,18 +1,24 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import DonateItemCard, { DonateCardProps } from "."
+import MilestoneCard, { MilestoneCardProps } from "."
+
+const template = {
+  title: "Resgatamos aproximadamente:",
+  content: "1.000 pessoas",
+  subcontent: "de porto alegre e região metropolitana"
+}
 
 export default {
-  title: "Resgatemais/DonateSection/CardItem",
-  component: DonateItemCard,
-  args: {
-    title: "Resgatamos aproximadamente:",
-    content: "1.000 pessoas",
-    subcontent: "de porto alegre e região metropolitana"
-  },
+  title: "ResgateMais/Components/Milestone Card",
+  component: MilestoneCard,
   parameters: {
-    layout: "fullscreen"
+    layout: "centered"
+  },
+  args: {
+    title: template.title,
+    content: template.content,
+    subcontent: template.subcontent
   }
-} as Meta<DonateCardProps>
+} as Meta<MilestoneCardProps>
 
-export const Default: StoryObj<DonateCardProps> = {}
+export const Default: StoryObj<MilestoneCardProps> = {}
