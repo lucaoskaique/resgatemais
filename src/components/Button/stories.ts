@@ -14,41 +14,22 @@ export default {
     background: { control: "inline-radio" }
   },
   args: {
-    label: "Botão"
+    children: "button"
   }
 } as Meta<ButtonProps>
 
-export const Primary: StoryObj<ButtonProps> = {
-  args: {
-    textColor: "white",
-    background: "red"
-  }
-}
+export const Primary: StoryObj<ButtonProps> = {}
 
-export const Secondary: StoryObj<ButtonProps> = {
+export const Transparent: StoryObj<ButtonProps> = {
   args: {
-    textColor: "white",
-    background: "red"
-  }
-}
-
-export const SecondaryBorder: StoryObj<ButtonProps> = {
-  args: {
-    textColor: "white",
-    background: "black"
+    background: "transparent"
   }
 }
 
 export const Small: StoryObj<ButtonProps> = {
   args: {
-    textColor: "white",
-    background: "red"
+    size: "small"
   }
 }
 
-export const Large: StoryObj<ButtonProps> = {
-  args: {
-    textColor: "white",
-    background: "red"
-  }
-}
+export const Large: StoryObj<ButtonProps> = {}
