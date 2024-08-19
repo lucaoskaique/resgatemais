@@ -1,8 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import DonateSection, {
-  DonateSectionProps
-} from "@/components/donateSection/donateSection"
+import DonateSection, { DonateSectionProps } from "."
 
 export default {
   title: "Resgatemais/DonateSection",

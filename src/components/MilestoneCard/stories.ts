@@ -1,8 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import DonateItemCard, {
-  DonateItemCardProps
-} from "@/components/donateSection/donateItemCard"
+import DonateItemCard, { DonateCardProps } from "."
 
 export default {
   title: "Resgatemais/DonateSection/CardItem",
@@ -15,6 +13,6 @@ export default {
   parameters: {
     layout: "fullscreen"
   }
-} as Meta<DonateItemCardProps>
+} as Meta<DonateCardProps>
 
-export const Default: StoryObj<DonateItemCardProps> = {}
+export const Default: StoryObj<DonateCardProps> = {}

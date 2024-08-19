@@ -7,7 +7,7 @@ const Footer = () => {
   const phone = "(51) 99114-7322"
 
   return (
-    <div className="flex h-[367px] w-full flex-col items-center justify-around bg-red-500 text-white md:flex-row">
+    <div className="flex h-[367px] w-full flex-col items-center justify-around bg-highlight text-white md:flex-row">
       <p
         className={`max-w-[264px] text-sm font-bold md:max-w-[383px] md:text-lg`}>
         {textFooter}
