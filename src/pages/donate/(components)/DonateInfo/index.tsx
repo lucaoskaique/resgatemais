@@ -1,16 +1,16 @@
-export type DonateFooterProps = {
-  title?: string
-  info?: string
-  pixKey?: string
-  bankInfo?: string
+export type FooterProps = {
+  title: string
+  info: string
+  pixKey: string
+  bankInfo: string
 }
 
-export default function DonatePageFooter({
+export default function DonateInfo({
   title,
   info,
   pixKey,
   bankInfo
-}: DonateFooterProps) {
+}: FooterProps) {
   return (
     <footer className="py-12 text-center dark:bg-background-secondary dark:text-secondary lg:py-[120px] lg:pl-20 lg:text-left">
       <h1 className="text-lg font-bold text-highlight">{title}</h1>

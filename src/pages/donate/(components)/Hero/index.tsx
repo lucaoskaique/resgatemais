@@ -1,26 +1,32 @@
 import Image, { StaticImageData } from "next/image"
-// import QrCode from "@/assets/images/qr-code.png"
 
-export type DonateHeroProps = {
-  backgroundImageUrl?: string
-  title?: string
-  paragraph1?: string
-  paragraph2?: string
-  donateCall?: string
-  qrCode?: StaticImageData
+import { cn } from "@/lib/utils"
+
+export type HeroProps = {
+  bgHero: string | StaticImageData
+  title: string
+  paragraph1: string
+  paragraph2: string
+  donateCall: string
+  qrCode: StaticImageData
 }
 
 export default function DonatePageHero({
-  backgroundImageUrl,
+  bgHero,
   title,
   paragraph1,
   paragraph2,
   donateCall,
   qrCode
-}: DonateHeroProps) {
+}: HeroProps) {
+  const bgHeroUrl = typeof bgHero === "string" ? bgHero : bgHero.src
+
   return (
     <div
-      className={`custom-background grid w-full grid-rows-2 justify-items-center gap-y-16 py-20 lg:grid-cols-2 lg:grid-rows-1 lg:items-center lg:justify-items-start`}>
+      className={cn(
+        "custom-bg",
+        "grid w-full grid-rows-2 justify-items-center gap-y-16 py-20 lg:grid-cols-2 lg:grid-rows-1 lg:items-center lg:justify-items-start"
+      )}>
       <article className="max-w-[480px] text-center lg:ml-20 lg:text-left">
         <h1 className="text-lg font-bold text-highlight">{title}</h1>
         <p className="mt-10 text-white">
@@ -43,8 +49,8 @@ export default function DonatePageHero({
         </aside>
       )}
       <style jsx>{`
-        .custom-background {
-          background: url(${backgroundImageUrl}) center/cover no-repeat;
+        .custom-bg {
+          background: url(${bgHeroUrl}) center/cover no-repeat;
         }
       `}</style>
     </div>

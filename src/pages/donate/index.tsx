@@ -1,13 +1,9 @@
-import DonatePageFooter, {
-  DonateFooterProps
-} from "@/components/donatePage/footer/footer"
-import DonatePageHero, {
-  DonateHeroProps
-} from "@/components/donatePage/hero/hero"
+import DonatePageFooter, { FooterProps } from "./(components)/DonateInfo"
+import DonatePageHero, { HeroProps } from "./(components)/Hero"
 
 export type DonatePageProps = {
-  heroProps?: DonateHeroProps
-  footerProps?: DonateFooterProps
+  heroProps: HeroProps
+  footerProps: FooterProps
 }
 
 export default function DonatePage({

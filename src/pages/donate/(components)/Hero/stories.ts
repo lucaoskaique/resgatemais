@@ -1,12 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import qrCode from "@/assets/images/qr-code.png"
-
-import DonatePageHero, { DonateHeroProps } from "./hero"
-import { heroTemplate } from "../template.json"
+import DonatePageHero, { HeroProps } from "."
+import { heroTemplate } from "../template"
 
 export default {
-  title: "Resgatemais/DonatePage/Hero",
+  title: "Resgatemais/Donate Page/Hero",
   component: DonatePageHero,
   parameters: {
     layout: "centered"
@@ -21,10 +19,10 @@ export default {
     paragraph1: heroTemplate.paragraph1,
     paragraph2: heroTemplate.paragraph2,
     donateCall: heroTemplate.donateCall,
-    qrCode: qrCode,
-    backgroundImageUrl: heroTemplate.imageUrl
+    qrCode: heroTemplate.qrCode,
+    bgHero: heroTemplate.bgHero
   },
   tags: ["autodocs"]
-} as Meta<DonateHeroProps>
+} as Meta<HeroProps>
 
-export const Default: StoryObj<DonateHeroProps> = {}
+export const Default: StoryObj<HeroProps> = {}
