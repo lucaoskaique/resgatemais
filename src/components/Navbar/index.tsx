@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
-import { SwitchTheme } from "../switchTheme/switch-theme"
+import ThemeToggle from "@/components/ThemeToggler/theme-toggle"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -50,7 +50,7 @@ export default function Navbar() {
         />
       </Link>
       <Link
-        className="block rounded-[0.313rem] bg-color-red px-4 py-3 lg:hidden"
+        className="bg-color-red block rounded-[0.313rem] px-4 py-3 lg:hidden"
         data-testid="doar-link-small"
         href="#">
         {textLinks[2]}
@@ -96,11 +96,11 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <SwitchTheme />
+            <ThemeToggle />
           </li>
           <li className="py-3">
             <Link
-              className="rounded-[0.313rem] bg-color-red px-4 py-3"
+              className="bg-color-red rounded-[0.313rem] px-4 py-3"
               data-testid="doar-link-large"
               href="#">
               {textLinks[2]}
@@ -108,7 +108,7 @@ export default function Navbar() {
           </li>
         </ul>
         <div className="flex items-center gap-4 lg:hidden">
-          <SwitchTheme />
+          <ThemeToggle />
           <button
             onClick={toggleMenu}
             className="flex flex-col items-center justify-center gap-1 rounded-lg p-4"
