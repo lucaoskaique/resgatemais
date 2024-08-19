@@ -13,7 +13,7 @@ const template: inputProps = {
 }
 
 export default {
-  title: "Resgatemais/RegisterEmail",
+  title: "ResgateMais/Components/Input",
   component: RegisterEmail,
   parameters: {
     layout: "fullscreen"

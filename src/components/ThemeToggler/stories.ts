@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import ThemeToggle, { SwitchProps } from "."
 
 export default {
-  title: "ResgateMais/Componentes/ThemeToggler",
+  title: "ResgateMais/Components/ThemeToggler",
   component: ThemeToggle,
   parameters: {
     layout: "centered"

@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import Footer from "."
 
 export default {
-  title: "Resgatemais/Footer",
+  title: "ResgateMais/Sections/Footer",
   component: Footer,
   args: {},
   parameters: {

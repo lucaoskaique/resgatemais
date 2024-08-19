@@ -22,7 +22,7 @@ const imageTemplate = [
 ]
 
 export default {
-  title: "Resgatemais/Components/Carousel",
+  title: "ResgateMais/Components/Carousel",
   component: Carousel,
   parameters: {
     layout: "centered"

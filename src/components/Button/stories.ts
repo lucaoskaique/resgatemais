@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import Button, { ButtonProps } from "."
 
 export default {
-  title: "Resgatemais/Componentes/Button",
+  title: "ResgateMais/Components/Button",
   component: Button,
   tags: ["autodocs"],
   parameters: {
