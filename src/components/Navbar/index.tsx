@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
-import ThemeToggle from "@/components/ThemeToggler/theme-toggle"
+import ThemeToggle from "@/components/ThemeToggler"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
