@@ -1,21 +1,21 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import DonatePageFooter, { FooterProps } from "."
-import { footerTemplate } from "../template"
+import DonateInfo, { InfoProps } from "."
+import { infoTemplate as template } from "../template"
 
 export default {
-  title: "Resgatemais/Donate Page/Footer",
-  component: DonatePageFooter,
+  title: "Resgatemais/Donate Page/Donate Info",
+  component: DonateInfo,
   parameters: {
     layout: "centered"
   },
   args: {
-    title: footerTemplate.title,
-    info: footerTemplate.info,
-    pixKey: footerTemplate.pixKey,
-    bankInfo: footerTemplate.bankInfo
+    title: template.title,
+    info: template.info,
+    pixKey: template.pixKey,
+    bankInfo: template.bankInfo
   },
   tags: ["autodocs"]
-} as Meta<FooterProps>
+} as Meta<InfoProps>
 
-export const Default: StoryObj<FooterProps> = {}
+export const Default: StoryObj<InfoProps> = {}

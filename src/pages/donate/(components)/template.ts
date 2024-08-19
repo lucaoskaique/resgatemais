@@ -1,7 +1,7 @@
 import qrCode from "@/assets/images/qr-code.png"
 import bgHero from "@/stories/assets/bg-hero.png"
 
-import { FooterProps } from "./DonateInfo"
+import { InfoProps } from "./DonateInfo"
 import { HeroProps } from "./Hero"
 
 const heroTemplate: HeroProps = {
@@ -15,11 +15,11 @@ const heroTemplate: HeroProps = {
   qrCode: qrCode
 }
 
-const footerTemplate: FooterProps = {
+const infoTemplate: InfoProps = {
   title: "COMO DOAR",
   info: "O Fundo Filantrópico Resgate+ aceita doações:",
   pixKey: "resgatemais@sitawi.net",
   bankInfo: "[dados bancários da sitawi]"
 }
 
-export { heroTemplate, footerTemplate }
+export { heroTemplate, infoTemplate }

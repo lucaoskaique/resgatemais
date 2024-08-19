@@ -1,26 +1,25 @@
-export type DonateCardProps = {
-  title?: string
-  content?: string
+export type MilestoneCardProps = {
+  title: string
+  content: string
   subcontent?: string
 }
-export const DonateItemCard = ({
+
+export const MilestoneCard = ({
   title,
   content,
   subcontent
-}: DonateCardProps) => {
+}: MilestoneCardProps) => {
   return (
     <div className="flex w-[236px] gap-[20px]">
       <span className="h-[30px] w-[4px] bg-black" />
       <div>
-        <p className="text-[14px] font-medium leading-[16px]">{title}</p>
-        <p className="text-[18px] font-bold leading-[20.7px] text-highlight">
-          {content}
-        </p>
-        <p className="text-[10px] font-bold leading-[11.5px] text-highlight">
+        <p className="text-sm font-medium leading-4">{title}</p>
+        <p className="text-lg font-bold leading-5 text-highlight">{content}</p>
+        <p className="text-[10px] font-bold leading-3 text-highlight">
           {subcontent}
         </p>
       </div>
     </div>
   )
 }
-export default DonateItemCard
+export default MilestoneCard

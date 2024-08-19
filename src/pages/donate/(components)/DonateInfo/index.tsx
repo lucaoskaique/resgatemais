@@ -1,4 +1,4 @@
-export type FooterProps = {
+export type InfoProps = {
   title: string
   info: string
   pixKey: string
@@ -10,7 +10,7 @@ export default function DonateInfo({
   info,
   pixKey,
   bankInfo
-}: FooterProps) {
+}: InfoProps) {
   return (
     <footer className="py-12 text-center dark:bg-background-secondary dark:text-secondary lg:py-[120px] lg:pl-20 lg:text-left">
       <h1 className="text-lg font-bold text-highlight">{title}</h1>

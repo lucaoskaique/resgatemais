@@ -1,15 +1,18 @@
-import Carousel from "@/components/Carousel/index"
-import MilestoneCard from "@/components/MilestoneCard"
+import Carousel from "@/components/Carousel"
+import MilestoneCard, { MilestoneCardProps } from "@/components/MilestoneCard"
 
 export type DonateSectionProps = {
   title?: string
   subtitle?: string
-  content?: string
+  description?: string
+  milestones?: MilestoneCardProps[]
 }
+
 export const DonateSection = ({
   title,
   subtitle,
-  content
+  description,
+  milestones
 }: DonateSectionProps) => {
   return (
     <section className="flex flex-col gap-[100px] pb-[75px] pl-[173px] pt-[106px]">
@@ -21,17 +24,16 @@ export const DonateSection = ({
           <h2 className="w-[217px] text-[24px] font-bold leading-[27.4px] text-highlight">
             {subtitle}
           </h2>
-          <p className="my-[30px] w-[217px]">{content}</p>
+          <p className="my-[30px] w-[217px]">{description}</p>
           <ul className="flex flex-col gap-[30px]">
-            <li>
-              <MilestoneCard />
-            </li>
-            <li>
-              <MilestoneCard />
-            </li>
-            <li>
-              <MilestoneCard />
-            </li>
+            {milestones?.map((item, i) => (
+              <MilestoneCard
+                key={i}
+                title={item.title}
+                content={item.content}
+                subcontent={item.subcontent}
+              />
+            ))}
           </ul>
         </div>
         <Carousel mediaType={"image"} />
