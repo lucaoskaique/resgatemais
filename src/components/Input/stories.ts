@@ -1,7 +1,16 @@
 import { Meta, StoryObj } from "@storybook/react"
 
+import bgImage from "@/stories/assets/bg-footer.png"
+
 import RegisterEmail, { inputProps } from "."
-import { inputTemplate } from "./template"
+
+const template: inputProps = {
+  background: bgImage,
+  title: "Cadastrar email para receber mais infos",
+  placeholder: "exemplo@email.com",
+  logo: "/logo-white-noText.png",
+  textLogo: "Organização Audiovisual da Sociedade Civil"
+}
 
 export default {
   title: "Resgatemais/RegisterEmail",
@@ -10,11 +19,11 @@ export default {
     layout: "fullscreen"
   },
   args: {
-    background: inputTemplate.background,
-    title: inputTemplate.title,
-    placeholder: inputTemplate.placeholder,
-    logo: inputTemplate.logo,
-    textLogo: inputTemplate.textLogo
+    background: template.background,
+    title: template.title,
+    placeholder: template.placeholder,
+    logo: template.logo,
+    textLogo: template.textLogo
   }
 } as Meta<inputProps>
 
