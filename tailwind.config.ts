@@ -13,13 +13,11 @@ const config: Config = {
         alteHaas: ['"Alte Haas Grotesk"']
       },
       colors: {
-        primary: "rgb(var(--primary))",
-        secondary: "rgb(var(--secondary))",
-        background: "rgb(var(--background))",
-        "background-secondary": "rgb(var(--background-secondary))",
-        highlight: "rgb(var(--highlight))",
-        "light-gray": "rgb(var(--light-gray))",
-        "dark-gray": "rgb(var(--dark-gray))"
+        primary: "hsl(var(--primary))",
+        secondary: "hsl(var(--secondary))",
+        background: "hsl(var(--background))",
+        "background-secondary": "hsl(var(--background-secondary))",
+        highlight: "hsl(var(--highlight))"
       },
       boxShadow: {
         button: "0px 0px 0px 1px rgba(0, 0, 0, 0.2) inset"
@@ -27,11 +25,7 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "register-email": "url(../../public/bg-footer.png)"
-      },
-      backgroundColor: {
-        "color-red": "#D63E44"
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))"
       }
     }
   },
