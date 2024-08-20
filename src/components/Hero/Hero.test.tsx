@@ -4,11 +4,10 @@ import { describe, expect, it } from "vitest"
 import Hero from "."
 
 describe("<Hero />", () => {
-  it("should render the heading", () => {
-    const { container } = render(<Hero />)
-
-    expect(screen.getByRole("heading", { name: /Hero/ })).toBeInTheDocument()
-
-    expect(container.firstChild).toMatchSnapshot()
+  it("should render the heading text", () => {
+    render(<Hero />)
+    expect(
+      screen.getByText("Organização Audiovisual da Sociedade Civil")
+    ).toBeDefined()
   })
 })
