@@ -2,21 +2,21 @@ import Image, { StaticImageData } from "next/image"
 
 import { cn } from "@/lib/utils"
 
-export type inputProps = {
-  background: StaticImageData
-  title?: string
-  placeholder?: string
+export type NewsletterProps = {
+  background: string | StaticImageData
+  title: string
+  placeholder: string
   logo: string | StaticImageData
   textLogo: string
 }
 
-const Input = ({
+export default function Newsletter({
   background,
   title,
   placeholder,
   logo,
   textLogo
-}: inputProps) => {
+}: NewsletterProps) {
   const bgUrl = typeof background === "string" ? background : background.src
 
   return (
@@ -59,5 +59,3 @@ const Input = ({
     </div>
   )
 }
-
-export default Input

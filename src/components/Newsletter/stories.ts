@@ -2,9 +2,9 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import bgImage from "@/stories/assets/bg-footer.png"
 
-import RegisterEmail, { inputProps } from "."
+import Newsletter, { NewsletterProps } from "."
 
-const template: inputProps = {
+export const template: NewsletterProps = {
   background: bgImage,
   title: "Cadastrar email para receber mais infos",
   placeholder: "exemplo@email.com",
@@ -14,7 +14,7 @@ const template: inputProps = {
 
 export default {
   title: "ResgateMais/Components/Input",
-  component: RegisterEmail,
+  component: Newsletter,
   parameters: {
     layout: "fullscreen"
   },
@@ -25,6 +25,6 @@ export default {
     logo: template.logo,
     textLogo: template.textLogo
   }
-} as Meta<inputProps>
+} as Meta<NewsletterProps>
 
-export const Default: StoryObj<inputProps> = {}
+export const Default: StoryObj<NewsletterProps> = {}
