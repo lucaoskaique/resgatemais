@@ -2,22 +2,20 @@ import Image, { StaticImageData } from "next/image"
 
 export type CarouselMediaProps = {
   mediaType: "video" | "image"
-  src?: string | StaticImageData
-  vSrc?: string
+  src: string | StaticImageData
   label?: string
 }
 
 export default function CarouselMedia({
   mediaType,
   src,
-  vSrc,
   label
 }: CarouselMediaProps) {
   return (
-    <article className="relative">
+    <article className="relative max-h-[420px]">
       {mediaType === "image" ? (
         <Image
-          className="h-full w-full"
+          className="h-full"
           src={src ?? ""}
           alt={label ?? ""}
           width={840}
@@ -26,7 +24,7 @@ export default function CarouselMedia({
       ) : (
         // adicionar evento para vídeo der autoPlay apenas quando aparecer na tela
         <video className="h-full w-full" autoPlay loop muted>
-          <source src={vSrc} type="video/mp4" />
+          <source src={typeof src === "string" ? src : ""} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       )}

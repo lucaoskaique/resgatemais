@@ -8,14 +8,14 @@ export type BaseTemplateProps = {
 }
 
 const Base = ({ children }: BaseTemplateProps) => (
-  <div className="flex h-screen flex-col justify-between">
-    <div className="h-24 bg-gray-200">
+  <div className="relative flex min-h-screen w-full flex-col justify-between">
+    <div className="fixed top-0 z-50 flex h-20 w-full items-center">
       <Navbar />
     </div>
 
     <div className="flex-1">{children}</div>
 
-    <footer className="h-24 bg-red-200">
+    <footer className="bg-highlight">
       <Footer />
     </footer>
   </div>

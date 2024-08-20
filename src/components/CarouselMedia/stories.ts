@@ -33,7 +33,7 @@ export const Image: StoryObj<CarouselMediaProps> = {
 export const Video: StoryObj<CarouselMediaProps> = {
   args: {
     mediaType: "video",
-    vSrc: videoTemplate.video,
+    src: videoTemplate.video,
     label: videoTemplate.label
   }
 }

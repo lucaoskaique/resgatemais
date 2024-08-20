@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import DonateSection, { DonateSectionProps } from "."
 
-const template = {
+export const template = {
   title: "DOAÇÕES MOBILIZADAS",
   subtitle: "DESDE 06 DE MAIO",
   description:

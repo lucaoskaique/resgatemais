@@ -1,31 +1,31 @@
-import Carousel from "@/components/Carousel"
+import Carousel, { MediaProps } from "@/components/Carousel"
 import MilestoneCard, { MilestoneCardProps } from "@/components/MilestoneCard"
 
 export type DonateSectionProps = {
-  title?: string
-  subtitle?: string
-  description?: string
-  milestones?: MilestoneCardProps[]
+  title: string
+  subtitle: string
+  description: string
+  milestones: MilestoneCardProps[]
+  media: MediaProps[]
+  mediaAutoplay: boolean
 }
 
 export const DonateSection = ({
   title,
   subtitle,
   description,
-  milestones
+  milestones,
+  media,
+  mediaAutoplay
 }: DonateSectionProps) => {
   return (
-    <section className="flex flex-col gap-[100px] pb-[75px] pl-[173px] pt-[106px]">
-      <h1 className="w-[456px] text-[40px] font-bold leading-none text-highlight">
-        {title}
-      </h1>
-      <div className="grid w-full grid-cols-[235px_minmax(300px,829px)]">
-        <div className="w-[235px]">
-          <h2 className="w-[217px] text-[24px] font-bold leading-[27.4px] text-highlight">
-            {subtitle}
-          </h2>
-          <p className="my-[30px] w-[217px]">{description}</p>
-          <ul className="flex flex-col gap-[30px]">
+    <section className="container grid grid-rows-[min-content_1fr] gap-7 py-7 lg:gap-20">
+      <h1 className="text-3xl font-bold text-highlight lg:text-4xl">{title}</h1>
+      <div className="grid grid-rows-[repeat(2,min-content)] gap-10 lg:grid-cols-[355px_1fr] lg:grid-rows-1">
+        <div className="flex flex-col gap-4">
+          <h2 className="text-xl font-bold text-highlight">{subtitle}</h2>
+          <p className="mb-6 w-3/4">{description}</p>
+          <ul className="flex flex-row justify-between gap-2 lg:flex-col lg:gap-8">
             {milestones?.map((item, i) => (
               <MilestoneCard
                 key={i}
@@ -36,7 +36,11 @@ export const DonateSection = ({
             ))}
           </ul>
         </div>
-        <Carousel mediaType={"image"} />
+        <Carousel
+          mediaType={"image"}
+          contentList={media}
+          autoplay={mediaAutoplay}
+        />
       </div>
     </section>
   )
