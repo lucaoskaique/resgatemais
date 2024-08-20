@@ -1,47 +1,19 @@
 import { Moon, Sun } from "lucide-react"
-import { Dispatch, SetStateAction, useState } from "react"
-import Switch from "react-switch"
+import { useState } from "react"
 
-type ToggleProps = {
-  theme?: string
-  setTheme: Dispatch<SetStateAction<string>>
-}
+import { ToggleProps } from "../Switch/switch"
 
-export function SwitchToggle({ theme, setTheme }: ToggleProps) {
-  const handleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
-  }
-
-  return (
-    <Switch
-      onChange={handleTheme}
-      checked={theme === "light"}
-      checkedIcon={false}
-      checkedHandleIcon={
-        <Sun className="size-full fill-[#FFD60A] p-[1px] text-[#FFD60A]" />
-      }
-      onColor="#FFC300"
-      uncheckedIcon={false}
-      uncheckedHandleIcon={<Moon className="size-full text-[#001D3D]" />}
-      offColor="#001D3D"
-      handleDiameter={22}
-      height={28}
-      width={50}
-    />
-  )
-}
-
-export function HamburgerToggle({ setTheme }: ToggleProps) {
+export function DropdownToggle({ setTheme }: ToggleProps) {
   const [open, setOpen] = useState(false)
 
-  function handleHamburgerState() {
+  function handleDropdownState() {
     setOpen(open ? false : true)
   }
 
   return (
     <div className="relative">
       <button
-        onClick={handleHamburgerState}
+        onClick={handleDropdownState}
         className="flex size-10 items-center justify-center rounded-md border border-primary/20 hover:bg-primary/10">
         <Sun className="block size-5 dark:hidden" />
         <Moon className="hidden size-5 dark:block" />

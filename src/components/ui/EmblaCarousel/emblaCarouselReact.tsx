@@ -1,6 +1,4 @@
-/* eslint no-unused-vars: "off" */
-"use client"
-
+/* eslint-disable no-unused-vars */
 import useEmblaCarousel, {
   type UseEmblaCarouselType
 } from "embla-carousel-react"
