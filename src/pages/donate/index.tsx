@@ -1,22 +1,5 @@
-import DonatePageFooter, { InfoProps } from "./(components)/DonateInfo"
-import DonatePageHero, { HeroProps } from "./(components)/Hero"
+import Donate from "@/templates/Donate"
 
-export type DonatePageProps = {
-  heroProps: HeroProps
-  footerProps: InfoProps
-}
-
-export default function DonatePage({
-  heroProps,
-  footerProps
-}: DonatePageProps) {
-  return (
-    <main className="flex h-screen w-screen flex-col">
-      <section className="flex w-full flex-1 justify-center">
-        {/* Header */}
-        <DonatePageHero {...heroProps} />
-      </section>
-      <DonatePageFooter {...footerProps} />
-    </main>
-  )
+export default function DonatePage() {
+  return <Donate />
 }
