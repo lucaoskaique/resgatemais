@@ -9,8 +9,8 @@ export type HeroProps = {
 export default function Hero({ title, logo, imageHeroUrl }: HeroProps) {
   return (
     <div className="relative">
-      <div className="custom-background left-0 top-0 z-[-1] h-dvh w-full bg-hero bg-cover bg-no-repeat">
-        <div className="absolute bottom-10 left-10 text-white md:pl-20 md:pt-96 lg:pl-40 lg:pt-72">
+      <div className="custom-background h-screen w-full">
+        <div className="absolute bottom-[50px] left-[50px] text-white md:bottom-[110px] md:left-[150px]">
           <Image
             src={logo || "/icon-red.png"}
             alt="A+Vermelho"
