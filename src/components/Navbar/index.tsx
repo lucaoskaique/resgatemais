@@ -1,5 +1,3 @@
-"use client"
-
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
@@ -50,7 +48,7 @@ export default function Navbar() {
         />
       </Link>
       <Link
-        className="bg-color-red block rounded-[0.313rem] px-4 py-3 lg:hidden"
+        className="block rounded-[0.313rem] bg-highlight px-4 py-3 lg:hidden"
         data-testid="doar-link-small"
         href="#">
         {textLinks[2]}
@@ -100,7 +98,7 @@ export default function Navbar() {
           </li>
           <li className="py-3">
             <Link
-              className="bg-color-red rounded-[0.313rem] px-4 py-3"
+              className="rounded-[0.313rem] bg-highlight px-4 py-3"
               data-testid="doar-link-large"
               href="#">
               {textLinks[2]}

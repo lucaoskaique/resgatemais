@@ -10,7 +10,7 @@ export type inputProps = {
   textLogo: string
 }
 
-const RegisterEmail = ({
+const Input = ({
   background,
   title,
   placeholder,
@@ -60,4 +60,4 @@ const RegisterEmail = ({
   )
 }
 
-export default RegisterEmail
+export default Input

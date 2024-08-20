@@ -1,8 +1,8 @@
-"use client"
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 
-import { HamburgerToggle, SwitchToggle } from "./togglers"
+import { DropdownToggle } from "../ui/DropdownButton/dropdown"
+import { SwitchToggle } from "../ui/Switch/switch"
 
 export type SwitchProps = {
   switcher?: boolean
@@ -26,6 +26,6 @@ export default function ThemeToggle({ switcher }: SwitchProps) {
   if (switcher) {
     return <SwitchToggle theme={theme} setTheme={setTheme} />
   } else {
-    return <HamburgerToggle theme={theme} setTheme={setTheme} />
+    return <DropdownToggle theme={theme} setTheme={setTheme} />
   }
 }

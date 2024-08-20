@@ -1,12 +1,12 @@
 import Autoplay from "embla-carousel-autoplay"
 import { StaticImageData } from "next/image"
 
+import CarouselMedia from "../CarouselMedia"
 import {
   EmblaCarousel,
   EmblaCarouselContent,
   EmblaCarouselItem
-} from "./emblaCarouselReact"
-import CarouselMedia from "../CarouselMedia"
+} from "../ui/EmblaCarousel/emblaCarouselReact"
 
 export type CarouselProps = {
   autoplay?: boolean
