@@ -1,11 +1,15 @@
+import DonateSection from "@/components/DonateSection"
+import Newsletter from "@/components/Newsletter"
+import { DStemp, Mediatemp, NLtemp } from "@/pages/api/(templates)/template"
+
 import Base from "../Base"
 
 const Home = () => {
   return (
     <Base>
       <section>
-        {/* sessão hero */}
-        <div style={{ height: "100px", backgroundColor: "lightgray" }}>
+        {/* sessão hero - 100vh*/}
+        <div style={{ height: "100vh", backgroundColor: "lightgreen" }}>
           sessão hero
         </div>
       </section>
@@ -15,24 +19,26 @@ const Home = () => {
           sessão about
         </div>
       </section>
-      <section>
-        {/* sessão mission (Missão, Visão e Valores) */}
-        <div style={{ height: "100px", backgroundColor: "lightgreen" }}>
-          sessão mission (Missão, Visão e Valores)
-        </div>
-      </section>
-      <section>
+      <section className="">
         {/* sessão donations (Doações Mobilizadas) */}
-        <div style={{ height: "100px", backgroundColor: "lightcoral" }}>
-          sessão donations (Doações Mobilizadas)
-        </div>
+        <DonateSection
+          title={DStemp.title}
+          subtitle={DStemp.subtitle}
+          description={DStemp.description}
+          milestones={DStemp.milestones}
+          mediaAutoplay={true}
+          media={Mediatemp}
+        />
       </section>
       <section>
         {/* sessão newsletter */}
-        <div
-          style={{ height: "100px", backgroundColor: "lightgoldenrodyellow" }}>
-          sessão newsletter
-        </div>
+        <Newsletter
+          background={NLtemp.background}
+          title={NLtemp.title}
+          placeholder={NLtemp.placeholder}
+          logo={NLtemp.logo}
+          textLogo={NLtemp.textLogo}
+        />
       </section>
     </Base>
   )
