@@ -6,16 +6,18 @@ import {
   EmblaCarousel,
   EmblaCarouselContent,
   EmblaCarouselItem
-} from "../ui/EmblaCarousel/emblaCarouselReact"
+} from "../ui/EmblaCarousel"
+
+export type MediaProps = {
+  src: string | StaticImageData
+  label?: string
+}
 
 export type CarouselProps = {
-  autoplay?: boolean
+  autoplay: boolean
   autoplayDelay?: number
   mediaType: "video" | "image"
-  contentList?: {
-    src: string | StaticImageData
-    label: string
-  }[]
+  contentList?: MediaProps[]
 }
 
 export default function Carousel({
@@ -40,12 +42,12 @@ export default function Carousel({
 
   return (
     <EmblaCarousel
-      className="aspect-video w-[820px]"
+      className="h-min max-h-[420px]"
       opts={{ loop: true }}
       plugins={carouselPlugins}>
-      <EmblaCarouselContent className="ml-0">
+      <EmblaCarouselContent className="ml-0 h-min">
         {contentList.map((media, i) => (
-          <EmblaCarouselItem key={i} className="basis-full pl-0">
+          <EmblaCarouselItem key={i} className="h-min basis-full pl-0">
             <CarouselMedia
               mediaType={mediaType}
               src={media.src}

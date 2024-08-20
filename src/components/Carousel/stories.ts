@@ -6,7 +6,7 @@ import image1 from "@/assets/images/carousel-vila-farrapos.png"
 
 import Carousel, { CarouselProps } from "."
 
-const imageTemplate = [
+export const imageTemplate = [
   {
     label: "Vila Farrapos",
     src: image1
