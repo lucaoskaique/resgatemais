@@ -3,7 +3,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import Empty from "."
 
 export default {
-  title: "Empty",
+  title: "ResgateMais/Empty",
   component: Empty
 } as Meta
 
