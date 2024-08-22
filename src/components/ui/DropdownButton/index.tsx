@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react"
 
 import { ToggleProps } from "../SwitchToggle"
 
-export function DropdownToggle({ setTheme }: ToggleProps) {
+export function DropdownButton({ setTheme }: ToggleProps) {
   const [open, setOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
 
