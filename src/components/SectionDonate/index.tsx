@@ -25,7 +25,7 @@ export const DonateSection = ({
         <div className="flex flex-col gap-4">
           <h2 className="text-xl font-bold text-highlight">{subtitle}</h2>
           <p className="mb-6 w-3/4">{description}</p>
-          <ul className="flex flex-row justify-between gap-2 lg:flex-col lg:gap-8">
+          <ul className="flex flex-row flex-wrap justify-between max-sm:gap-4 lg:flex-col lg:gap-8">
             {milestones?.map((item, i) => (
               <MilestoneCard
                 key={i}

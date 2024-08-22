@@ -70,7 +70,7 @@ export default function Navbar({ bgColor = "dark" }: NavbarProps) {
           {/* Mobile Logo */}
           <Image
             data-testid="mobile-logo"
-            className="w-full max-w-[6.5rem] sm:hidden"
+            className="w-10 sm:hidden"
             src={logo.mobile}
             width={100}
             height={100}
