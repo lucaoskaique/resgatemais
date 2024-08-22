@@ -4,29 +4,23 @@
 
 @layer base {
   :root {
-    --primary: 0, 0, 0; /* Texto Principal */
-    --secondary: 255, 255, 255; /* Texto Secundário */
+    --primary: 222.2 84% 4.9%; /* Texto Principal */
+    --background: 0 0% 85%; /* Background Principal */
 
-    --background: 224, 224, 224; /* Background Principal */
-    --background-secondary: 50, 50, 50; /* Background Secundário (oposto) */
+    --secondary: 210 40% 98%; /* Texto Secundário */
+    --background-secondary: 0 0% 20%; /* Background Secundário (oposto) */
 
-    --highlight: 214, 62, 68; /* Vermelho (text, bg) */
-
-    --light-gray: 217, 217, 217;
-    --dark-gray: 50, 50, 50;
+    --highlight: 358 65% 54%; /* Vermelho (text, bg) */
   }
 
   .dark {
-    --primary: 255, 255, 255; /* Texto Principal */
-    --secondary: 0, 0, 0; /* Texto Secundário */
+    --primary: 210 40% 98%; /* Texto Principal */
+    --background: 0 0% 20%; /* Background Principal */
 
-    --background: 50, 50, 50; /* Background Principal */
-    --background-secondary: 224, 224, 224; /* Background Secundário (oposto) */
+    --secondary: 222.2 84% 4.9%; /* Texto Secundário */
+    --background-secondary: 0 0% 85%; /* Background Secundário (oposto) */
 
-    --highlight: 214, 62, 68; /* Vermelho (text, bg) */
-
-    --light-gray: 217, 217, 217;
-    --dark-gray: 50, 50, 50;
+    --highlight: 358 65% 54%; /* Vermelho (text, bg) */
   }
 }
 
