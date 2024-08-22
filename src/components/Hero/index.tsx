@@ -17,15 +17,14 @@ type HomeProps = {
 }
 
 export type HeroProps = {
-  bgHero?: string | StaticImageData
+  bgUrl?: string
   home?: HomeProps
   donatePage?: DonatePageProps
 }
 
-export default function Hero({ bgHero, home, donatePage }: HeroProps) {
+export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
   const router = useRouter()
   const donatePageRoute = router.asPath === "/donate"
-  const bgHeroUrl = typeof bgHero === "string" ? bgHero : bgHero?.src
 
   return (
     <section
@@ -73,7 +72,7 @@ export default function Hero({ bgHero, home, donatePage }: HeroProps) {
       )}
       <style jsx>{`
         .custom-bg {
-          background: url(${bgHeroUrl}) center/cover no-repeat;
+          background: url(${bgUrl}) center/cover no-repeat;
         }
       `}</style>
     </section>

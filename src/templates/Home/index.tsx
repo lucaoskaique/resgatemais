@@ -15,7 +15,7 @@ const Home = () => {
     <Base>
       {/* sessão hero - 100vh*/}
       <Hero
-        bgHero={Herotemp.bgHero}
+        bgUrl={Herotemp.bgHero.src}
         home={{
           logo: Herotemp.home.logo,
           title: Herotemp.home.title
