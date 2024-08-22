@@ -14,11 +14,11 @@ type ButtonTypes =
   | ButtonHTMLAttributes<HTMLButtonElement>
 
 export type ButtonProps = {
-  background?: "red" | "white" | "black" | "blue"
+  background?: "red" | "white" | "black" | "transparent"
   size?: "xlarge" | "large" | "medium" | "small"
   icon?: ReactNode
   fullWidth?: boolean
-  fontWeight?: boolean
+  fontBold?: "bold" | "medium"
   textColor?: "primary" | "secondary" | "white" | "black"
   as?: ElementType
 } & ButtonTypes
@@ -34,6 +34,7 @@ const Button: ForwardRefRenderFunction<
     fullWidth = false,
     icon,
     textColor = "white",
+    fontBold = "bold",
     as: Component = "a",
     ...props
   },
@@ -47,10 +48,10 @@ const Button: ForwardRefRenderFunction<
   }
 
   const backgroundClasses = {
-    red: "bg-red-500",
-    blue: "bg-blue-500",
+    red: "bg-highlight",
     white: "bg-white",
-    black: "bg-black"
+    black: "bg-black",
+    transparent: "bg-transparent"
   }
 
   const textColorClasses = {
@@ -60,10 +61,16 @@ const Button: ForwardRefRenderFunction<
     black: "text-black"
   }
 
+  const fontWeightClasses = {
+    bold: "font-bold",
+    medium: "font-medium"
+  }
+
   return (
     <Component
       className={cn(
-        "rounded-md font-bold",
+        "rounded-md",
+        fontWeightClasses[fontBold],
         sizeClasses[size],
         backgroundClasses[background],
         textColorClasses[textColor],

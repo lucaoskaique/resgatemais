@@ -7,17 +7,14 @@ const Footer = () => {
   const phone = "(51) 99114-7322"
 
   return (
-    <div className="flex h-[367px] w-full flex-col items-center justify-around bg-red-500 text-white md:flex-row">
-      <p
-        className={`max-w-[264px] text-sm font-bold md:max-w-[383px] md:text-lg`}>
+    <div className="container flex w-full flex-col items-center justify-between gap-8 px-5 py-20 text-white md:flex-row md:gap-0">
+      <p className="max-w-[264px] text-sm font-bold md:max-w-[383px] md:text-lg">
         {textFooter}
       </p>
 
-      <div className="flex min-w-[211px] flex-col">
-        <h2 className={`mb-[33px] text-[18px] font-bold leading-[18px]`}>
-          {title}
-        </h2>
-        <ul className={`text-sm`}>
+      <div className="flex min-w-[211px] flex-col gap-2 md:gap-6">
+        <h2 className="text-[18px] font-bold leading-[18px]">{title}</h2>
+        <ul className="text-sm">
           <li className="leading-[16.24px]">E-mail: {email}</li>
           <li className="leading-[16.24px]">Instagram: {instagram}</li>
           <li className="leading-[16.24px]">Telefone: {phone}</li>
