@@ -1,18 +1,11 @@
-export interface FooterProps {
-  textFooter?: string
-  title?: string
-  phone?: string
-  email?: string
-  instagram?: string
-}
+const Footer = () => {
+  const textFooter =
+    "Procuramos organizações parceiras, dispostas a contribuir com todas as etapas de reconstrução do Rio Grande do Sul para somar junto com a Resgate+ no desenvolvimento dos nossos projetos."
+  const title = "FALE CONOSCO"
+  const email = "resgatemais@gmail.com"
+  const instagram = "@resgate.mais"
+  const phone = "(51) 99114-7322"
 
-const Footer = ({
-  textFooter,
-  title,
-  phone,
-  email,
-  instagram
-}: FooterProps) => {
   return (
     <div className="flex h-[367px] w-full flex-col items-center justify-around bg-red-500 text-white md:flex-row">
       <p
@@ -25,11 +18,9 @@ const Footer = ({
           {title}
         </h2>
         <ul className={`text-sm`}>
-          {email && <li className="leading-[16.24px]">E-mail: {email}</li>}
-          {instagram && (
-            <li className="leading-[16.24px]">Instagram: {instagram}</li>
-          )}
-          {phone && <li className="leading-[16.24px]">Telefone: {phone}</li>}
+          <li className="leading-[16.24px]">E-mail: {email}</li>
+          <li className="leading-[16.24px]">Instagram: {instagram}</li>
+          <li className="leading-[16.24px]">Telefone: {phone}</li>
         </ul>
       </div>
     </div>
