@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 
 import { cn } from "@/lib/utils"
 
-type DonatePageProps = {
+export type DonatePageProps = {
   title?: string
   paragraph1?: string
   paragraph2?: string
