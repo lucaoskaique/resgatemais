@@ -1,11 +1,9 @@
 import qrCode from "@/assets/images/qr-code.png"
-import bgHero from "@/stories/assets/bg-hero.png"
+import { DonatePageProps } from "@/components/Hero/index"
 
 import { InfoProps } from "./DonateInfo"
-import { HeroProps } from "./Hero"
 
-const heroTemplate: HeroProps = {
-  bgHero: bgHero,
+const heroTemplate: DonatePageProps = {
   title: "AJUDE A MANTER NOSSA OPERAÇÃO ATIVA",
   paragraph1:
     "A tragédia climática que assola o Rio Grande do Sul deixou submersas 471 cidades, desalojou 644 mil pessoas e já afetou em média 3,1 milhões de pessoas.",
