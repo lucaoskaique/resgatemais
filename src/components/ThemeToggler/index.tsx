@@ -2,7 +2,7 @@ import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 
 import { DropdownToggle } from "../ui/DropdownButton"
-import { SwitchToggle } from "../ui/Switch"
+import { SwitchToggle } from "../ui/SwitchToggle"
 
 export type SwitchProps = {
   switcher?: boolean

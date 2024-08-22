@@ -12,7 +12,7 @@ export default function DonateInfo({
   bankInfo
 }: InfoProps) {
   return (
-    <footer className="py-8 text-center dark:bg-background-secondary dark:text-secondary lg:py-16 lg:pl-20 lg:text-left">
+    <section className="py-8 text-center dark:bg-background-secondary dark:text-secondary lg:py-16 lg:pl-20 lg:text-left">
       <h1 className="text-lg font-bold text-highlight">{title}</h1>
       <div className="mt-4 leading-loose lg:mt-10">
         <h2>{info}</h2>
@@ -28,6 +28,6 @@ export default function DonateInfo({
           </p>
         )}
       </div>
-    </footer>
+    </section>
   )
 }

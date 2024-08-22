@@ -1,5 +1,5 @@
-import DonateSection from "@/components/DonateSection"
 import Newsletter from "@/components/Newsletter"
+import DonateSection from "@/components/SectionDonate"
 import { DStemp, Mediatemp, NLtemp } from "@/pages/api/(templates)/template"
 
 import Base from "../Base"
