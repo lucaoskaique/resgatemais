@@ -8,7 +8,7 @@ const Donate = () => {
   return (
     <Base>
       <Hero
-        bgHero={Herotemp.bgHero}
+        bgUrl={Herotemp.bgHero.src}
         donatePage={{
           title: Herotemp.donatePage.title,
           paragraph1: Herotemp.donatePage.paragraph1,
