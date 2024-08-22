@@ -1,7 +1,7 @@
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 
-import { DropdownToggle } from "../ui/DropdownButton"
+import { DropdownButton } from "../ui/DropdownButton"
 import { SwitchToggle } from "../ui/SwitchToggle"
 
 export type SwitchProps = {
@@ -26,6 +26,6 @@ export default function ThemeToggle({ switcher }: SwitchProps) {
   if (switcher) {
     return <SwitchToggle theme={theme} setTheme={setTheme} />
   } else {
-    return <DropdownToggle theme={theme} setTheme={setTheme} />
+    return <DropdownButton theme={theme} setTheme={setTheme} />
   }
 }

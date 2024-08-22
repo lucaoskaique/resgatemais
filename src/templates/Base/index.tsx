@@ -8,10 +8,8 @@ export type BaseTemplateProps = {
 }
 
 const Base = ({ children }: BaseTemplateProps) => (
-  <div className="relative flex min-h-screen w-full flex-col justify-between">
-    <div className="fixed top-0 z-50 flex h-20 w-full items-center">
-      <Navbar />
-    </div>
+  <div className="container relative flex min-h-screen w-full flex-col justify-between">
+    <Navbar />
 
     <div className="flex-1">{children}</div>
 

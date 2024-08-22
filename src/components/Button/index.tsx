@@ -21,6 +21,7 @@ export type ButtonProps = {
   fontBold?: "bold" | "medium"
   textColor?: "primary" | "secondary" | "white" | "black"
   as?: ElementType
+  className?: string
 } & ButtonTypes
 
 const Button: ForwardRefRenderFunction<
@@ -36,6 +37,7 @@ const Button: ForwardRefRenderFunction<
     textColor = "white",
     fontBold = "bold",
     as: Component = "a",
+    className,
     ...props
   },
   ref
@@ -75,7 +77,8 @@ const Button: ForwardRefRenderFunction<
         backgroundClasses[background],
         textColorClasses[textColor],
         fullWidth && "w-full",
-        icon && "flex items-center justify-center"
+        icon && "flex items-center justify-center",
+        className
       )}
       ref={ref}
       {...props}>
