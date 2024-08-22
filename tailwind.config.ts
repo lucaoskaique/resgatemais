@@ -12,7 +12,9 @@ const config: Config = {
     extend: {
       container: {
         center: true,
-        padding: "1rem",
+        padding: {
+          lg: "1rem"
+        },
         screens: {
           sm: "100%", // Mobile width
           md: "100%", // Tablet width
@@ -36,6 +38,20 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))"
+      },
+      keyframes: {
+        drawerAnimationDown: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(0)" }
+        },
+        drawerAnimationUp: {
+          "0%": { transform: "translateY(0)" },
+          "100%": { transform: "translateY(-100%)" }
+        }
+      },
+      animation: {
+        drawerDown: "drawerAnimationDown 0.3s ease-in forwards",
+        drawerUp: "drawerAnimationUp 0.3s ease-out forwards"
       }
     }
   },
