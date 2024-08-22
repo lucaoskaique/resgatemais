@@ -1,7 +1,7 @@
 import { Moon, Sun } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
-import { ToggleProps } from "../Switch"
+import { ToggleProps } from "../SwitchToggle"
 
 export function DropdownToggle({ setTheme }: ToggleProps) {
   const [open, setOpen] = useState(false)
