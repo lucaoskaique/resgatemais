@@ -26,7 +26,7 @@ export default function Newsletter({
         "flex h-[373px] w-full flex-col items-center justify-center"
       )}>
       <div className="flex flex-col items-center">
-        <h2 className="mb-[25px] text-center text-[16px] font-bold text-white sm:text-[20px] md:text-[32px]">
+        <h2 className="mb-[25px] text-center text-2xl font-bold text-white sm:text-[20px] md:text-[32px]">
           {title}
         </h2>
         <input
