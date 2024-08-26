@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react"
 
+import aboutImage from "@/assets/images/about-image.png"
 import qrCode from "@/assets/images/qr-code.png"
 
 import SectionAbout, { SectionAboutProps } from "."
@@ -12,7 +13,25 @@ export const template: SectionAboutProps = {
     "Através da produção de registros visuais, dos testemunhos dos sujeitos e da documentação da realidade vivida na tragédia ambiental, buscamos garantir justiça ao passado, amparo ao presente e despertar a esperança de um futuro digno e justo."
   ],
   label: "DOE AGORA",
-  QrCode: qrCode
+  QrCode: qrCode.src,
+  image: aboutImage.src,
+  cards: [
+    {
+      title: "MISSÃO",
+      content:
+        "Utilizar o audiovisual, a música, a literatura e o cinema como ferramenta para documentar a realidade vivida e auxiliar na reconstrução da vida daqueles que foram afetados pelas enchentes de maio de 2024 no Rio Grande do Sul."
+    },
+    {
+      title: "VISÃO",
+      content:
+        "Restituir o direito à dignidade, moradia, bens, cultura e lazer aos gaúchos e gaúchas afetados pelo maior desastre climático da história do estado."
+    },
+    {
+      title: "VALORES",
+      content:
+        "soliedariede coletividade, responsabilidade, ética, transparência, comunicação e esperança."
+    }
+  ]
 }
 
 export default {
@@ -25,7 +44,9 @@ export default {
     title: template.title,
     content: template.content,
     label: template.label,
-    QrCode: qrCode
+    QrCode: template.QrCode,
+    image: template.image,
+    cards: template.cards
   }
 } as Meta<SectionAboutProps>
 
