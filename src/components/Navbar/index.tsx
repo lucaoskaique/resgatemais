@@ -66,7 +66,7 @@ export default function Navbar({ bgColor = "dark" }: NavbarProps) {
   const navLinks: NavLinksProps[] = [
     {
       label: "Sobre",
-      href: "#"
+      href: "#sobre-nos"
     },
     {
       label: "Ações",
