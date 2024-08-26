@@ -1,7 +1,9 @@
 import Hero from "@/components/Hero"
 import Newsletter from "@/components/Newsletter"
+import SectionAbout from "@/components/SectionAbout"
 import DonateSection from "@/components/SectionDonate"
 import {
+  Abouttemp,
   DStemp,
   Herotemp,
   Mediatemp,
@@ -23,9 +25,14 @@ const Home = () => {
       />
 
       {/* sessão about */}
-      <div style={{ height: "100px", backgroundColor: "lightblue" }}>
-        sessão about
-      </div>
+      <SectionAbout
+        title={Abouttemp.title}
+        content={Abouttemp.content}
+        label={Abouttemp.label}
+        QrCode={Abouttemp.QrCode}
+        image={Abouttemp.image}
+        cards={Abouttemp.cards}
+      />
 
       {/* sessão donations (Doações Mobilizadas) */}
       <DonateSection
