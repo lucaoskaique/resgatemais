@@ -1,7 +1,7 @@
 import qrCode from "@/assets/images/qr-code.png"
 import { DonatePageProps } from "@/components/Hero/index"
 
-import { InfoProps } from "./DonateInfo"
+import { InfoProps } from "."
 
 const heroTemplate: DonatePageProps = {
   title: "AJUDE A MANTER NOSSA OPERAÇÃO ATIVA",
