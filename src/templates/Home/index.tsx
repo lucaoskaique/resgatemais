@@ -23,7 +23,6 @@ const Home = () => {
         cards={Abouttemp.cards}
       />
 
-      {/* sessão donations (Doações Mobilizadas) */}
       <DonateSection
         title={DStemp.title}
         subtitle={DStemp.subtitle}

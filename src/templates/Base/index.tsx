@@ -21,7 +21,7 @@ const Base = ({ children }: BaseTemplateProps) => (
         }}
       />
 
-      <main className="container mx-auto min-h-screen px-4">{children}</main>
+      <main className="mx-auto min-h-screen px-4">{children}</main>
 
       <footer className="bg-highlight">
         <Footer />
