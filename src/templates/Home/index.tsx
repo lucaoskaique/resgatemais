@@ -1,44 +1,37 @@
 import Newsletter from "@/components/Newsletter"
 import SectionAbout from "@/components/SectionAbout"
 import DonateSection from "@/components/SectionDonate"
-import {
-  Abouttemp,
-  DStemp,
-  Mediatemp,
-  NLtemp
-} from "@/pages/api/(templates)/template"
+import { donateSectionData, newsletterData, sectionAboutData } from "@/mock"
 
 import Base from "../Base"
 
 const Home = () => {
   return (
     <Base>
-      {/* sessão about */}
       <SectionAbout
-        title={Abouttemp.title}
-        content={Abouttemp.content}
-        label={Abouttemp.label}
-        QrCode={Abouttemp.QrCode}
-        image={Abouttemp.image}
-        cards={Abouttemp.cards}
+        title={sectionAboutData.title}
+        content={sectionAboutData.content}
+        label={sectionAboutData.label}
+        QrCode={sectionAboutData.QrCode}
+        image={sectionAboutData.image}
+        cards={sectionAboutData.cards}
       />
 
       <DonateSection
-        title={DStemp.title}
-        subtitle={DStemp.subtitle}
-        description={DStemp.description}
-        milestones={DStemp.milestones}
+        title={donateSectionData.title}
+        subtitle={donateSectionData.subtitle}
+        description={donateSectionData.description}
+        milestones={donateSectionData.milestones}
         mediaAutoplay={true}
-        media={Mediatemp}
+        media={donateSectionData.media}
       />
 
-      {/* sessão newsletter */}
       <Newsletter
-        background={NLtemp.background}
-        title={NLtemp.title}
-        placeholder={NLtemp.placeholder}
-        logo={NLtemp.logo}
-        textLogo={NLtemp.textLogo}
+        background={newsletterData.background}
+        title={newsletterData.title}
+        placeholder={newsletterData.placeholder}
+        logo={newsletterData.logo}
+        textLogo={newsletterData.textLogo}
       />
     </Base>
   )

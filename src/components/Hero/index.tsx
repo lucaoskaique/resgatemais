@@ -17,7 +17,7 @@ type HomeProps = {
 }
 
 export type HeroProps = {
-  bgUrl?: string
+  bgUrl: string
   home?: HomeProps
   donatePage?: DonatePageProps
 }
