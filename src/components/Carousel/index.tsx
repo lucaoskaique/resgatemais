@@ -42,7 +42,7 @@ export default function Carousel({
 
   return (
     <EmblaCarousel
-      className="h-min max-h-[420px] max-w-[100vh]"
+      className="h-min"
       opts={{ loop: true }}
       plugins={carouselPlugins}>
       <EmblaCarouselContent className="ml-0 h-min">
