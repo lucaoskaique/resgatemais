@@ -1,6 +1,7 @@
+import DonateInfo from "@/components/DonateInfo"
+import { infoTemplate as Infotemp } from "@/components/DonateInfo/template"
 import Hero from "@/components/Hero"
-import { Herotemp, Infotemp } from "@/pages/api/(templates)/template"
-import DonateInfo from "@/pages/donate/(components)/DonateInfo"
+import { heroTemplate as Herotemp } from "@/components/Hero/stories"
 
 import Base from "../Base"
 

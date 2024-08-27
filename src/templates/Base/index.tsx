@@ -3,7 +3,7 @@ import { ReactNode } from "react"
 import Footer from "@/components/Footer"
 import Hero from "@/components/Hero"
 import Navbar from "@/components/Navbar"
-import { Herotemp } from "@/pages/api/(templates)/template"
+import { heroData } from "@/mock"
 
 export type BaseTemplateProps = {
   children: ReactNode
@@ -14,10 +14,10 @@ const Base = ({ children }: BaseTemplateProps) => (
     <div>
       <Navbar />
       <Hero
-        bgUrl={Herotemp.bgHero.src}
+        bgUrl={heroData.bgUrl}
         home={{
-          logo: Herotemp.home.logo,
-          title: Herotemp.home.title
+          logo: heroData.home?.logo,
+          title: heroData.home?.title
         }}
       />
 
