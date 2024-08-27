@@ -1,21 +1,32 @@
 import { ReactNode } from "react"
 
 import Footer from "@/components/Footer"
-import Navbar from "@/components/NavBar"
+import Hero from "@/components/Hero"
+import Navbar from "@/components/Navbar"
+import { Herotemp } from "@/pages/api/(templates)/template"
 
 export type BaseTemplateProps = {
   children: ReactNode
 }
 
 const Base = ({ children }: BaseTemplateProps) => (
-  <div className="container relative flex min-h-screen w-full flex-col justify-between">
-    <Navbar />
+  <div className="relative flex min-h-screen w-full flex-col justify-between">
+    <div>
+      <Navbar />
+      <Hero
+        bgUrl={Herotemp.bgHero.src}
+        home={{
+          logo: Herotemp.home.logo,
+          title: Herotemp.home.title
+        }}
+      />
 
-    <div className="flex-1">{children}</div>
+      <main className="container mx-auto min-h-screen px-4">{children}</main>
 
-    <footer className="bg-highlight">
-      <Footer />
-    </footer>
+      <footer className="bg-highlight">
+        <Footer />
+      </footer>
+    </div>
   </div>
 )
 

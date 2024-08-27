@@ -28,19 +28,23 @@
   @font-face {
     font-family: "Alte Haas Grotesk";
     font-weight: 400;
-    src: url(/fonts/AlteHaasGroteskRegular.ttf) format("ttf");
+    src: url(/fonts/AlteHaasGroteskRegular.ttf) format("truetype");
   }
 
   @font-face {
     font-family: "Alte Haas Grotesk";
     font-weight: 700;
-    src: url(/fonts/AlteHaasGroteskBold.ttf) format("ttf");
+    src: url(/fonts/AlteHaasGroteskBold.ttf) format("truetype");
   }
 }
 
 @layer base {
   body {
     @apply bg-background font-alteHaas text-primary;
+  }
+  html,
+  body {
+    font-family: "Alte Haas Grotesk", ui-sans-serif, system-ui, sans-serif !important;
   }
 }
 

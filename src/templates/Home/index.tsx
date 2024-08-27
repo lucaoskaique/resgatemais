@@ -1,11 +1,9 @@
-import Hero from "@/components/Hero"
 import Newsletter from "@/components/Newsletter"
 import SectionAbout from "@/components/SectionAbout"
 import DonateSection from "@/components/SectionDonate"
 import {
   Abouttemp,
   DStemp,
-  Herotemp,
   Mediatemp,
   NLtemp
 } from "@/pages/api/(templates)/template"
@@ -15,15 +13,6 @@ import Base from "../Base"
 const Home = () => {
   return (
     <Base>
-      {/* sessão hero - 100vh*/}
-      <Hero
-        bgUrl={Herotemp.bgHero.src}
-        home={{
-          logo: Herotemp.home.logo,
-          title: Herotemp.home.title
-        }}
-      />
-
       {/* sessão about */}
       <SectionAbout
         title={Abouttemp.title}
