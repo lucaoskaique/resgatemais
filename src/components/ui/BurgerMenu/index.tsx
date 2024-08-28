@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 import Button from "@/components/Button"
-import { NavLinksProps } from "@/components/Navbar"
+import { NavLinksProps } from "@/components/NavBar"
 
 type BurgerMenuProps = {
   navList: NavLinksProps[]

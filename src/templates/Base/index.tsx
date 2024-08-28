@@ -2,7 +2,7 @@ import { ReactNode } from "react"
 
 import Footer from "@/components/Footer"
 import Hero from "@/components/Hero"
-import Navbar from "@/components/Navbar"
+import Navbar from "@/components/NavBar"
 import { heroData } from "@/mock"
 
 export type BaseTemplateProps = {
@@ -19,9 +19,16 @@ const Base = ({ children }: BaseTemplateProps) => (
           logo: heroData.home?.logo,
           title: heroData.home?.title
         }}
+        donatePage={{
+          title: heroData.donatePage?.title,
+          paragraph1: heroData.donatePage?.paragraph1,
+          paragraph2: heroData.donatePage?.paragraph2,
+          donateCall: heroData.donatePage?.donateCall,
+          qrCode: heroData.donatePage?.qrCode
+        }}
       />
 
-      <main className="mx-auto min-h-screen px-4">{children}</main>
+      <main className="mx-auto">{children}</main>
 
       <footer className="bg-highlight">
         <Footer />
