@@ -43,10 +43,10 @@ const Button: ForwardRefRenderFunction<
   ref
 ) => {
   const sizeClasses = {
-    xlarge: "text-xl px-8 py-4",
-    large: "text-lg px-6 py-3",
-    medium: "text-base px-4 py-2",
-    small: "text-sm px-2 py-1"
+    xlarge: "px-8 py-4",
+    large: "px-6 py-3",
+    medium: "px-4 py-2",
+    small: "px-2 py-1"
   }
 
   const backgroundClasses = {
