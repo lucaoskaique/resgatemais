@@ -39,7 +39,7 @@ export default function SectionAbout({
         width={980}
         height={260}
       />
-      <div className="bg-highlight">
+      <div className="flex h-full items-center bg-highlight">
         <CardsSection cards={cards} />
       </div>
     </section>
