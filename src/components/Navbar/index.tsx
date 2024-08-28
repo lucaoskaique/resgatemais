@@ -15,6 +15,13 @@ export type NavLinksProps = {
   href: string
 }
 
+export const navLinks: NavLinksProps[] = [
+  { label: "Sobre", href: "#sobre-nos" },
+  { label: "Ações", href: "#" },
+  { label: "Projetos", href: "#" },
+  { label: "DOAR", href: "/donate" }
+]
+
 export default function Navbar({ bgColor = "dark" }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -63,24 +70,18 @@ export default function Navbar({ bgColor = "dark" }: NavbarProps) {
     desktop: "/logo-white-noText.png",
     mobile: "/icon-red.png"
   }
-  const navLinks: NavLinksProps[] = [
-    { label: "Sobre", href: "#sobre-nos" },
-    { label: "Ações", href: "#" },
-    { label: "Projetos", href: "#" },
-    { label: "DOAR", href: "/donate" }
-  ]
 
   return (
     <header
       className={`fixed inset-x-0 z-50 transition-colors duration-300 ${bgColorClasses[bgColor]}`}
       id="header"
       data-testid="header">
-      <div className="container mx-auto flex items-center justify-between py-3 text-sm md:text-lg">
+      <div className="container flex items-center justify-between py-3 text-sm md:text-lg">
         <div className="flex items-center gap-3">
           <Link href="/">
             <Image
               data-testid="mobile-logo"
-              className="w-10 sm:hidden"
+              className="w-10 md:hidden"
               src={logo.mobile}
               width={100}
               height={100}
@@ -88,7 +89,7 @@ export default function Navbar({ bgColor = "dark" }: NavbarProps) {
             />
             <Image
               data-testid="large-screen-light-logo"
-              className="hidden w-full sm:block"
+              className="hidden w-full md:block"
               src={logo.desktop}
               width={120}
               height={120}

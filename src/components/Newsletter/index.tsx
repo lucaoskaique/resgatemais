@@ -25,7 +25,7 @@ export default function Newsletter({
         "custom-bg",
         "flex h-[373px] w-full flex-col items-center justify-center"
       )}>
-      <div className="flex flex-col items-center">
+      <div className="container flex flex-col items-center gap-4">
         <h2 className="mb-[25px] text-center text-2xl font-bold text-white sm:text-[20px] md:text-[32px]">
           {title}
         </h2>
@@ -38,14 +38,14 @@ export default function Newsletter({
         />
         <div className="flex flex-row items-center gap-[15px] sm:gap-[30px]">
           <Image
-            className="ml-[3px] mt-[32px]"
+            className="ml-[3px]"
             src={logo}
             alt="Logo Resgaste Mais"
             width={100}
             height={100}
           />
           {textLogo && (
-            <h3 className="mt-[30px] w-[180px] text-[14px] font-bold leading-[20.88px] text-white sm:w-[230px] sm:text-[18px]">
+            <h3 className="w-[180px] text-[14px] font-bold leading-[20.88px] text-white sm:w-[230px] sm:text-[18px]">
               {textLogo}
             </h3>
           )}

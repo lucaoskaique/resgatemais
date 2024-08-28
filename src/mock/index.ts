@@ -67,7 +67,7 @@ export const sectionAboutData: SectionAboutProps = {
     {
       title: "VALORES",
       content:
-        "solidariedade, coletividade, responsabilidade, ética, transparência, comunicação e esperança."
+        "Solidariedade, coletividade, responsabilidade, ética, transparência, comunicação e esperança."
     }
   ]
 }
@@ -79,16 +79,18 @@ export const donateSectionData: DonateSectionProps = {
     "Nossa rede de solidariedade, que já conta com a participação de mais de 50 pessoas, impactou a vida de pelo menos 14 mil gaúchos.",
   milestones: [
     {
-      title: "Produzimos ao todo:",
-      content: "11.300 MARMITAS"
+      title: "Produzimos ao todo",
+      data: 11300,
+      content: "MARMITAS"
     },
     {
-      title: "Resgatamos aproximadamente:",
-      content: "1.000 pessoas",
+      title: "Resgatamos aproximadamente",
+      data: 1000,
+      content: "pessoas",
       subcontent: "de Porto Alegre e região metropolitana"
     },
     {
-      title: "Movimentamos aproximadamente:",
+      title: "Movimentamos aproximadamente",
       content: "+ de 18 toneladas em doações"
     }
   ],

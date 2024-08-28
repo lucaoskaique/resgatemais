@@ -12,10 +12,11 @@ const config: Config = {
     extend: {
       container: {
         center: true,
-        // padding: {
-        //   DEFAULT: "0.5rem",
-        //   lg: "1rem"
-        // },
+        padding: {
+          DEFAULT: "0.5rem",
+          md: "1rem",
+          lg: "2rem"
+        },
         screens: {
           sm: "100%", // Full width for small screens (mobile)
           md: "100%", // Full width for medium screens (tablet)
@@ -31,6 +32,9 @@ const config: Config = {
           "system-ui",
           "sans-serif"
         ]
+      },
+      padding: {
+        container: "3rem"
       },
       colors: {
         primary: "hsl(var(--primary))",
@@ -67,7 +71,11 @@ const config: Config = {
           - Maximum size: 1.2rem (19.2px)
       */
       fontSize: {
-        base: "clamp(1rem, 2vw, 1.2rem)"
+        base: "clamp(1rem, 2vw, 1.2rem)",
+        h1: "clamp(3rem, 5vw, 4.5rem)",
+        h2: "clamp(1.75rem, 4vw, 2.25rem)",
+        h3: "clamp(1.5rem, 3.5vw, 2rem)",
+        paragraph: "clamp(1.5rem, 2.5vw, 1.5rem)"
       }
     }
   },
