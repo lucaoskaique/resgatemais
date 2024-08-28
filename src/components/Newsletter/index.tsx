@@ -25,7 +25,7 @@ export default function Newsletter({
         "custom-bg",
         "flex h-[373px] w-full flex-col items-center justify-center"
       )}>
-      <div className="flex flex-col items-center">
+      <div className="container flex flex-col items-center">
         <h2 className="mb-[25px] text-center text-2xl font-bold text-white sm:text-[20px] md:text-[32px]">
           {title}
         </h2>

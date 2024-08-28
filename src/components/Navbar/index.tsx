@@ -75,7 +75,7 @@ export default function Navbar({ bgColor = "dark" }: NavbarProps) {
       className={`fixed inset-x-0 z-50 transition-colors duration-300 ${bgColorClasses[bgColor]}`}
       id="header"
       data-testid="header">
-      <div className="container mx-auto flex items-center justify-between py-3 text-sm md:text-lg">
+      <div className="container flex items-center justify-between py-3 text-sm md:text-lg">
         <div className="flex items-center gap-3">
           <Link href="/">
             <Image

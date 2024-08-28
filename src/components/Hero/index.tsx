@@ -38,12 +38,12 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat"
       }}>
-      <div className="container mx-auto px-4">
+      <div className="container h-full px-4">
         <div
           className={cn(
-            "grid gap-y-16",
+            "grid h-full gap-y-16",
             donatePageRoute
-              ? "grid-rows-2 lg:grid-cols-2 lg:grid-rows-1"
+              ? "grid-rows-[repeat(2,min-content)] items-center max-lg:justify-items-center lg:grid-cols-2 lg:grid-rows-1"
               : "grid-rows-1 items-center"
           )}>
           <div className="max-w-[480px] text-center lg:text-left">
@@ -64,7 +64,7 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
                 {home?.logo && (
                   <Image src={home?.logo} alt="" width={73} height={73} />
                 )}
-                <h1 className="max-w-52 pt-8 text-2xl font-bold text-white md:text-3xl lg:max-w-80 lg:text-4xl">
+                <h1 className="max-w-52 pt-8 text-start text-2xl font-bold text-white md:text-3xl lg:max-w-80 lg:text-4xl">
                   {home?.title}
                 </h1>
               </>

@@ -20,7 +20,7 @@ export const DonateSection = ({
 }: DonateSectionProps) => {
   return (
     <section className="grid grid-rows-[min-content_1fr] gap-7 bg-background-secondary py-10">
-      <div className="container mx-auto">
+      <div className="container">
         <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-20">
           <div className="flex-1">
             <h1 className="text-3xl font-bold text-highlight lg:text-4xl">

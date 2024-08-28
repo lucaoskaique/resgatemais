@@ -12,10 +12,11 @@ const config: Config = {
     extend: {
       container: {
         center: true,
-        // padding: {
-        //   DEFAULT: "0.5rem",
-        //   lg: "1rem"
-        // },
+        padding: {
+          DEFAULT: "0.5rem",
+          md: "1rem",
+          lg: "2rem"
+        },
         screens: {
           sm: "100%", // Full width for small screens (mobile)
           md: "100%", // Full width for medium screens (tablet)
