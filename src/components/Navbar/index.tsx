@@ -15,6 +15,13 @@ export type NavLinksProps = {
   href: string
 }
 
+export const navLinks: NavLinksProps[] = [
+  { label: "Sobre", href: "#sobre-nos" },
+  { label: "Ações", href: "#" },
+  { label: "Projetos", href: "#" },
+  { label: "DOAR", href: "/donate" }
+]
+
 export default function Navbar({ bgColor = "dark" }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -63,12 +70,6 @@ export default function Navbar({ bgColor = "dark" }: NavbarProps) {
     desktop: "/logo-white-noText.png",
     mobile: "/icon-red.png"
   }
-  const navLinks: NavLinksProps[] = [
-    { label: "Sobre", href: "#sobre-nos" },
-    { label: "Ações", href: "#" },
-    { label: "Projetos", href: "#" },
-    { label: "DOAR", href: "/donate" }
-  ]
 
   return (
     <header
@@ -80,7 +81,7 @@ export default function Navbar({ bgColor = "dark" }: NavbarProps) {
           <Link href="/">
             <Image
               data-testid="mobile-logo"
-              className="w-10 sm:hidden"
+              className="w-10 md:hidden"
               src={logo.mobile}
               width={100}
               height={100}
@@ -88,7 +89,7 @@ export default function Navbar({ bgColor = "dark" }: NavbarProps) {
             />
             <Image
               data-testid="large-screen-light-logo"
-              className="hidden w-full sm:block"
+              className="hidden w-full md:block"
               src={logo.desktop}
               width={120}
               height={120}

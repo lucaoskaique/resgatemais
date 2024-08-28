@@ -1,16 +1,44 @@
+import Image from "next/image"
+import Link from "next/link"
+
+import Button from "../Button"
+import { navLinks } from "../Navbar"
+
 const Footer = () => {
-  const textFooter =
-    "Procuramos organizações parceiras, dispostas a contribuir com todas as etapas de reconstrução do Rio Grande do Sul para somar junto com a Resgate+ no desenvolvimento dos nossos projetos."
   const title = "FALE CONOSCO"
   const email = "resgatemais@gmail.com"
   const instagram = "@resgate.mais"
   const phone = "(51) 99114-7322"
 
   return (
-    <div className="container flex w-full flex-col items-center justify-between gap-8 px-5 py-20 text-white md:flex-row md:gap-0">
-      <p className="max-w-[264px] text-sm font-bold md:max-w-[383px] md:text-lg">
-        {textFooter}
-      </p>
+    <div className="container flex w-full items-center justify-between gap-8 py-container text-white">
+      <div className="flex flex-col gap-3">
+        <Link href="/">
+          <Image
+            data-testid="large-screen-light-logo"
+            className=""
+            src="/logo-white-black.png"
+            width={120}
+            height={120}
+            alt=""
+          />
+        </Link>
+        <ul className="flex flex-col gap-1">
+          {navLinks.map((nav, i) => (
+            <li key={i}>
+              {nav.href === "/donate" ? (
+                <Button size="medium" href={nav.href}>
+                  {nav.label}
+                </Button>
+              ) : (
+                <Button size="medium" background="transparent" href={nav.href}>
+                  {nav.label}
+                </Button>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div className="flex min-w-[211px] flex-col gap-2 md:gap-6">
         <h2 className="text-[18px] font-bold leading-[18px]">{title}</h2>
