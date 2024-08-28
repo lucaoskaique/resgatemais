@@ -7,7 +7,7 @@ const Footer = () => {
   const phone = "(51) 99114-7322"
 
   return (
-    <div className="container flex w-full flex-col items-center justify-between gap-8 px-5 py-20 text-white md:flex-row md:gap-0">
+    <div className="container flex w-full flex-col items-center justify-between gap-8 py-20 text-white md:flex-row md:gap-0">
       <p className="max-w-[264px] text-sm font-bold md:max-w-[383px] md:text-lg">
         {textFooter}
       </p>

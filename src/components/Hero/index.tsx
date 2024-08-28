@@ -38,7 +38,7 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat"
       }}>
-      <div className="container h-full px-4">
+      <div className="container h-full">
         <div
           className={cn(
             "grid h-full gap-y-16",
