@@ -1,12 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import MilestoneCard, { MilestoneCardProps } from "."
+import { donateSectionData } from "@/mock"
 
-const template = {
-  title: "Resgatamos aproximadamente:",
-  content: "1.000 pessoas",
-  subcontent: "de porto alegre e região metropolitana"
-}
+import MilestoneCard, { MilestoneCardProps } from "."
 
 export default {
   title: "ResgateMais/Components/Milestone Card",
@@ -15,9 +11,9 @@ export default {
     layout: "centered"
   },
   args: {
-    title: template.title,
-    content: template.content,
-    subcontent: template.subcontent
+    title: donateSectionData.milestones[0].title,
+    content: donateSectionData.milestones[0].content,
+    subcontent: donateSectionData.milestones[0].subcontent
   }
 } as Meta<MilestoneCardProps>
 

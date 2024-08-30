@@ -1,25 +1,20 @@
 import { Meta, StoryObj } from "@storybook/react"
 
+import { donateInfoData } from "@/mock"
+
 import DonateInfo, { InfoProps } from "."
 
-export const infoTemplate: InfoProps = {
-  title: "COMO DOAR",
-  info: "O Fundo Filantrópico Resgate+ aceita doações:",
-  pixKey: "resgatemais@sitawi.net",
-  bankInfo: "[dados bancários da sitawi]"
-}
-
 export default {
-  title: "Resgatemais/Donate Page/Donate Info",
+  title: "Resgatemais/Sections/Donate Info",
   component: DonateInfo,
   parameters: {
     layout: "centered"
   },
   args: {
-    title: infoTemplate.title,
-    info: infoTemplate.info,
-    pixKey: infoTemplate.pixKey,
-    bankInfo: infoTemplate.bankInfo
+    title: donateInfoData.title,
+    info: donateInfoData.info,
+    pixKey: donateInfoData.pixKey,
+    bankInfo: donateInfoData.bankInfo
   },
   tags: ["autodocs"]
 } as Meta<InfoProps>

@@ -4,23 +4,23 @@
 
 @layer base {
   :root {
-    --primary: 222.2 84% 4.9%; /* Texto Principal */
-    --background: 0 0% 85%; /* Background Principal */
+    --primary: 0 0% 0%; /* #000000 Texto Principal */
+    --background: 0 0% 85%; /* #D9D9D9 Background Principal */
 
-    --secondary: 210 40% 98%; /* Texto Secundário */
-    --background-secondary: 0 0% 20%; /* Background Secundário (oposto) */
+    --secondary: 0 0% 90%; /* #E6E6E6 Texto Secundário */
+    --background-secondary: 0 0% 20%; /* #323232 Background Secundário (oposto) */
 
-    --highlight: 358 65% 54%; /* Vermelho (text, bg) */
+    --highlight: 358 65% 54%; /* #D63E44 Vermelho (text|bg) */
   }
 
   .dark {
-    --primary: 210 40% 98%; /* Texto Principal */
-    --background: 0 0% 20%; /* Background Principal */
+    --primary: 0 0% 90%; /* #E6E6E6 Texto Principal */
+    --background: 0 0% 20%; /* #323232 Background Principal */
 
-    --secondary: 222.2 84% 4.9%; /* Texto Secundário */
-    --background-secondary: 0 0% 85%; /* Background Secundário (oposto) */
+    --secondary: 0 0% 0%; /* #000000 Texto Secundário */
+    --background-secondary: 0 0% 85%; /* #D9D9D9 Background Secundário (oposto) */
 
-    --highlight: 358 65% 54%; /* Vermelho (text, bg) */
+    --highlight: 358 65% 54%; /* #D63E44 Vermelho (text|bg) */
   }
 }
 
@@ -40,8 +40,9 @@
 
 @layer base {
   body {
-    @apply bg-background font-alteHaas text-primary;
+    @apply bg-background font-alteHaas text-base text-primary;
   }
+
   html,
   body {
     font-family: "Alte Haas Grotesk", ui-sans-serif, system-ui, sans-serif !important;

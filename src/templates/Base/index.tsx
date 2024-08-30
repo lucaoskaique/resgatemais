@@ -24,7 +24,7 @@ const Base = ({ children }: BaseTemplateProps) => (
           paragraph1: heroData.donatePage?.paragraph1,
           paragraph2: heroData.donatePage?.paragraph2,
           donateCall: heroData.donatePage?.donateCall,
-          qrCode: heroData.donatePage?.qrCode
+          qrCodeUrl: heroData.donatePage?.qrCodeUrl
         }}
       />
 

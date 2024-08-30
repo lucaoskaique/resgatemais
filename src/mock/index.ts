@@ -1,4 +1,6 @@
 import aboutImage from "@/assets/images/about-image.png"
+import bgNewsletter from "@/assets/images/bg-footer.png"
+import bgHero from "@/assets/images/bg-hero.png"
 import image3 from "@/assets/images/carousel-humaita.png"
 import image2 from "@/assets/images/carousel-lami.png"
 import image1 from "@/assets/images/carousel-vila-farrapos.png"
@@ -8,8 +10,6 @@ import { HeroProps } from "@/components/Hero"
 import { NewsletterProps } from "@/components/Newsletter"
 import { SectionAboutProps } from "@/components/SectionAbout"
 import { DonateSectionProps } from "@/components/SectionDonate"
-import bgImage from "@/stories/assets/bg-footer.png"
-import bgHero from "@/stories/assets/bg-hero.png"
 
 export const heroData: HeroProps = {
   bgUrl: bgHero.src,
@@ -24,23 +24,15 @@ export const heroData: HeroProps = {
     paragraph2:
       "Observando a urgência da ajuda, a Resgate + se juntou com a Sitawi, que possui mais de 16 anos de atuação em finanças para causas socioambientais, responsável pela gestão financeira do Fundo Filantrópico Resgate +. Dessa forma, nós focamos na linha de frente enquanto a Sitawi lida com a operacionalização do Fundo e garante a transparência das doações arrecadadas.",
     donateCall: "DOE PELO QR CODE",
-    qrCode: qrCode
+    qrCodeUrl: qrCode.src
   }
 }
 
-export const infoData: InfoProps = {
+export const donateInfoData: InfoProps = {
   title: "COMO DOAR",
   info: "O Fundo Filantrópico Resgate+ aceita doações:",
   pixKey: "resgatemais@sitawi.net",
   bankInfo: "[dados bancários da sitawi]"
-}
-
-export const newsletterData: NewsletterProps = {
-  background: bgImage,
-  title: "Cadastrar email para receber mais infos",
-  placeholder: "exemplo@email.com",
-  logo: "/logo-white-noText.png",
-  textLogo: "Organização Audiovisual da Sociedade Civil"
 }
 
 export const sectionAboutData: SectionAboutProps = {
@@ -109,4 +101,8 @@ export const donateSectionData: DonateSectionProps = {
     }
   ],
   mediaAutoplay: false
+}
+
+export const newsletterData: NewsletterProps = {
+  bgUrl: bgNewsletter.src
 }
