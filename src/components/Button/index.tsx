@@ -14,12 +14,12 @@ type ButtonTypes =
   | ButtonHTMLAttributes<HTMLButtonElement>
 
 export type ButtonProps = {
-  background?: "red" | "white" | "black" | "transparent"
+  background?: "white" | "black" | "red" | "transparent" | "secondary"
   size?: "xlarge" | "large" | "medium" | "small"
   icon?: ReactNode
   fullWidth?: boolean
-  fontBold?: "bold" | "medium"
-  textColor?: "primary" | "secondary" | "white" | "black"
+  fontBold?: "bold" | "regular"
+  textColor?: "primary" | "secondary" | "white" | "black" | "red"
   as?: ElementType
   className?: string
 } & ButtonTypes
@@ -34,7 +34,7 @@ const Button: ForwardRefRenderFunction<
     background = "red",
     fullWidth = false,
     icon,
-    textColor = "white",
+    textColor = "primary",
     fontBold = "bold",
     as: Component = "a",
     className,
@@ -43,39 +43,42 @@ const Button: ForwardRefRenderFunction<
   ref
 ) => {
   const sizeClasses = {
-    xlarge: "px-8 py-4",
-    large: "px-6 py-3",
-    medium: "px-4 py-2",
-    small: "px-2 py-1"
+    xlarge: "px-6 py-3 text-xl",
+    large: "px-4 py-2 text-lg",
+    medium: "px-2 py-1",
+    small: "px-1 py-[0.125rem] text-sm"
   }
 
   const backgroundClasses = {
     red: "bg-highlight",
     white: "bg-white",
     black: "bg-black",
-    transparent: "bg-transparent"
+    transparent: "bg-transparent",
+    secondary: "bg-background"
   }
 
   const textColorClasses = {
     primary: "text-primary",
     secondary: "text-secondary",
     white: "text-white",
-    black: "text-black"
+    black: "text-black",
+    red: "text-highlight"
   }
 
   const fontWeightClasses = {
     bold: "font-bold",
-    medium: "font-medium"
+    regular: "font-medium"
   }
 
   return (
     <Component
       className={cn(
-        "rounded-md",
+        "px- rounded-md tracking-wide",
         fontWeightClasses[fontBold],
         sizeClasses[size],
         backgroundClasses[background],
         textColorClasses[textColor],
+        background === "red" ? "text-white" : "",
         fullWidth && "w-full",
         icon && "flex items-center justify-center",
         className

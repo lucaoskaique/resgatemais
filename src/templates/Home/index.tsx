@@ -25,20 +25,14 @@ const Home = () => {
         mediaAutoplay={true}
         media={donateSectionData.media}
       />
-      <div className="bg-highlight text-white">
-        <p className="container py-container text-center text-paragraph leading-tight">
+      <div className="bg-highlight text-center text-paragraph font-bold leading-tight text-white md:text-h3">
+        <p className="container py-container">
           Procuramos organizações parceiras, dispostas a contribuir com todas as
           etapas de reconstrução do Rio Grande do Sul para somar junto com a
           Resgate+ no desenvolvimento dos nossos projetos.
         </p>
       </div>
-      <Newsletter
-        background={newsletterData.background}
-        title={newsletterData.title}
-        placeholder={newsletterData.placeholder}
-        logo={newsletterData.logo}
-        textLogo={newsletterData.textLogo}
-      />
+      <Newsletter bgUrl={newsletterData.bgUrl} />
     </Base>
   )
 }
