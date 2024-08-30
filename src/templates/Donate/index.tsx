@@ -1,5 +1,5 @@
 import DonateInfo from "@/components/DonateInfo"
-import { infoTemplate as Infotemp } from "@/components/DonateInfo/template"
+import { donateInfoData } from "@/mock"
 
 import Base from "../Base"
 
@@ -7,10 +7,10 @@ const Donate = () => {
   return (
     <Base>
       <DonateInfo
-        title={Infotemp.title}
-        info={Infotemp.info}
-        pixKey={Infotemp.pixKey}
-        bankInfo={Infotemp.bankInfo}
+        title={donateInfoData.title}
+        info={donateInfoData.info}
+        pixKey={donateInfoData.pixKey}
+        bankInfo={donateInfoData.bankInfo}
       />
     </Base>
   )
