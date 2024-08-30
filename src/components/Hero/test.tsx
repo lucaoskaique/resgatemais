@@ -9,15 +9,15 @@ describe("<Hero />", () => {
       <Hero
         bgUrl=""
         home={{
-          logo: undefined,
-          title: undefined
+          logo: "",
+          title: ""
         }}
         donatePage={{
-          title: undefined,
+          title: "",
           paragraph1: undefined,
           paragraph2: undefined,
-          donateCall: undefined,
-          qrCode: undefined
+          donateCall: "",
+          qrCodeUrl: ""
         }}
       />
     )

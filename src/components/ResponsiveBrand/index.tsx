@@ -1,4 +1,4 @@
-type ResponsiveLogoProps = {
+export type ResponsiveLogoProps = {
   text?: "black" | "white"
   highlight?: "black" | "white" | "red"
   className?: string

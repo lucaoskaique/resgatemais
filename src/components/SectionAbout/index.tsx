@@ -27,7 +27,7 @@ export default function SectionAbout({
       <div className="container grid grid-rows-[repeat(2,min-content)] justify-items-center gap-y-10 pb-24 pt-container sm:pb-28 md:min-h-[50vh] md:grid-cols-2 md:grid-rows-1 md:items-center md:pb-32 lg:pb-40">
         <SectionHeader title={title} content={content} />
         <div className="flex flex-col items-center gap-5 lg:justify-self-end">
-          <QrCodeCard label={label} url={QrCode} buttonUrl="/donate" />
+          <QrCodeCard label={label} url={QrCode} />
         </div>
       </div>
       <div className="relative flex h-full bg-highlight pb-container">
@@ -43,31 +43,6 @@ export default function SectionAbout({
     </section>
   )
 }
-
-const CardsSection = ({
-  cards = []
-}: {
-  cards: {
-    title: string
-    content: string
-  }[]
-}) => (
-  <div className="container pt-24 text-background-secondary sm:pt-28 md:pt-32 lg:pt-40">
-    <div className="flex flex-row flex-wrap justify-around gap-6 lg:justify-between lg:gap-0">
-      {cards.map((card, i) => (
-        <article
-          className="flex w-full flex-col gap-1 text-pretty lg:max-w-[300px] lg:gap-2"
-          key={i}>
-          <h2 className="text-h2 font-bold tracking-widest">
-            <span className="mr-1">#</span>
-            {card.title}
-          </h2>
-          <p className="text-paragraph leading-snug">{card.content}</p>
-        </article>
-      ))}
-    </div>
-  </div>
-)
 
 const SectionHeader = ({
   title = "",
@@ -85,7 +60,7 @@ const SectionHeader = ({
     {content.map((paragraph, i) =>
       i % 2 ? (
         <div className="flex w-full max-md:justify-end" key={i}>
-          <p className="max-w-[450px] text-end text-paragraph leading-tight md:text-start">
+          <p className="my-4 max-w-[450px] text-end text-paragraph leading-tight md:text-start">
             {paragraph}
           </p>
         </div>
@@ -97,5 +72,30 @@ const SectionHeader = ({
         </div>
       )
     )}
+  </div>
+)
+
+const CardsSection = ({
+  cards = []
+}: {
+  cards: {
+    title: string
+    content: string
+  }[]
+}) => (
+  <div className="container pt-24 text-primary sm:pt-28 md:pt-32 lg:pt-40">
+    <div className="flex flex-row flex-wrap justify-around gap-6 lg:justify-between lg:gap-0">
+      {cards.map((card, i) => (
+        <article
+          className="flex w-full flex-col gap-1 text-pretty lg:max-w-[300px] lg:gap-2"
+          key={i}>
+          <h2 className="text-h2 font-bold tracking-widest text-white">
+            <span className="mr-1">#</span>
+            {card.title}
+          </h2>
+          <p className="text-paragraph leading-snug">{card.content}</p>
+        </article>
+      ))}
+    </div>
   </div>
 )

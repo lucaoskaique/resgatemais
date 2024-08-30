@@ -7,15 +7,6 @@ const meta: Meta = {
   component: Navbar,
   parameters: {
     layout: "fullscreen"
-  },
-  args: {
-    title: "Organização Audiovisual da Sociedade Civil",
-    logos: {
-      dark: "/logo-white-red.png",
-      light: "/logo-black-red.png",
-      small: "/icon-red.png"
-    },
-    textLinks: ["sobre", "acoes", "doar"]
   }
 }
 

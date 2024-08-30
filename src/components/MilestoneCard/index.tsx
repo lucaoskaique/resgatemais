@@ -26,13 +26,13 @@ export const MilestoneCard = ({
 
   return (
     <div className="flex">
-      <span className="mr-5 h-1/3 w-1 bg-black" />
+      <span className="mr-5 h-2/5 w-1 bg-black" />
       <div className="lg:text-nowrap">
         <p className="text-h3 leading-none text-secondary">{title}</p>
         <p className="text-h2 font-bold text-highlight">
           {data && <span>{value}</span>} {content}
         </p>
-        <p className="text-xl font-bold leading-3 text-highlight">
+        <p className="text-xl font-medium leading-3 text-highlight">
           {subcontent}
         </p>
       </div>
