@@ -22,9 +22,9 @@ const Home = () => {
         subtitle={donateSectionData.subtitle}
         description={donateSectionData.description}
         milestones={donateSectionData.milestones}
-        mediaAutoplay={true}
         media={donateSectionData.media}
       />
+
       <div className="bg-highlight text-center text-paragraph font-bold leading-tight text-white md:text-h3">
         <p className="container py-container">
           Procuramos organizações parceiras, dispostas a contribuir com todas as
@@ -32,6 +32,7 @@ const Home = () => {
           Resgate+ no desenvolvimento dos nossos projetos.
         </p>
       </div>
+
       <Newsletter bgUrl={newsletterData.bgUrl} />
     </Base>
   )
