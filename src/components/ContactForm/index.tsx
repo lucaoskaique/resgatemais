@@ -6,11 +6,12 @@ import {
   useRadioInput,
   useShortAnswerInput
 } from "react-google-forms-hooks"
+import Swal from "sweetalert2"
 
-import Button from "@/components/Button"
 import { TextInput } from "@/components/ui/TextInput"
 
 import form from "../../GoogleForm.json"
+import Button from "../Button"
 import { TextAreaInput } from "../ui/TextAreaInput"
 
 const ShortAnswerInput = ({ id }: { id: string }) => {
@@ -40,7 +41,12 @@ const RadioInput = ({ id }: { id: string }) => {
       <label>{label}</label>
       {options.map((option) => (
         <div key={option.id}>
-          <input type="radio" id={option.id} {...option.registerOption()} />
+          <input
+            required
+            type="radio"
+            id={option.id}
+            {...option.registerOption()}
+          />
           <label htmlFor={option.id}>{option.label}</label>
         </div>
       ))}
@@ -58,7 +64,14 @@ const ContactForm = () => {
 
   const onSubmit = async (data: any) => {
     await methods.submitToGoogleForms(data)
-    alert("Form submitted successfully!")
+    Swal.fire({
+      title: "Sucesso",
+      text: "Formulário enviado com sucesso!",
+      icon: "success",
+      background: "#323232",
+      color: "#E6E6E6",
+      confirmButtonColor: "#D63E44"
+    })
   }
 
   return (
@@ -69,7 +82,7 @@ const ContactForm = () => {
           <CheckboxInput id="1931622500" />
           <LongAnswerInput id="1505362106" />
           <RadioInput id="1589187329" />
-          <Button type="submit" className="mt-2">
+          <Button as={"button"} type="submit">
             Submit
           </Button>
         </form>
