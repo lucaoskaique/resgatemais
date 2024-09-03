@@ -1,61 +1,40 @@
-import Autoplay from "embla-carousel-autoplay"
-import { StaticImageData } from "next/image"
+import useEmblaCarousel from "embla-carousel-react"
+
+import { cn } from "@/lib/utils"
 
 import CarouselMedia from "../CarouselMedia"
-import {
-  EmblaCarousel,
-  EmblaCarouselContent,
-  EmblaCarouselItem
-} from "../ui/EmblaCarousel"
-
-export type MediaProps = {
-  src: string | StaticImageData
-  label?: string
-}
 
 export type CarouselProps = {
-  autoplay: boolean
-  autoplayDelay?: number
-  mediaType: "video" | "image"
-  contentList?: MediaProps[]
+  loop?: boolean
+  orientation?: "horizontal" | "vertical"
+  plugins?: any[]
+  slides: {
+    src: string
+    label?: string
+  }[]
 }
 
 export default function Carousel({
-  autoplay,
-  autoplayDelay = 3000,
-  mediaType,
-  contentList
+  loop = true,
+  orientation = "horizontal",
+  plugins = [],
+  slides
 }: CarouselProps) {
-  const carouselPlugins = autoplay
-    ? [
-        Autoplay({
-          delay: autoplayDelay,
-          stopOnMouseEnter: true,
-          stopOnInteraction: false
-        })
-      ]
-    : []
+  const axis = orientation === "horizontal" ? "x" : "y"
+  const [emblaRef] = useEmblaCarousel({ loop: loop, axis: axis }, plugins)
 
-  if (!contentList) {
-    return null
-  }
+  const carouselDisplay =
+    orientation === "horizontal"
+      ? "grid-flow-col auto-cols-[100%]"
+      : "grid-flow-row auto-rows-[100%]"
 
   return (
-    <EmblaCarousel
-      className="h-min"
-      opts={{ loop: true }}
-      plugins={carouselPlugins}>
-      <EmblaCarouselContent className="ml-0 h-min">
-        {contentList.map((media, i) => (
-          <EmblaCarouselItem key={i} className="h-min basis-full pl-0">
-            <CarouselMedia
-              mediaType={mediaType}
-              src={media.src}
-              label={media.label}
-            />
-          </EmblaCarouselItem>
+    <section className="overflow-hidden" ref={emblaRef}>
+      <div className={cn("grid", carouselDisplay)}>
+        {slides?.map((item, i) => (
+          <CarouselMedia key={i} src={item.src} label={item.label} />
         ))}
-      </EmblaCarouselContent>
-    </EmblaCarousel>
+      </div>
+    </section>
   )
 }
