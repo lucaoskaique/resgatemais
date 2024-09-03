@@ -1,4 +1,6 @@
-import Carousel, { MediaProps } from "@/components/Carousel"
+import Autoplay from "embla-carousel-autoplay"
+
+import Carousel from "@/components/Carousel"
 import MilestoneCard, { MilestoneCardProps } from "@/components/MilestoneCard"
 
 export type DonateSectionProps = {
@@ -6,8 +8,10 @@ export type DonateSectionProps = {
   subtitle: string
   description: string
   milestones: MilestoneCardProps[]
-  media: MediaProps[]
-  mediaAutoplay: boolean
+  media: {
+    src: string
+    label?: string
+  }[]
 }
 
 export const DonateSection = ({
@@ -15,8 +19,7 @@ export const DonateSection = ({
   subtitle,
   description,
   milestones,
-  media,
-  mediaAutoplay
+  media
 }: DonateSectionProps) => {
   return (
     <section className="bg-background-secondary py-container text-secondary">
@@ -49,11 +52,7 @@ export const DonateSection = ({
         </div>
         <div className="flex w-full justify-center">
           <div className="max-w-[800px]">
-            <Carousel
-              mediaType={"image"}
-              contentList={media}
-              autoplay={mediaAutoplay}
-            />
+            <Carousel plugins={[Autoplay()]} slides={media} />
           </div>
         </div>
       </div>

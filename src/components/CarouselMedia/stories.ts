@@ -25,7 +25,7 @@ export default {
 export const Image: StoryObj<CarouselMediaProps> = {
   args: {
     mediaType: "image",
-    src: imageTemplate.image,
+    src: imageTemplate.image.src,
     label: imageTemplate.label
   }
 }
