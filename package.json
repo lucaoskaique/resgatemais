@@ -42,6 +42,7 @@
     "react-dom": "^18",
     "react-google-forms-hooks": "^1.2.4",
     "react-switch": "^7.0.0",
+    "sweetalert2": "^11.13.1",
     "tailwind-merge": "^2.4.0",
     "use-count-up": "^3.0.1"
   },
