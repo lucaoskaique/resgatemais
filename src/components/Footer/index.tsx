@@ -1,7 +1,5 @@
 import Link from "next/link"
 
-import qrCode from "@/assets/images/qr-code.png"
-
 import Button from "../Button"
 import { navLinks } from "../Navbar"
 import QrCodeCard from "../QrCodeCard"
@@ -13,7 +11,7 @@ const Footer = () => {
     { plataform: "E-mail", info: "resgatemais@gmail.com" },
     { plataform: "Telefone", info: "(51) 99114-7322" }
   ]
-  const qrCodeUrl = qrCode.src
+  const qrCodeUrl = "/images/qr-code.png"
   const title = "FALE CONOSCO"
 
   return (
