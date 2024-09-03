@@ -1,38 +1,39 @@
-import Image, { StaticImageData } from "next/image"
+import Image from "next/image"
+import React, { HTMLAttributes } from "react"
 
 export type CarouselMediaProps = {
-  mediaType: "video" | "image"
-  src: string | StaticImageData
+  mediaType?: "video" | "image"
+  src: string
   label?: string
-}
+} & HTMLAttributes<HTMLDivElement>
 
 export default function CarouselMedia({
-  mediaType,
+  mediaType = "image",
   src,
-  label
+  label,
+  ...props
 }: CarouselMediaProps) {
   return (
-    <article className="relative max-h-[420px]">
+    <div {...props} className="relative min-w-0">
       {mediaType === "image" ? (
         <Image
           className="h-full"
-          src={src ?? ""}
+          src={src}
           alt={label ?? ""}
           width={840}
           height={420}
         />
       ) : (
-        // adicionar evento para vídeo der autoPlay apenas quando aparecer na tela
-        <video className="h-full w-full" autoPlay loop muted>
-          <source src={typeof src === "string" ? src : ""} type="video/mp4" />
+        <video className="w-full" autoPlay loop muted>
+          <source src={src} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       )}
       {label && (
-        <span className="absolute bottom-10 left-10 text-2xl font-bold uppercase tracking-wider text-white">
+        <span className="absolute bottom-10 left-10 text-paragraph font-bold uppercase tracking-wider text-white">
           {label}
         </span>
       )}
-    </article>
+    </div>
   )
 }

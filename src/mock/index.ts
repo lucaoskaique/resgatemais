@@ -89,18 +89,17 @@ export const donateSectionData: DonateSectionProps = {
   media: [
     {
       label: "Vila Farrapos",
-      src: image1
+      src: image1.src
     },
     {
       label: "Lami",
-      src: image2
+      src: image2.src
     },
     {
       label: "Humaita",
-      src: image3
+      src: image3.src
     }
-  ],
-  mediaAutoplay: false
+  ]
 }
 
 export const newsletterData: NewsletterProps = {
