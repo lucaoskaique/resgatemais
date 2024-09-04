@@ -25,8 +25,8 @@ const Contact = () => {
             }}
           />
 
-          <div className="trans absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col gap-4 rounded-lg bg-slate-500/50 p-5">
-            <h1 className="text-2xl font-bold">Contato</h1>
+          <div className="trans absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col gap-4 rounded-lg bg-highlight p-5">
+            <h1 className="text-h3 font-bold">Seja um voluntário!</h1>
             <ContactForm />
           </div>
         </div>

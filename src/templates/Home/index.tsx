@@ -25,11 +25,15 @@ const Home = () => {
         media={donateSectionData.media}
       />
 
-      <div className="bg-highlight text-center text-paragraph font-bold leading-tight text-white md:text-h3">
+      <div className="bg-highlight text-start text-paragraph leading-tight text-primary md:text-h3">
         <p className="container py-container">
-          Procuramos organizações parceiras, dispostas a contribuir com todas as
-          etapas de reconstrução do Rio Grande do Sul para somar junto com a
-          Resgate+ no desenvolvimento dos nossos projetos.
+          <span className="font-bold text-white">
+            Procuramos organizações parceiras
+          </span>
+          , dispostas a contribuir com todas as etapas de reconstrução do Rio
+          Grande do Sul para somar junto com a{" "}
+          <span className="font-bold text-white">Resgate+</span> no
+          desenvolvimento dos nossos projetos.
         </p>
       </div>
 

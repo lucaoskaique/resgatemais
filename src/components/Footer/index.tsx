@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import Button from "../Button"
 import { navLinks } from "../Navbar"
-import QrCodeCard from "../QrCodeCard"
+// import QrCodeCard from "../QrCodeCard"
 import { ResponsiveIcon, ResponsiveLogo } from "../ResponsiveBrand"
 
 const Footer = () => {
@@ -11,15 +11,36 @@ const Footer = () => {
     { plataform: "E-mail", info: "resgatemais@gmail.com" },
     { plataform: "Telefone", info: "(51) 99114-7322" }
   ]
-  const qrCodeUrl = "/images/qr-code.png"
+  // const qrCodeUrl = "/images/qr-code.png"
   const title = "FALE CONOSCO"
 
   return (
-    <div className="container flex w-max flex-col items-center justify-between gap-8 py-container text-white sm:w-full sm:flex-row">
-      <div className="flex flex-col gap-5 max-sm:w-full">
-        <Link href="/" className="flex justify-center">
+    <div className="flex w-max flex-col items-start justify-between gap-8 px-10 py-10 text-white sm:container sm:w-full sm:flex-row sm:py-24">
+      <Link href="/" className="flex justify-start sm:hidden">
+        <ResponsiveLogo className="hidden w-48 sm:block" highlight="black" />
+        <ResponsiveIcon className="w-16 sm:hidden" highlight="white" />
+      </Link>
+      <div className="flex flex-col gap-2 sm:gap-6">
+        <h2 className="text-paragraph font-bold leading-[18px]">{title}</h2>
+        <ul className="flex flex-col gap-1">
+          {social.map((social, i) => (
+            <li
+              key={i}
+              className="flex items-center gap-2 text-nowrap font-bold">
+              {social.plataform}:
+              <span className="font-medium">{social.info}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {/* <div className="hidden md:block">
+        <QrCodeCard url={qrCodeUrl} />
+      </div> */}
+
+      <div className="flex flex-col gap-5 self-start">
+        <Link href="/" className="hidden justify-start sm:flex">
           <ResponsiveLogo className="hidden w-48 sm:block" highlight="black" />
-          <ResponsiveIcon className="w-16 sm:hidden" highlight="black" />
+          <ResponsiveIcon className="w-16 sm:hidden" highlight="white" />
         </Link>
         <ul className="flex flex-col items-center sm:flex-row sm:gap-3">
           {navLinks.map((nav, i) => (
@@ -37,22 +58,6 @@ const Footer = () => {
                   {nav.label}
                 </Button>
               )}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="hidden md:block">
-        <QrCodeCard url={qrCodeUrl} />
-      </div>
-      <div className="flex flex-col gap-2 sm:gap-6">
-        <h2 className="text-paragraph font-bold leading-[18px]">{title}</h2>
-        <ul className="flex flex-col gap-1">
-          {social.map((social, i) => (
-            <li
-              key={i}
-              className="flex items-center gap-2 text-nowrap font-bold">
-              {social.plataform}:
-              <span className="font-medium">{social.info}</span>
             </li>
           ))}
         </ul>

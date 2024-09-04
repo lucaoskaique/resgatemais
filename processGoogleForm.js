@@ -3,7 +3,7 @@ const fs = require("fs")
 const { googleFormsToJson } = require("react-google-forms-hooks")
 
 googleFormsToJson(
-  "https://docs.google.com/forms/d/e/1FAIpQLSfLpiO1MYjDuaMwAp3EDhFRjaw_HC4UGDSQ9oX2zf_062bn7A/viewform"
+  "https://docs.google.com/forms/d/1YTgu2H9icGvUrcqCwvNF1WIrmyjvyEC0YN5wlNiKDUU/viewform?edit_requested=true"
 )
   .then((data) => {
     const jsonString = JSON.stringify(data, null, 2)

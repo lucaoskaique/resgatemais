@@ -14,13 +14,14 @@ export const TextInput = React.forwardRef(
         {label && (
           <label
             htmlFor={props.id}
-            className="mb-1 block text-sm font-medium text-primary">
+            className="mb-1 block text-base font-bold text-primary">
             {label}
           </label>
         )}
         <input
+          required
           className={cn(
-            "w-full rounded-xl bg-white py-1 pl-3 text-base text-black sm:text-paragraph",
+            "w-full rounded-sm bg-white py-1 pl-3 text-base text-black sm:text-paragraph",
             "focus:border-highlight focus:ring-highlight",
             className
           )}

@@ -17,10 +17,19 @@ export default function QrCodeCard({
 }: QRCodeCardProps) {
   return (
     <div className="flex flex-col items-center gap-5">
-      <Image src={url} alt="QrCode" quality={100} width={180} height={180} />
+      <div className="w-full rounded-sm bg-white">
+        <Image
+          className="w-full"
+          src={url}
+          alt="QrCode"
+          quality={100}
+          width={360}
+          height={360}
+        />
+      </div>
       {label && (
         <Button
-          className="w-60 text-center tracking-widest"
+          className="w-60 rounded-sm text-center tracking-widest"
           textColor={btnTextColor}
           background={btnBgColor}
           size="xlarge"

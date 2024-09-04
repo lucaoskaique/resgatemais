@@ -21,20 +21,22 @@ export const DonateSection = ({
   milestones,
   media
 }: DonateSectionProps) => {
+  // const inverseMedia = media.slice(0).reverse()
+
   return (
     <section className="bg-background-secondary py-container text-secondary">
       <div className="container">
         <div className="flex flex-col gap-10 pb-container lg:flex-row lg:gap-20">
-          <div className="">
-            <h1 className="text-h1 font-bold leading-tight text-highlight">
+          <div className="self-start">
+            <h1 className="mb-10 text-h1 font-bold leading-tight text-highlight">
               {title}
             </h1>
             <h2 className="text-h2 text-highlight">{subtitle}</h2>
             <p className="mt-4 w-full text-paragraph">{description}</p>
           </div>
-          <div className="self-start">
+          <div className="self-end">
             <div className="grid grid-rows-[repeat(2,min-content)] gap-10 lg:grid-rows-1">
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col items-end justify-end">
                 <ul className="flex flex-col gap-4 lg:gap-8">
                   {milestones?.map((item, i) => (
                     <MilestoneCard
@@ -50,9 +52,12 @@ export const DonateSection = ({
             </div>
           </div>
         </div>
-        <div className="flex w-full justify-center">
+        <div className="mt-10 flex w-full justify-between gap-5">
           <div className="max-w-[800px]">
-            <Carousel plugins={[Autoplay()]} slides={media} />
+            <Carousel plugins={[Autoplay()]} slides={media} direction={"ltr"} />
+          </div>
+          <div className="hidden max-w-[800px] lg:block">
+            <Carousel plugins={[Autoplay()]} slides={media} direction={"rtl"} />
           </div>
         </div>
       </div>
