@@ -1,6 +1,5 @@
 import { ReactNode } from "react"
 
-import { Banner } from "@/components/Banner"
 import Footer from "@/components/Footer"
 import Hero from "@/components/Hero"
 import Navbar from "@/components/Navbar"
@@ -13,7 +12,6 @@ export type BaseTemplateProps = {
 const Base = ({ children }: BaseTemplateProps) => (
   <div className="relative flex min-h-screen w-full flex-col justify-between">
     <div>
-      <Banner />
       <Navbar />
       <Hero
         bgUrl={heroData.bgUrl}
