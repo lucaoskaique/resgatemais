@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react"
 
-import Banner from "."
+import { Banner } from "."
 
 export default {
   title: "Banner",
