@@ -3,7 +3,7 @@ import { useRouter } from "next/router"
 import { cn } from "@/lib/utils"
 
 import QrCodeCard from "../QrCodeCard"
-import { ResponsiveIcon } from "../ResponsiveBrand"
+import { ResponsiveLogo } from "../ResponsiveBrand"
 
 export type DonatePageProps = {
   title: string
@@ -30,7 +30,10 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
 
   return (
     <section
-      className="h-screen w-full overflow-hidden"
+      className={cn(
+        donatePageRoute ? "min-h-screen" : "h-screen",
+        "w-full overflow-hidden"
+      )}
       style={{
         backgroundImage: `url(${bgUrl})`,
         backgroundPosition: "center",
@@ -42,23 +45,25 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
           className={cn(
             "grid h-full",
             donatePageRoute
-              ? "grid-rows-[repeat(2,min-content)] content-around items-center pt-4 max-lg:justify-items-center md:pt-8 lg:grid-cols-2 lg:grid-rows-1"
+              ? "grid-rows-[min-content_1fr] content-around items-center gap-10 px-10 pt-4 max-lg:justify-items-center md:pt-8 lg:grid-cols-[min-content_1fr] lg:grid-rows-1"
               : "grid-rows-1 items-center"
           )}>
           {donatePageRoute && (
             <>
-              <div className="px-8 text-start lg:px-0">
-                <h1 className="text-h3 font-bold text-highlight max-lg:text-center">
+              <div className="text-start lg:px-0">
+                <h1 className="text-h2 font-bold text-highlight max-lg:text-center lg:text-nowrap">
                   {donatePage?.title}
                 </h1>
-                <p className="mt-10 text-justify text-primary">
+                <p className="mt-10 w-full text-justify text-paragraph font-bold text-primary">
                   {donatePage?.paragraph1}
-                  <span className="mt-4 block">{donatePage?.paragraph2}</span>
+                  <span className="mt-4 block font-medium">
+                    {donatePage?.paragraph2}
+                  </span>
                 </p>
               </div>
 
               <aside className="lg:justify-self-end">
-                <p className="mb-4 text-center text-xs font-bold text-white">
+                <p className="mb-4 text-center text-base font-bold text-white">
                   {donatePage?.donateCall}
                 </p>
                 {donatePage?.qrCodeUrl && (
@@ -70,8 +75,8 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
 
           {!donatePageRoute && (
             <div className="max-w-[480px] pl-4 text-start">
-              {home?.logo && <ResponsiveIcon className="w-24" />}
-              <h1 className="max-w-52 pt-8 text-h2 font-bold leading-tight text-white md:text-3xl lg:max-w-80 lg:text-4xl">
+              {home?.logo && <ResponsiveLogo className="" />}
+              <h1 className="pt-8 text-h2 font-bold leading-tight text-white md:text-3xl lg:text-4xl">
                 {home?.title}
               </h1>
             </div>

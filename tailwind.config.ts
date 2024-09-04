@@ -34,7 +34,7 @@ const config: Config = {
         ]
       },
       padding: {
-        container: "3rem"
+        container: "8rem"
       },
       colors: {
         primary: "hsl(var(--primary))",

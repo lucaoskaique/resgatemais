@@ -12,10 +12,10 @@ export default function DonateInfo({
   bankInfo
 }: InfoProps) {
   return (
-    <section className="py-8 text-center dark:bg-background-secondary dark:text-secondary lg:py-16 lg:text-left">
-      <div className="container">
-        <h1 className="text-lg font-bold text-highlight">{title}</h1>
-        <div className="mt-4 leading-loose lg:mt-10">
+    <section className="py-10 text-left dark:bg-background-secondary dark:text-secondary sm:py-container lg:py-16">
+      <div className="px-10 sm:container">
+        <h1 className="text-start text-lg font-bold text-highlight">{title}</h1>
+        <div className="mt-4 flex flex-col items-start leading-loose lg:mt-10">
           <h2>{info}</h2>
           {pixKey && (
             <p className="font-bold">

@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import ThemeToggle from "@/components/ThemeToggler"
 
 import Button from "../Button"
-import { ResponsiveIcon, ResponsiveLogo } from "../ResponsiveBrand"
+import { ResponsiveIcon } from "../ResponsiveBrand"
 
 export type NavLinksProps = {
   label: string
@@ -64,10 +64,10 @@ export default function Navbar() {
       <div className="container flex items-center justify-between py-3 text-sm md:text-lg">
         <div className="flex items-center gap-3">
           <Link href="/">
-            <ResponsiveIcon className="block w-12 md:hidden" />
-            <ResponsiveLogo className="hidden h-6 w-24 md:block lg:h-8 lg:w-32" />
+            <ResponsiveIcon className="w-12" />
+            {/* <ResponsiveLogo className="hidden h-6 w-24 md:block lg:h-8 lg:w-32" /> */}
           </Link>
-          <h1 className="hidden font-bold md:block">
+          <h1 className="hidden md:block">
             Organização Audiovisual
             <br className="xl:hidden" /> da Sociedade Civil
           </h1>
