@@ -27,13 +27,13 @@ const Base = ({ children }: BaseTemplateProps) => (
           qrCodeUrl: heroData.donatePage?.qrCodeUrl
         }}
       />
-
-      <main className="mx-auto">{children}</main>
-
-      <footer className="bg-highlight">
-        <Footer />
-      </footer>
     </div>
+
+    <main className="mx-auto mt-32 w-full">{children}</main>
+
+    <footer className="bg-highlight">
+      <Footer />
+    </footer>
   </div>
 )
 
