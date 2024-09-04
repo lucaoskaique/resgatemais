@@ -13,7 +13,8 @@ export function Banner() {
           ✨
           <span className="font-bold">
             {" "}
-            ⭐ Procuramos organizações parceiras
+            Nosso trabalho só é possível com a sua ajuda!{" "}
+            <span className="underline">Seja um voluntário, clique aqui!</span>
           </span>{" "}
           <ChevronRight className="ml-1 size-4 transition-all duration-300 ease-out group-hover:translate-x-1" />
         </Link>

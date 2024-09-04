@@ -7,34 +7,32 @@ import { heroData } from "@/mock"
 const Contact = () => {
   return (
     <div className="relative flex min-h-screen w-full flex-col justify-between">
-      <div>
-        <Navbar />
-        <div className="relative">
-          <Hero
-            bgUrl={heroData.bgUrl}
-            home={{
-              logo: "",
-              title: ""
-            }}
-            donatePage={{
-              title: "",
-              paragraph1: "",
-              paragraph2: "",
-              donateCall: "",
-              qrCodeUrl: ""
-            }}
-          />
+      <Navbar />
+      <div className="relative flex flex-col items-center">
+        <Hero
+          bgUrl={heroData.bgUrl}
+          home={{
+            logo: "",
+            title: ""
+          }}
+          donatePage={{
+            title: "",
+            paragraph1: "",
+            paragraph2: "",
+            donateCall: "",
+            qrCodeUrl: ""
+          }}
+        />
 
-          <div className="trans absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col gap-4 rounded-lg bg-highlight p-5">
-            <h1 className="text-h3 font-bold">Seja um voluntário!</h1>
-            <ContactForm />
-          </div>
+        <div className="absolute left-1/2 top-10 mt-20 flex -translate-x-1/2 transform flex-col items-center gap-4 rounded-lg bg-highlight p-5">
+          <h1 className="text-h3 font-bold">Seja um voluntário!</h1>
+          <ContactForm />
         </div>
-
-        <footer className="bg-highlight">
-          <Footer />
-        </footer>
       </div>
+
+      <footer className="bg-highlight">
+        <Footer />
+      </footer>
     </div>
   )
 }
