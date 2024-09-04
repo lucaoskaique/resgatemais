@@ -13,9 +13,8 @@ const config: Config = {
       container: {
         center: true,
         padding: {
-          DEFAULT: "0.5rem",
-          md: "1rem",
-          lg: "2rem"
+          DEFAULT: "1rem",
+          sm: "2rem"
         },
         screens: {
           sm: "100%", // Full width for small screens (mobile)
@@ -34,14 +33,17 @@ const config: Config = {
         ]
       },
       padding: {
-        container: "8rem"
+        container: "4.5rem",
+        section: "6rem"
       },
       colors: {
         primary: "hsl(var(--primary))",
         secondary: "hsl(var(--secondary))",
         background: "hsl(var(--background))",
         "background-secondary": "hsl(var(--background-secondary))",
-        highlight: "hsl(var(--highlight))"
+        highlight: "hsl(var(--highlight))",
+        lightColor: "hsl(var(--light))",
+        darkColor: "hsl(var(--dark))"
       },
       boxShadow: {
         button: "0px 0px 0px 1px rgba(0, 0, 0, 0.2) inset"

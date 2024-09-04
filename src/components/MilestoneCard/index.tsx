@@ -32,7 +32,7 @@ export const MilestoneCard = ({
         <p className="text-h2 font-bold text-highlight">
           {data && <span>{value}</span>} {content}
         </p>
-        <p className="text-xl font-medium leading-3 text-highlight">
+        <p className="text-xl font-medium leading-none text-highlight">
           {subcontent}
         </p>
       </div>

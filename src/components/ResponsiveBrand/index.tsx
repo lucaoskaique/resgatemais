@@ -40,6 +40,44 @@ export function ResponsiveIcon({
   )
 }
 
+export function ResponsiveRecIcon({
+  highlight = "red",
+  className
+}: ResponsiveLogoProps) {
+  return (
+    <svg
+      id="icon"
+      className={className}
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 8.43 11.19">
+      <path
+        fill={highlightTextColor[highlight]}
+        d="M4.17,5.2c0-.39-.3-.66-.76-.66h-.85v2.1h.38v-.79h.38l.54.79h.47l-.59-.85c.27-.1.44-.31.44-.6ZM3.34,5.52h-.41v-.64h.43c.27,0,.42.12.42.32s-.17.32-.45.32ZM4.62,4.55h1.45v.33h-1.07v.56h.95v.33h-.95v.54h1.07v.33h-1.45v-2.1ZM8.03,5.85h.4c-.08.5-.49.84-1,.84-.64,0-1.06-.44-1.06-1.09s.42-1.09,1.06-1.09c.51,0,.92.33,1,.84h-.4c-.08-.29-.28-.49-.6-.49-.41,0-.68.3-.68.75s.27.75.68.75c.32,0,.52-.2.6-.49ZM2,5.59c0,.55-.45,1-1,1s-1-.45-1-1,.45-1,1-1,1,.45,1,1ZM8.43,11.19h-4v-1h4v1ZM8.43,7.69h-1v2.5h1v-2.5ZM8.43,3.5h-1V1h1v2.5ZM8.43,0h-4v1h4V0Z"
+      />
+    </svg>
+  )
+}
+
+export function ResponsivePlusSign({
+  highlight = "red",
+  className
+}: ResponsiveLogoProps) {
+  return (
+    <svg
+      id="plus"
+      className={className}
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 10 10">
+      <path
+        fill={highlightTextColor[highlight]}
+        d="M10,6.25h-3.75v3.75h-2.5v-3.75H0v-2.5h3.75V0h2.5v3.75h3.75v2.5Z"
+      />
+    </svg>
+  )
+}
+
 export function ResponsiveLogo({
   text = "white",
   highlight = "red",

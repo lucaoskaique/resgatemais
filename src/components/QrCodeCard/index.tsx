@@ -1,4 +1,7 @@
 import Image from "next/image"
+import { HTMLAttributes } from "react"
+
+import { cn } from "@/lib/utils"
 
 import Button from "../Button"
 
@@ -7,16 +10,19 @@ export type QRCodeCardProps = {
   label?: string
   btnTextColor?: "primary" | "secondary" | "white" | "black" | "red"
   btnBgColor?: "white" | "black" | "red" | "transparent" | "secondary"
-}
+} & HTMLAttributes<HTMLDivElement>
 
 export default function QrCodeCard({
   url,
   label,
   btnBgColor = "red",
-  btnTextColor = "white"
+  btnTextColor = "white",
+  ...props
 }: QRCodeCardProps) {
   return (
-    <div className="flex flex-col items-center gap-5">
+    <div
+      {...props}
+      className={cn("flex flex-col items-center gap-5", props.className)}>
       <div className="w-full rounded-sm bg-white">
         <Image
           className="w-full"

@@ -14,9 +14,7 @@ export const TextAreaInput = React.forwardRef(
     return (
       <div className="w-full">
         {label && (
-          <label
-            htmlFor={props.id}
-            className="mb-1 block text-sm font-medium text-primary">
+          <label htmlFor={props.id} className="mb-1 block text-sm font-medium">
             {label}
           </label>
         )}

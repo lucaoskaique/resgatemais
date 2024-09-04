@@ -16,7 +16,7 @@ const Footer = () => {
 
   return (
     <div>
-      <div className="flex flex-col items-start justify-between gap-8 px-10 py-10 text-white sm:container sm:w-full sm:flex-row sm:py-24">
+      <div className="container flex flex-col items-start justify-between gap-8 py-container text-white sm:w-full sm:flex-row">
         <Link href="/" className="flex justify-start sm:hidden">
           <ResponsiveLogo className="hidden w-48 sm:block" highlight="black" />
           <ResponsiveIcon className="w-16 sm:hidden" highlight="white" />
@@ -67,7 +67,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="mt-8 w-full text-center">
+      <div className="w-full text-center">
         <p className="px-1 py-1 text-sm text-gray-300">
           Desenvolvido por Comunidade DOS • © 2024
         </p>
