@@ -1,5 +1,6 @@
 import { ReactNode } from "react"
 
+import { Banner } from "@/components/Banner"
 import Footer from "@/components/Footer"
 import Hero from "@/components/Hero"
 import Navbar from "@/components/Navbar"
@@ -12,6 +13,7 @@ export type BaseTemplateProps = {
 const Base = ({ children }: BaseTemplateProps) => (
   <div className="relative flex min-h-screen w-full flex-col justify-between">
     <div>
+      <Banner />
       <Navbar />
       <Hero
         bgUrl={heroData.bgUrl}
@@ -27,13 +29,13 @@ const Base = ({ children }: BaseTemplateProps) => (
           qrCodeUrl: heroData.donatePage?.qrCodeUrl
         }}
       />
-
-      <main className="mx-auto">{children}</main>
-
-      <footer className="bg-highlight">
-        <Footer />
-      </footer>
     </div>
+
+    <main className="mx-auto mt-32 w-full">{children}</main>
+
+    <footer className="bg-highlight">
+      <Footer />
+    </footer>
   </div>
 )
 
