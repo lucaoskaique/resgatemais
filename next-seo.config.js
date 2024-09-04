@@ -58,6 +58,10 @@ export default {
     {
       rel: "manifest",
       href: "/manifest.json"
+    },
+    {
+      rel: "privacy-policy",
+      href: "/politica-de-privacidade"
     }
   ]
 }

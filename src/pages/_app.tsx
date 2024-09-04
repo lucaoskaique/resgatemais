@@ -2,8 +2,9 @@ import "@/styles/globals.css"
 import type { AppProps } from "next/app"
 import Head from "next/head"
 import { DefaultSeo } from "next-seo"
+import { ThemeProvider } from "next-themes"
 
-import { ThemeProvider } from "@/contexts/theme-provider"
+import CookieConsent from "@/components/CookieConsent"
 
 import SEO from "../../next-seo.config"
 
@@ -85,6 +86,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <DefaultSeo {...SEO} />
       <Component {...pageProps} />
+      <CookieConsent />
     </ThemeProvider>
   )
 }
