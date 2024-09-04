@@ -1,3 +1,4 @@
+import { motion } from "framer-motion"
 import { useRouter } from "next/router"
 
 import { cn } from "@/lib/utils"
@@ -41,7 +42,10 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
         backgroundRepeat: "no-repeat"
       }}>
       <div className="container h-full py-container">
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className={cn(
             "grid h-full",
             donatePageRoute
@@ -81,7 +85,7 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
               </h1>
             </div>
           )}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

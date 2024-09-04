@@ -1,4 +1,6 @@
+import { motion } from "framer-motion"
 import Image from "next/image"
+import { useInView } from "react-intersection-observer"
 
 import QrCodeCard from "../QrCodeCard"
 
@@ -22,25 +24,39 @@ export default function SectionAbout({
   image,
   cards
 }: SectionAboutProps) {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1
+  })
+
   return (
-    <section id="sobre-nos" className="grid grid-rows-[repeat(2,min-content)]">
+    <motion.section
+      ref={ref}
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : { opacity: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      id="sobre-nos"
+      className="grid grid-rows-[repeat(2,min-content)]">
       <div className="container grid grid-rows-[repeat(3,min-content)] justify-items-center gap-y-10 py-container pb-container md:min-h-[50vh] md:grid-cols-[3fr_1fr] md:grid-rows-1 md:items-center">
         <SectionHeader title={title} content={content} />
         <div className="flex h-full flex-col items-end justify-end gap-5 lg:justify-self-end">
           <QrCodeCard label={label} url={QrCode} />
         </div>
       </div>
+      {/* Improved Image Animation */}
+
       <Image
         className="w-full"
         src={image ?? ""}
-        alt={""}
+        alt={"Section image"}
         width={980}
         height={260}
       />
+
       <div className="flex bg-highlight pb-container">
         <CardsSection cards={cards} />
       </div>
-    </section>
+    </motion.section>
   )
 }
 

@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion"
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 
@@ -18,6 +19,15 @@ export const navLinks: NavLinksProps[] = [
   { label: "Projetos", href: "#" },
   { label: "DOAR", href: "/donate" }
 ]
+
+export const AnimatedBanner = () => (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}>
+    <Banner />
+  </motion.div>
+)
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -59,13 +69,24 @@ export default function Navbar() {
 
   return (
     <div className="relative">
-      {!isScrolled && (
-        <div id="banner" className="fixed left-0 right-0 top-0 z-50">
-          <Banner />
-        </div>
-      )}
+      <AnimatePresence>
+        {!isScrolled && (
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 0.5 }}
+            id="banner"
+            className="fixed left-0 right-0 top-0 z-50">
+            <AnimatedBanner />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      <header
+      <motion.header
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.5 }}
         id="header"
         className={`fixed inset-x-0 z-40 transition-all duration-300 ${bgColorClasses} ${isScrolled ? "top-0 py-2" : "top-12 py-3"}`}
         data-testid="header">
@@ -160,7 +181,7 @@ export default function Navbar() {
             </span>
           </nav>
         </div>
-      </header>
+      </motion.header>
     </div>
   )
 }

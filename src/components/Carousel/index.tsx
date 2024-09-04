@@ -1,4 +1,5 @@
 import useEmblaCarousel from "embla-carousel-react"
+import { AnimatePresence, motion } from "framer-motion"
 
 import { cn } from "@/lib/utils"
 
@@ -38,11 +39,26 @@ export default function Carousel({
       dir={direction === "rtl" ? "rtl" : ""}
       className="overflow-hidden"
       ref={emblaRef}>
-      <div className={cn("grid", carouselDisplay)}>
-        {slides?.map((item, i) => (
-          <CarouselMedia key={i} src={item.src} label={item.label} />
-        ))}
-      </div>
+      {" "}
+      <AnimatePresence>
+        <motion.div
+          className={cn("grid", carouselDisplay)}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}>
+          {slides?.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ x: 300, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -300, opacity: 0 }}
+              transition={{ duration: 0.5 }}>
+              <CarouselMedia src={item.src} label={item.label} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </AnimatePresence>
     </section>
   )
 }
