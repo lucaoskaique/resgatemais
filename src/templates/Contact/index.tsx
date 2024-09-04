@@ -24,7 +24,7 @@ const Contact = () => {
           }}
         />
 
-        <div className="absolute left-1/2 top-10 mt-20 flex -translate-x-1/2 transform flex-col items-center gap-4 rounded-lg bg-highlight p-5">
+        <div className="absolute left-1/2 top-12 mt-20 flex -translate-x-1/2 transform flex-col items-center gap-4 rounded-lg bg-highlight p-5">
           <h1 className="text-h3 font-bold">Seja um voluntário!</h1>
           <ContactForm />
         </div>
