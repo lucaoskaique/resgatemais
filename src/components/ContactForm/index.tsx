@@ -99,15 +99,15 @@ const ContactForm = () => {
           </div>
           <CheckboxInput id="1016726377" />
           <CheckboxInput
-            className="grid grid-cols-[repeat(2,max-content)] justify-between"
+            className="grid justify-between md:grid-cols-[repeat(2,max-content)]"
             id="422683773"
           />
-          <div className="flex items-center justify-between">
+          <div className="flex justify-between max-md:flex-col md:items-center">
             <CheckboxInput id="1536846454" />
             <RadioInput id="1492285441" />
           </div>
           <Button
-            className="w-1/4 self-center rounded-sm bg-background"
+            className="self-center rounded-sm bg-background md:w-1/4"
             as={"button"}
             type="submit">
             Enviar

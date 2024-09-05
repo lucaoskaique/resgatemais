@@ -1,33 +1,24 @@
 import ContactForm from "@/components/ContactForm"
 import Footer from "@/components/Footer"
-import Hero from "@/components/Hero"
 import Navbar from "@/components/Navbar"
 import { heroData } from "@/mock"
 
 const Contact = () => {
   return (
-    <div className="relative flex min-h-screen w-full flex-col justify-between">
+    <div className="flex min-h-screen w-full flex-col justify-between">
       <Navbar />
-      <div className="relative flex flex-col items-center">
-        <Hero
-          bgUrl={heroData.bgUrl}
-          home={{
-            logo: "",
-            title: ""
-          }}
-          donatePage={{
-            title: "",
-            paragraph1: "",
-            paragraph2: "",
-            donateCall: "",
-            qrCodeUrl: ""
-          }}
-        />
-
-        <div className="absolute left-1/2 top-12 mt-20 flex -translate-x-1/2 transform flex-col items-center gap-4 rounded-lg bg-highlight p-5">
-          <h1 className="text-h3 font-bold">Seja um voluntário!</h1>
-          <ContactForm />
+      <div className="custom-bg flex flex-col items-center">
+        <div className="container mt-32 max-w-[700px] py-container max-[600px]:mt-36">
+          <div className="flex flex-col items-center gap-4 rounded-lg bg-highlight p-5">
+            <h1 className="text-h3 font-bold">Seja um voluntário!</h1>
+            <ContactForm />
+          </div>
         </div>
+        <style jsx>{`
+          .custom-bg {
+            background: url(${heroData.bgUrl}) center/cover no-repeat;
+          }
+        `}</style>
       </div>
 
       <footer className="bg-highlight">

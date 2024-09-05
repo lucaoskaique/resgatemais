@@ -14,7 +14,7 @@ export default function CarouselMedia({
   ...props
 }: CarouselMediaProps) {
   return (
-    <div {...props} className="relative min-w-0">
+    <div {...props} className="relative h-full min-w-0">
       {mediaType === "image" ? (
         <Image
           className="h-full"
