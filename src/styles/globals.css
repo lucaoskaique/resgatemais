@@ -11,6 +11,8 @@
     --background-secondary: 0 0% 20%; /* #323232 Background Secundário (oposto) */
 
     --highlight: 358 65% 54%; /* #D63E44 Vermelho (text|bg) */
+    --light: 0 0% 90%;
+    --dark: 0 0% 20%;
   }
 
   .dark {
@@ -21,6 +23,8 @@
     --background-secondary: 0 0% 85%; /* #D9D9D9 Background Secundário (oposto) */
 
     --highlight: 358 65% 54%; /* #D63E44 Vermelho (text|bg) */
+    --light: 0 0% 90%;
+    --dark: 0 0% 20%;
   }
 }
 

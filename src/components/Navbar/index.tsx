@@ -77,7 +77,7 @@ export default function Navbar() {
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.5 }}
             id="banner"
-            className="fixed left-0 right-0 top-0 z-50">
+            className="fixed left-0 top-0 z-50 w-full">
             <AnimatedBanner />
           </motion.div>
         )}
@@ -88,7 +88,7 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
         id="header"
-        className={`fixed inset-x-0 z-40 transition-all duration-300 ${bgColorClasses} ${isScrolled ? "top-0 py-2" : "top-12 py-3"}`}
+        className={`fixed inset-x-0 z-40 transition-all duration-300 ${bgColorClasses} ${isScrolled ? "top-0 py-2" : "top-12 py-3 max-[600px]:top-16"}`}
         data-testid="header">
         <div className="container flex items-center justify-between py-3 text-sm md:text-lg">
           <div className="flex items-center gap-3">

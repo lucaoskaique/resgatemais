@@ -29,7 +29,7 @@ const Base = ({ children }: BaseTemplateProps) => (
       />
     </div>
 
-    <main className="mx-auto mt-32 w-full">{children}</main>
+    <main>{children}</main>
 
     <footer className="bg-highlight">
       <Footer />

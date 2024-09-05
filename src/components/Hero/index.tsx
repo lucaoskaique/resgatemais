@@ -41,7 +41,7 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat"
       }}>
-      <div className="container h-full py-container">
+      <div className="container mt-12 h-full py-container max-[600px]:mt-14">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
