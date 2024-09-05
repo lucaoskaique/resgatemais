@@ -12,11 +12,11 @@ export function Banner() {
           target="_blank"
           className="group inline-flex items-center justify-center gap-3 text-center text-sm leading-loose">
           <ResponsivePlusSign className="size-5 transition-transform duration-300 ease-out group-hover:rotate-90 md:size-4" />
-          <span>
+          <span className="hidden lg:block">
             Nosso trabalho só é possível com a sua ajuda!{" "}
-            <span className="font-bold text-black underline dark:text-white max-[600px]:block">
-              Seja um voluntário, clique aqui!
-            </span>
+          </span>
+          <span className="font-bold text-black underline dark:text-white max-[600px]:block">
+            Seja um voluntário, clique aqui!
           </span>{" "}
           <ChevronRight className="size-5 text-black transition-all duration-300 ease-out group-hover:translate-x-1 dark:text-white md:size-4" />
         </Link>
