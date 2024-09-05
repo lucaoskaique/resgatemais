@@ -15,6 +15,13 @@ export default {
       "Organização Audiovisual da Sociedade Civil dedicada a projetos audiovisuais e culturais.",
     images: [
       {
+        url: "https://resgatemais.vercel.app/images/bg-hero.png",
+        width: 1200,
+        height: 630,
+        alt: "Resgate+ | Organização Audiovisual da Sociedade Civil",
+        type: "image/jpeg"
+      },
+      {
         url: "https://resgatemais.vercel.app/android-chrome-192x192.png",
         width: 1200,
         height: 630,
