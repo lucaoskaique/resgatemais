@@ -9,8 +9,8 @@ export type NewsletterProps = {
 
 export default function Newsletter({ bgUrl }: NewsletterProps) {
   return (
-    <div className="custom-bg h- w-full">
-      <div className="container flex flex-col items-center justify-between py-container max-md:gap-12 md:flex-row">
+    <div className="custom-bg w-full">
+      <div className="container flex flex-col items-center justify-between py-container max-md:gap-12 lg:flex-row">
         <div className="flex h-full flex-col items-start justify-center gap-4 md:gap-8">
           <h2 className="text-center text-paragraph text-white sm:text-h2">
             <span className="text-h3 font-bold">Cadastrar email</span> para
@@ -32,7 +32,6 @@ export default function Newsletter({ bgUrl }: NewsletterProps) {
           </div>
         </div>
         <QrCodeCard
-          className=""
           label={sectionAboutData.label}
           url={sectionAboutData.QrCode}
         />
