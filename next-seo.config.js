@@ -4,11 +4,11 @@ export default {
   defaultTitle: "Organização Audiovisual da Sociedade Civil | Resgate+",
   description:
     "Organização Audiovisual da Sociedade Civil dedicada a projetos audiovisuais e culturais.",
-  canonical: "https://resgatemais.vercel.app",
+  canonical: "https://resgatemais.org/",
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://resgatemais.vercel.app",
+    url: "https://resgatemais.org",
     siteName: "Resgate+",
     title: "Organização Audiovisual da Sociedade Civil",
     description:
