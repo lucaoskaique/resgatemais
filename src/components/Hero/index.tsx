@@ -33,7 +33,7 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
     <section
       className={cn(
         donatePageRoute ? "min-h-screen" : "h-screen",
-        "w-full overflow-hidden"
+        "relative w-full overflow-hidden"
       )}
       style={{
         backgroundImage: `url(${bgUrl})`,
@@ -41,7 +41,18 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat"
       }}>
-      <div className="container mt-12 h-full py-container max-[600px]:mt-14">
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.5)",
+          zIndex: 1
+        }}></div>
+
+      <div className="container relative z-10 mt-12 h-full py-container max-[600px]:mt-14">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
