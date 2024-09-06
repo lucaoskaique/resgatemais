@@ -50,6 +50,7 @@ export default function Carousel({
           {slides?.map((item, i) => (
             <motion.div
               key={i}
+              className="h-full"
               initial={{ x: 300, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -300, opacity: 0 }}

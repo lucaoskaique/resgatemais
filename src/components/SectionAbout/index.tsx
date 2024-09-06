@@ -26,7 +26,7 @@ export default function SectionAbout({
 }: SectionAboutProps) {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.2
   })
 
   return (
@@ -34,12 +34,12 @@ export default function SectionAbout({
       ref={ref}
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1 } : { opacity: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       id="sobre-nos"
       className="grid grid-rows-[repeat(2,min-content)]">
-      <div className="container grid grid-rows-[repeat(3,min-content)] justify-items-center gap-y-10 py-container pb-container md:min-h-[50vh] md:grid-cols-[3fr_1fr] md:grid-rows-1 md:items-center">
+      <div className="container grid grid-rows-[repeat(2,min-content)] justify-items-center gap-y-10 py-container pb-container lg:min-h-[50vh] lg:grid-cols-[3fr_1fr] lg:grid-rows-1 lg:items-center">
         <SectionHeader title={title} content={content} />
-        <div className="flex h-full flex-col items-end justify-end gap-5 lg:justify-self-end">
+        <div className="flex h-full items-end justify-end gap-5 lg:justify-self-end">
           <QrCodeCard label={label} url={QrCode} />
         </div>
       </div>
@@ -73,21 +73,15 @@ const SectionHeader = ({
         {title}
       </h1>
     )}
-    {content.map((paragraph, i) =>
-      i % 2 ? (
-        <div className="flex w-full max-md:justify-end" key={i}>
-          <p className="my-4 max-w-[700px] text-end text-paragraph leading-tight md:text-start">
-            {paragraph}
-          </p>
-        </div>
-      ) : (
-        <div className="w-full" key={i}>
-          <p className="max-w-[700px] text-start text-paragraph leading-tight text-white">
-            {paragraph}
-          </p>
-        </div>
-      )
-    )}
+    <div className="flex w-full flex-col gap-4 lg:gap-6">
+      {content.map((paragraph, i) => (
+        <p
+          key={i}
+          className="max-w-[700px] text-paragraph leading-tight first:font-bold odd:text-black dark:odd:text-white max-lg:even:self-end max-lg:even:text-end">
+          {paragraph}
+        </p>
+      ))}
+    </div>
   </div>
 )
 
@@ -100,10 +94,10 @@ const CardsSection = ({
   }[]
 }) => (
   <div className="container py-container text-primary">
-    <div className="flex flex-row flex-wrap justify-around gap-6 lg:justify-between lg:gap-0">
+    <div className="flex flex-col max-xl:gap-8 xl:flex-row xl:justify-between">
       {cards.map((card, i) => (
         <article
-          className="flex w-full flex-col gap-1 text-pretty lg:max-w-[450px] lg:gap-2"
+          className="flex min-w-[300px] flex-col gap-1 text-pretty max-lg:w-full max-md:px-4 lg:gap-2 xl:w-min xl:max-w-[400px]"
           key={i}>
           <h2 className="text-h2 font-bold tracking-widest text-white">
             <span className="mr-1">#</span>

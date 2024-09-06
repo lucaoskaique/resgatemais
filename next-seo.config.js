@@ -4,37 +4,30 @@ export default {
   defaultTitle: "Organização Audiovisual da Sociedade Civil | Resgate+",
   description:
     "Organização Audiovisual da Sociedade Civil dedicada a projetos audiovisuais e culturais.",
-  canonical: "https://resgatemais.vercel.app",
+  canonical: "https://resgatemais.org/",
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://resgatemais.vercel.app",
+    url: "https://resgatemais.org",
     siteName: "Resgate+",
     title: "Organização Audiovisual da Sociedade Civil",
     description:
       "Organização Audiovisual da Sociedade Civil dedicada a projetos audiovisuais e culturais.",
     images: [
       {
-        url: "https://resgatemais.vercel.app/images/bg-hero.png",
+        url: "https://resgatemais.org/images/bg-hero.png",
         width: 1200,
         height: 630,
         alt: "Resgate+ | Organização Audiovisual da Sociedade Civil",
         type: "image/jpeg"
-      },
-      {
-        url: "https://resgatemais.vercel.app/android-chrome-192x192.png",
-        width: 1200,
-        height: 630,
-        alt: "Resgate+ | Organização Audiovisual da Sociedade Civil",
-        type: "image/jpeg"
-      },
-      {
-        url: "https://resgatemais.vercel.app/android-chrome-192x192.png",
-        width: 340,
-        height: 80,
-        alt: "Resgate+ Logo",
-        type: "image/png"
       }
+      // {
+      //   url: "https://resgatemais.org/android-chrome-192x192.png",
+      //   width: 340,
+      //   height: 80,
+      //   alt: "Resgate+ | Organização Audiovisual da Sociedade Civil",
+      //   type: "image/png"
+      // }
     ]
   },
   twitter: {

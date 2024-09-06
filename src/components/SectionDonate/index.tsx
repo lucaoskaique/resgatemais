@@ -34,25 +34,23 @@ export const DonateSection = ({
             <h2 className="text-h2 text-highlight">{subtitle}</h2>
             <p className="mt-4 w-full text-paragraph">{description}</p>
           </div>
-          <div className="self-end">
-            <div className="grid grid-rows-[repeat(2,min-content)] gap-10 lg:grid-rows-1">
-              <div className="flex flex-col items-end justify-end">
-                <ul className="flex flex-col gap-4 lg:gap-8">
-                  {milestones?.map((item, i) => (
-                    <MilestoneCard
-                      key={i}
-                      title={item.title}
-                      content={item.content}
-                      data={item.data}
-                      subcontent={item.subcontent}
-                    />
-                  ))}
-                </ul>
-              </div>
+          <div className="self-start lg:self-end">
+            <div className="flex flex-col items-end justify-end">
+              <ul className="flex flex-col gap-4 lg:gap-8">
+                {milestones?.map((item, i) => (
+                  <MilestoneCard
+                    key={i}
+                    title={item.title}
+                    content={item.content}
+                    data={item.data}
+                    subcontent={item.subcontent}
+                  />
+                ))}
+              </ul>
             </div>
           </div>
         </div>
-        <div className="mt-10 flex w-full justify-between gap-5">
+        <div className="flex w-full justify-between gap-5 lg:mt-10">
           <div className="max-w-[800px]">
             <Carousel plugins={[Autoplay()]} slides={media} direction={"ltr"} />
           </div>

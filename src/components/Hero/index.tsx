@@ -60,12 +60,12 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
           className={cn(
             "grid h-full",
             donatePageRoute
-              ? "grid-rows-[min-content_1fr] content-around items-center gap-10 px-10 pt-4 max-lg:justify-items-center md:pt-8 lg:grid-cols-[min-content_1fr] lg:grid-rows-1"
+              ? "grid-rows-[min-content_1fr] content-around items-center gap-10 px-10 pt-4 max-xl:justify-items-center md:pt-8 xl:grid-cols-[1fr_min-content] xl:grid-rows-1"
               : "grid-rows-1 items-center"
           )}>
           {donatePageRoute && (
             <>
-              <div className="text-start lg:px-0">
+              <div className="text-start lg:w-min lg:px-0">
                 <h1 className="text-h2 font-bold text-highlight max-lg:text-center lg:text-nowrap">
                   {donatePage?.title}
                 </h1>
@@ -77,7 +77,7 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
                 </p>
               </div>
 
-              <aside className="lg:justify-self-end">
+              <aside className="min-w-[200px] xl:justify-self-end">
                 <p className="mb-4 text-center text-base font-bold text-white">
                   {donatePage?.donateCall}
                 </p>
