@@ -1,8 +1,10 @@
 import { motion } from "framer-motion"
 import { useRouter } from "next/router"
+import { useState } from "react"
 
 import { cn } from "@/lib/utils"
 
+import Button from "../Button"
 import QrCodeCard from "../QrCodeCard"
 import { ResponsiveLogo } from "../ResponsiveBrand"
 
@@ -28,7 +30,16 @@ export type HeroProps = {
 export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
   const router = useRouter()
   const donatePageRoute = router.asPath === "/donate"
-
+  const [buttonText, setButtonText] = useState("Copiar código PIX")
+  const handleCopyPix = () => {
+    navigator.clipboard.writeText(
+      "00020126440014BR.GOV.BCB.PIX0122resgatemais@sitawi.net5204000053039865802BR5906SITAWI6009SAO PAULO6226052252oMdqOKiSWZ4QWt2z8Fp26304FEE2"
+    )
+    setButtonText("PIX copiado!")
+    setTimeout(() => {
+      setButtonText("Copiar Código PIX")
+    }, 5000)
+  }
   return (
     <section
       className={cn(
@@ -73,6 +84,12 @@ export default function Hero({ bgUrl, home, donatePage }: HeroProps) {
                 {donatePage?.qrCodeUrl && (
                   <QrCodeCard url={donatePage.qrCodeUrl} label="" />
                 )}
+                <Button
+                  as={"button"}
+                  onClick={handleCopyPix}
+                  className="mt-4 flex w-full flex-col items-center">
+                  {buttonText}
+                </Button>
               </aside>
             </>
           )}

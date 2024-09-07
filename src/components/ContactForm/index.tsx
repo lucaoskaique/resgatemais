@@ -91,20 +91,20 @@ const ContactForm = () => {
           id="ContactForm"
           onSubmit={methods.handleSubmit(onSubmit)}>
           <div className="mb-6 flex flex-col gap-2">
-            <ShortAnswerInput id="1714355573" />
-            <ShortAnswerInput id="1375709068" />
-            <ShortAnswerInput id="2061399360" />
-            <ShortAnswerInput id="75440542" />
-            <ShortAnswerInput id="300789299" />
+            <ShortAnswerInput id="1716903264" />
+            <ShortAnswerInput id="182861281" />
+            <ShortAnswerInput id="1373922681" />
+            <ShortAnswerInput id="725381455" />
+            <ShortAnswerInput id="1031332134" />
           </div>
-          <CheckboxInput id="1016726377" />
+          <CheckboxInput id="776661885" />
           <CheckboxInput
             className="grid justify-between md:grid-cols-[repeat(2,max-content)]"
-            id="422683773"
+            id="798225254"
           />
           <div className="flex justify-between max-md:flex-col md:items-center">
-            <CheckboxInput id="1536846454" />
-            <RadioInput id="1492285441" />
+            <CheckboxInput id="2031111894" />
+            <RadioInput id="1618202966" />
           </div>
           <Button
             className="self-center rounded-sm bg-background md:w-1/4"

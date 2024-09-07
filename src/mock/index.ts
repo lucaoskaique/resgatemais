@@ -25,7 +25,7 @@ export const donateInfoData: InfoProps = {
   title: "COMO DOAR",
   info: "O Fundo Filantrópico Resgate+ aceita doações:",
   pixKey: "resgatemais@sitawi.net",
-  bankInfo: "[dados bancários da sitawi]"
+  bankInfo: "CNPJ: 09.607.915/0001-34  Agência:9229  Conta Corrente: 08500-7"
 }
 
 export const sectionAboutData: SectionAboutProps = {

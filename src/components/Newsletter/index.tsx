@@ -1,5 +1,6 @@
 import { sectionAboutData } from "@/mock"
 
+import Button from "../Button"
 import QrCodeCard from "../QrCodeCard"
 import { ResponsiveLogo } from "../ResponsiveBrand"
 
@@ -16,13 +17,22 @@ export default function Newsletter({ bgUrl }: NewsletterProps) {
             <span className="text-h3 font-bold">Cadastrar email</span> para
             receber mais infos
           </h2>
-          <input
-            className="w-full rounded-sm bg-white py-1 pl-3 text-base text-black sm:text-paragraph"
-            type="email"
-            placeholder="exemplo@email.com"
-            name="email-cadastro"
-            id="email-cadastro"
-          />
+          <div className="flex w-[340px]">
+            <input
+              className="w-full rounded-sm bg-white py-1 pl-2 text-base text-black outline-none sm:text-paragraph"
+              type="email"
+              placeholder="exemplo@email.com"
+              name="email-cadastro"
+              id="email-cadastro"
+            />
+            <Button
+              as={"button"}
+              size="small"
+              type="submit"
+              className="relative right-[51.86px] rounded-none">
+              Enviar
+            </Button>
+          </div>
           <div className="flex flex-row items-center justify-between gap-5">
             <ResponsiveLogo className="w-48" />
             <h3 className="text-center text-white">
