@@ -10,7 +10,6 @@ const Donate = () => {
         title={donateInfoData.title}
         info={donateInfoData.info}
         pixKey={donateInfoData.pixKey}
-        bankInfo={donateInfoData.bankInfo}
       />
     </Base>
   )
