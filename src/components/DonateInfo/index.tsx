@@ -1,5 +1,5 @@
+import { Copy, CopyCheck } from "lucide-react"
 import { useState } from "react"
-import { FaCheck, FaCopy } from "react-icons/fa"
 
 import Button from "../Button"
 
@@ -10,20 +10,13 @@ export type InfoProps = {
 }
 
 export default function DonateInfo({ title, info, pixKey }: InfoProps) {
-  const [showCopyButton, setShowCopyButton] = useState(false)
   const [copied, setCopied] = useState(false)
-
-  const handleTextClick = () => {
-    setShowCopyButton(true)
-    setTimeout(() => setShowCopyButton(false), 6000)
-  }
 
   const handleCopy = () => {
     navigator.clipboard.writeText(pixKey)
     setCopied(true)
     setTimeout(() => {
       setCopied(false)
-      setShowCopyButton(false)
     }, 2000)
   }
 
@@ -37,8 +30,8 @@ export default function DonateInfo({ title, info, pixKey }: InfoProps) {
           <h2>{info}</h2>
           <div className="flex gap-[5px]">
             {pixKey && (
-              <button onClick={handleTextClick}>
-                <p className="font-bold">
+              <button onClick={handleCopy}>
+                <p className="text-start font-bold">
                   Via PIX:
                   <span className="ml-3 cursor-pointer font-medium">
                     {pixKey}
@@ -46,11 +39,18 @@ export default function DonateInfo({ title, info, pixKey }: InfoProps) {
                 </p>
               </button>
             )}
-            {showCopyButton && (
-              <Button as={"button"} size="medium" onClick={handleCopy}>
-                {copied ? <FaCheck /> : <FaCopy />}
+            <div className="flex items-center gap-1">
+              <Button as="button" size="small" onClick={handleCopy}>
+                {copied ? (
+                  <div className="animate-spin">
+                    <CopyCheck />
+                  </div>
+                ) : (
+                  <Copy />
+                )}
               </Button>
-            )}
+              <p className="text-xs">Click here to copy</p>
+            </div>
           </div>
 
           <p className="font-bold">Transferência bancária:</p>
