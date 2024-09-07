@@ -24,8 +24,7 @@ export const heroData: HeroProps = {
 export const donateInfoData: InfoProps = {
   title: "COMO DOAR",
   info: "O Fundo Filantrópico Resgate+ aceita doações:",
-  pixKey: "resgatemais@sitawi.net",
-  bankInfo: "[dados bancários da sitawi]"
+  pixKey: "resgatemais@sitawi.net"
 }
 
 export const sectionAboutData: SectionAboutProps = {

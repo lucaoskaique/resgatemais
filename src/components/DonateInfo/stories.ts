@@ -13,8 +13,7 @@ export default {
   args: {
     title: donateInfoData.title,
     info: donateInfoData.info,
-    pixKey: donateInfoData.pixKey,
-    bankInfo: donateInfoData.bankInfo
+    pixKey: donateInfoData.pixKey
   },
   tags: ["autodocs"]
 } as Meta<InfoProps>
