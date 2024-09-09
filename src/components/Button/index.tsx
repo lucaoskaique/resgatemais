@@ -73,7 +73,7 @@ const Button: ForwardRefRenderFunction<
   return (
     <Component
       className={cn(
-        "px- rounded-md tracking-wide",
+        "px- rounded-md tracking-wide hover:translate-y-[-0.1em] hover:shadow-[0_0.5em_0.5em_-0.2em_#fff]",
         fontWeightClasses[fontBold],
         sizeClasses[size],
         backgroundClasses[background],
